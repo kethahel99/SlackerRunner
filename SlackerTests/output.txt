@@ -1,0 +1,44 @@
+Code:
+  * features/support/env.rb
+  * features/step_definitions/all_steps.rb
+
+Features:
+  * features/failing.feature
+  * features/passing.feature
+
+Using the defaultProfile profile...
+Feature: 
+  As a developer
+  I want to hook up automated tests to continuous integration
+  So that I am notified of failing tests
+
+  Scenario:                    # features/failing.feature:6
+    Given I have a test        # features/step_definitions/all_steps.rb:1
+    When it passes             # features/step_definitions/all_steps.rb:4
+    Then I have a passing test # features/step_definitions/all_steps.rb:10
+
+  Scenario:                    # features/failing.feature:11
+    Given I have a test        # features/step_definitions/all_steps.rb:1
+    When it fails              # features/step_definitions/all_steps.rb:7
+    Then I have a failing test # features/step_definitions/all_steps.rb:13
+      expected: 2
+           got: 1 (using ==) (RSpec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/all_steps.rb:14:in `/^I have a failing test$/'
+      features/failing.feature:14:in `Then I have a failing test'
+
+Feature: 
+  As a developer
+  I want to hook up automated tests to continuous integration
+  So that I am notified of passing tests
+
+  Scenario:                    # features/passing.feature:6
+    Given I have a test        # features/step_definitions/all_steps.rb:1
+    When it passes             # features/step_definitions/all_steps.rb:4
+    Then I have a passing test # features/step_definitions/all_steps.rb:10
+
+Failing Scenarios:
+cucumber -p defaultProfile features/failing.feature:11 # Scenario: 
+
+3 scenarios (1 failed, 2 passed)
+9 steps (1 failed, 8 passed)
+0m0.111s

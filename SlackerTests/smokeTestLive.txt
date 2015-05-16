@@ -1,0 +1,21 @@
+Code:
+  * features/support/env.rb
+  * features/step_definitions/all_steps.rb
+
+Features:
+  * features/passing.feature
+
+Using the passingProfile profile...
+Feature: 
+  As a developer
+  I want to hook up automated tests to continuous integration
+  So that I am notified of passing tests
+
+  Scenario:                    # features/passing.feature:6
+    Given I have a test        # features/step_definitions/all_steps.rb:1
+    When it passes             # features/step_definitions/all_steps.rb:4
+    Then I have a passing test # features/step_definitions/all_steps.rb:10
+
+1 scenario (1 passed)
+3 steps (3 passed)
+0m0.094s

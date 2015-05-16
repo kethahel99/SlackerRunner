@@ -1,0 +1,8 @@
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.UnitTests\bin\Debug\SlackerRunner.UnitTests.dll
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.UnitTests\bin\Debug\SlackerRunner.UnitTests.pdb
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.UnitTests\bin\Debug\Rhino.Mocks.dll
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.UnitTests\bin\Debug\SlackerRunner.dll
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.UnitTests\bin\Debug\SlackerRunner.pdb
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.UnitTests\obj\Debug\SlackerRunner.UnitTests.csprojResolveAssemblyReference.cache
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.UnitTests\obj\Debug\SlackerRunner.UnitTests.dll
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.UnitTests\obj\Debug\SlackerRunner.UnitTests.pdb

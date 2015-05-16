@@ -1,0 +1,7 @@
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.IntegrationTests\bin\Debug\SlackerRunner.IntegrationTests.dll
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.IntegrationTests\bin\Debug\SlackerRunner.IntegrationTests.pdb
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.IntegrationTests\bin\Debug\SlackerRunner.dll
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.IntegrationTests\bin\Debug\SlackerRunner.pdb
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.IntegrationTests\obj\Debug\SlackerRunner.IntegrationTests.csprojResolveAssemblyReference.cache
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.IntegrationTests\obj\Debug\SlackerRunner.IntegrationTests.dll
+C:\work\tfs\solvas\SlackerRunner\SlackerRunner.IntegrationTests\obj\Debug\SlackerRunner.IntegrationTests.pdb
