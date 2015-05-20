@@ -7,7 +7,7 @@ https://cukesfortfs.codeplex.com/
 
 Intro 
 ============
-Slacker TFS / VS test runner.  Allows you to run Slacker tests from within Visual Studio and during Continuous Integration under TFS.  This is not a TestRunner, rather a process runner that can be run by UnitTests and will bring back number of failures and passed slacker tests back to TFS.
+Slacker TFS / VS test runner.  Allows you to run Slacker tests from within Visual Studio and during Continuous Integration under TFS.  This is not a TestRunner, rather a process runner that can be run by UnitTests and will bring back number of failures and passed Slacker tests back to TFS.
 
 
 
