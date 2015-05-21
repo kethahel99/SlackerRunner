@@ -1,0 +1,13 @@
+# Compiled source #
+###################
+*.dll
+*.exe
+*.trx
+*.pdb
+
+# directories
+###################
+bin/
+obj/
+TestResults/
+

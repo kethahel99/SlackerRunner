@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CucumberResults.cs" />
+    <Compile Include="SlackerResults.cs" />
     <Compile Include="CucumberService.cs" />
     <Compile Include="Impersonator.cs" />
     <Compile Include="IProcess.cs" />

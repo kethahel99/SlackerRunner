@@ -10,7 +10,7 @@ namespace SlackerRunner.UnitTests
         {
             var sb = new StringBuilder();
             sb.AppendLine("Beachcomber ((local))");
-            sb.AppendLine(".F.");
+            sb.AppendLine(".F.*");
             sb.AppendLine(" ");
             sb.AppendLine("Finished in 0.11845 seconds");
             sb.AppendLine("3 examples, 1 failures");

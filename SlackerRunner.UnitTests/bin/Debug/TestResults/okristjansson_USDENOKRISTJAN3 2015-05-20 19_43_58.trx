@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a08894eb-1db3-4213-b1d4-c738b5323d6a" name="okristjansson@USDENOKRISTJAN3 2015-05-20 19:43:58" runUser="US\okristjansson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="de9e420c-0f65-403d-a3ac-8aae64809c4c">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="okristjansson_USDENOKRISTJAN3 2015-05-20 19_43_58" />
+    <Properties />
+  </TestSettings>
+  <Times creation="2015-05-20T19:43:58.8028115-06:00" queuing="2015-05-20T19:43:59.3622663-06:00" start="2015-05-20T19:43:59.4553416-06:00" finish="2015-05-20T19:44:00.2690031-06:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="11" executed="11" passed="11" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="BuildReturnsStartInfoWithCorrectParameters" storage="slackerrunner.unittests.dll" id="14d156ff-b5f7-7766-80c7-a843c9858615">
+      <Execution id="d3775a59-c811-4a86-a287-c52af1cd48c6" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.ProcessStartInfoBuilderTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="BuildReturnsStartInfoWithCorrectParameters" />
+    </UnitTest>
+    <UnitTest name="ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsEmpty" storage="slackerrunner.unittests.dll" id="a265b0cf-4e94-0699-17ef-1e3ec4ee450c">
+      <Execution id="468ee38b-edff-4b34-9273-4d570d88983c" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.ResultsParserTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsEmpty" />
+    </UnitTest>
+    <UnitTest name="ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsNull" storage="slackerrunner.unittests.dll" id="cb5deacb-08b0-0b7c-6dc1-12a9db130e1f">
+      <Execution id="55350a31-6e9a-4048-ae88-4e155efe104e" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.ResultsParserTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsNull" />
+    </UnitTest>
+    <UnitTest name="RunCallsProcessRunnerAndResultsValidatorAndSetsPassedToTrueWhenValid" storage="slackerrunner.unittests.dll" id="fdda4e33-12d4-09a1-fae3-bef85dcc8f83">
+      <Execution id="9d85aa6c-c54f-405c-9375-e927e835559b" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.ProfileRunnerTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RunCallsProcessRunnerAndResultsValidatorAndSetsPassedToTrueWhenValid" />
+    </UnitTest>
+    <UnitTest name="ParseReturnsFailedSpecsWhenSomeFailed" storage="slackerrunner.unittests.dll" id="c9090656-599e-54a6-45f5-8236fbe25294">
+      <Execution id="1aa527bf-859e-4ade-9483-ec793b06db5e" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.ResultsParserTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ParseReturnsFailedSpecsWhenSomeFailed" />
+    </UnitTest>
+    <UnitTest name="RunCallsFactoyToCreateProcessWrapperAndRunsProcess" storage="slackerrunner.unittests.dll" id="ca0a7d22-ea2f-524d-e6b5-a775db1007f2">
+      <Execution id="2609ba29-9ef4-4812-8c9c-521fece223b5" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.ProcessRunnerTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RunCallsFactoyToCreateProcessWrapperAndRunsProcess" />
+    </UnitTest>
+    <UnitTest name="ValidateReturnsFalseWhenOutResultsHaveFailedScenario" storage="slackerrunner.unittests.dll" id="e1ac3e39-4dcc-a2f5-ede8-2f3b3696b35d">
+      <Execution id="4a3195d4-f63d-4ed5-8f0d-23bdea2c5661" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.ResultsParserTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ValidateReturnsFalseWhenOutResultsHaveFailedScenario" />
+    </UnitTest>
+    <UnitTest name="ParseReturnsFailedSpecsWhenAllPassed" storage="slackerrunner.unittests.dll" id="ff9f57a5-be5c-83c2-9e6a-f2ba9a9a692a">
+      <Execution id="c597ad1e-e0c2-483b-851f-4d99dd0eef11" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.ResultsParserTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ParseReturnsFailedSpecsWhenAllPassed" />
+    </UnitTest>
+    <UnitTest name="RunCallsProfileRunner" storage="slackerrunner.unittests.dll" id="dbf56de4-9d5a-7729-5082-b5b9e45a1d75">
+      <Execution id="28e57309-081e-4e47-874c-83395aeee307" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.SlackerServiceTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RunCallsProfileRunner" />
+    </UnitTest>
+    <UnitTest name="ParseReturnsFalseWhenStandardErrorNotNull" storage="slackerrunner.unittests.dll" id="e0650994-a47c-eb00-a2e8-b654609f2f52">
+      <Execution id="5979c250-9f71-4d27-8779-4978f151cbd3" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.ResultsParserTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ParseReturnsFalseWhenStandardErrorNotNull" />
+    </UnitTest>
+    <UnitTest name="RunCallsProfileRunnerAndUsesImpersonationWithUserDetails" storage="slackerrunner.unittests.dll" id="4fba17f7-bb74-6bed-3723-efc19948cf83">
+      <Execution id="4a53e11e-2c51-43c7-9356-56719677fc36" />
+      <TestMethod codeBase="C:/work/tfs/solvas/SlackerRunner/SlackerRunner.UnitTests/bin/Debug/SlackerRunner.UnitTests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SlackerRunner.UnitTests.SlackerServiceTest, SlackerRunner.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RunCallsProfileRunnerAndUsesImpersonationWithUserDetails" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ca0a7d22-ea2f-524d-e6b5-a775db1007f2" executionId="2609ba29-9ef4-4812-8c9c-521fece223b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="14d156ff-b5f7-7766-80c7-a843c9858615" executionId="d3775a59-c811-4a86-a287-c52af1cd48c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fdda4e33-12d4-09a1-fae3-bef85dcc8f83" executionId="9d85aa6c-c54f-405c-9375-e927e835559b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ff9f57a5-be5c-83c2-9e6a-f2ba9a9a692a" executionId="c597ad1e-e0c2-483b-851f-4d99dd0eef11" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c9090656-599e-54a6-45f5-8236fbe25294" executionId="1aa527bf-859e-4ade-9483-ec793b06db5e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e0650994-a47c-eb00-a2e8-b654609f2f52" executionId="5979c250-9f71-4d27-8779-4978f151cbd3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1ac3e39-4dcc-a2f5-ede8-2f3b3696b35d" executionId="4a3195d4-f63d-4ed5-8f0d-23bdea2c5661" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a265b0cf-4e94-0699-17ef-1e3ec4ee450c" executionId="468ee38b-edff-4b34-9273-4d570d88983c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb5deacb-08b0-0b7c-6dc1-12a9db130e1f" executionId="55350a31-6e9a-4048-ae88-4e155efe104e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dbf56de4-9d5a-7729-5082-b5b9e45a1d75" executionId="28e57309-081e-4e47-874c-83395aeee307" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4fba17f7-bb74-6bed-3723-efc19948cf83" executionId="4a53e11e-2c51-43c7-9356-56719677fc36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2609ba29-9ef4-4812-8c9c-521fece223b5" testId="ca0a7d22-ea2f-524d-e6b5-a775db1007f2" testName="RunCallsFactoyToCreateProcessWrapperAndRunsProcess" computerName="USDENOKRISTJAN3" duration="00:00:00.1988662" startTime="2015-05-20T19:43:59.4903703-06:00" endTime="2015-05-20T19:43:59.9487427-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2609ba29-9ef4-4812-8c9c-521fece223b5">
+    </UnitTestResult>
+    <UnitTestResult executionId="d3775a59-c811-4a86-a287-c52af1cd48c6" testId="14d156ff-b5f7-7766-80c7-a843c9858615" testName="BuildReturnsStartInfoWithCorrectParameters" computerName="USDENOKRISTJAN3" duration="00:00:00.0019326" startTime="2015-05-20T19:43:59.9527460-06:00" endTime="2015-05-20T19:43:59.9617531-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3775a59-c811-4a86-a287-c52af1cd48c6">
+    </UnitTestResult>
+    <UnitTestResult executionId="9d85aa6c-c54f-405c-9375-e927e835559b" testId="fdda4e33-12d4-09a1-fae3-bef85dcc8f83" testName="RunCallsProcessRunnerAndResultsValidatorAndSetsPassedToTrueWhenValid" computerName="USDENOKRISTJAN3" duration="00:00:00.0781982" startTime="2015-05-20T19:43:59.9747639-06:00" endTime="2015-05-20T19:44:00.0608330-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9d85aa6c-c54f-405c-9375-e927e835559b">
+    </UnitTestResult>
+    <UnitTestResult executionId="c597ad1e-e0c2-483b-851f-4d99dd0eef11" testId="ff9f57a5-be5c-83c2-9e6a-f2ba9a9a692a" testName="ParseReturnsFailedSpecsWhenAllPassed" computerName="USDENOKRISTJAN3" duration="00:00:00.0094961" startTime="2015-05-20T19:44:00.0638371-06:00" endTime="2015-05-20T19:44:00.0758450-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c597ad1e-e0c2-483b-851f-4d99dd0eef11">
+      <Output>
+        <StdOut>Beachcomber ((local)
+Passed: True
+Passed Specs: 3
+Failed Specs: 0
+Seconds: 0.11845</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1aa527bf-859e-4ade-9483-ec793b06db5e" testId="c9090656-599e-54a6-45f5-8236fbe25294" testName="ParseReturnsFailedSpecsWhenSomeFailed" computerName="USDENOKRISTJAN3" duration="00:00:00.0052386" startTime="2015-05-20T19:44:00.0788480-06:00" endTime="2015-05-20T19:44:00.0878547-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1aa527bf-859e-4ade-9483-ec793b06db5e">
+      <Output>
+        <StdOut>Beachcomber ((local)
+Passed: False
+Passed Specs: 2
+Failed Specs: 1
+Seconds: 0.11845</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5979c250-9f71-4d27-8779-4978f151cbd3" testId="e0650994-a47c-eb00-a2e8-b654609f2f52" testName="ParseReturnsFalseWhenStandardErrorNotNull" computerName="USDENOKRISTJAN3" duration="00:00:00.0061582" startTime="2015-05-20T19:44:00.0918583-06:00" endTime="2015-05-20T19:44:00.1008658-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5979c250-9f71-4d27-8779-4978f151cbd3">
+      <Output>
+        <StdOut>Beachcomber ((local)
+Passed: False
+Passed Specs: 3
+Failed Specs: 0
+Seconds: 0.11845</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4a3195d4-f63d-4ed5-8f0d-23bdea2c5661" testId="e1ac3e39-4dcc-a2f5-ede8-2f3b3696b35d" testName="ValidateReturnsFalseWhenOutResultsHaveFailedScenario" computerName="USDENOKRISTJAN3" duration="00:00:00.0045977" startTime="2015-05-20T19:44:00.1048691-06:00" endTime="2015-05-20T19:44:00.1118742-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4a3195d4-f63d-4ed5-8f0d-23bdea2c5661">
+      <Output>
+        <StdOut>Beachcomber ((local)
+Passed: False
+Passed Specs: 2
+Failed Specs: 1
+Seconds: 0.11845</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="468ee38b-edff-4b34-9273-4d570d88983c" testId="a265b0cf-4e94-0699-17ef-1e3ec4ee450c" testName="ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsEmpty" computerName="USDENOKRISTJAN3" duration="00:00:00.0046612" startTime="2015-05-20T19:44:00.1168785-06:00" endTime="2015-05-20T19:44:00.1238840-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="468ee38b-edff-4b34-9273-4d570d88983c">
+      <Output>
+        <StdOut>Beachcomber ((local)
+Passed: True
+Passed Specs: 3
+Failed Specs: 0
+Seconds: 0.11845</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="55350a31-6e9a-4048-ae88-4e155efe104e" testId="cb5deacb-08b0-0b7c-6dc1-12a9db130e1f" testName="ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsNull" computerName="USDENOKRISTJAN3" duration="00:00:00.0060863" startTime="2015-05-20T19:44:00.1268873-06:00" endTime="2015-05-20T19:44:00.1368955-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="55350a31-6e9a-4048-ae88-4e155efe104e">
+      <Output>
+        <StdOut>Beachcomber ((local)
+Passed: True
+Passed Specs: 3
+Failed Specs: 0
+Seconds: 0.11845</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="28e57309-081e-4e47-874c-83395aeee307" testId="dbf56de4-9d5a-7729-5082-b5b9e45a1d75" testName="RunCallsProfileRunner" computerName="USDENOKRISTJAN3" duration="00:00:00.0441600" startTime="2015-05-20T19:44:00.1419001-06:00" endTime="2015-05-20T19:44:00.1899376-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28e57309-081e-4e47-874c-83395aeee307">
+    </UnitTestResult>
+    <UnitTestResult executionId="4a53e11e-2c51-43c7-9356-56719677fc36" testId="4fba17f7-bb74-6bed-3723-efc19948cf83" testName="RunCallsProfileRunnerAndUsesImpersonationWithUserDetails" computerName="USDENOKRISTJAN3" duration="00:00:00.0235441" startTime="2015-05-20T19:44:00.1929406-06:00" endTime="2015-05-20T19:44:00.2189625-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4a53e11e-2c51-43c7-9356-56719677fc36">
+    </UnitTestResult>
+  </Results>
+</TestRun>
