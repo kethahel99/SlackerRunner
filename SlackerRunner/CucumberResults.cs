@@ -2,10 +2,10 @@
 {
     public class SlackerResults
     {
-        public int Scenarios { get; set; }
-        public int Steps { get; set; }
-        public int FailedScenarios { get; set; }
-        public int PassedScenarios { get; set; }
+        public string What { get; set; }
+        public double Seconds { get; set; }
+        public int FailedSpecs { get; set; }
+        public int PassedSpecs { get; set; }
         public bool Passed { get; set; }
     }
 }
