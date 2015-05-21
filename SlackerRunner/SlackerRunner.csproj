@@ -35,7 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CucumberService.cs" />
     <Compile Include="Impersonator.cs" />
     <Compile Include="IProcess.cs" />
     <Compile Include="IProcessRunner.cs" />
@@ -52,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultsParser.cs" />
     <Compile Include="SlackerResults.cs" />
+    <Compile Include="SlackerService.cs" />
     <Compile Include="User.cs" />
     <Content Include="Readme.txt" />
     <Reference Include="Microsoft.CSharp" />
