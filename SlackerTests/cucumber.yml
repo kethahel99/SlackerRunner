@@ -1,3 +1,0 @@
-defaultProfile: --format pretty -v -r features
-passingProfile: --format pretty -v -r features -e failing.feature
-failingProfile: --format pretty -v -r features -e passing.feature
