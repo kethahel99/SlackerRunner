@@ -9,8 +9,9 @@ namespace SlackerRunner
     public class ResultsParser : IResultsParser
     {
         // Regexs 
+        const string _FAILURE = "failure";
         readonly Regex seconds = new Regex(@"(?<seconds>\d+(.\d+)?)\sseconds", RegexOptions.Compiled);
-        readonly Regex FailedSpecs = new Regex(@"(?<failures>\d+)\sfailures", RegexOptions.Compiled);
+        readonly Regex FailedSpecs = new Regex(@"(?<failure>\d+)\sfailure", RegexOptions.Compiled);
         readonly Regex PassedSpecs = new Regex(@"(?<examples>\d+)\sexamples", RegexOptions.Compiled);
         //
         private SlackerResults _res = new SlackerResults();
@@ -24,18 +25,17 @@ namespace SlackerRunner
         /// <returns></returns>
         public SlackerResults Parse(string result, string standardError)
         {
+            // Extract results 
             _res = new SlackerResults
             {
-                Info = getLine(result, 1),
+                Header = getLine(result, 1),
                 Trace = getLine(result, 2),
                 Seconds = FindDouble("seconds", result, seconds),
-                FailedSpecs = FindInt("failures", result, FailedSpecs),
-                PassedSpecs = FindInt("examples", result, PassedSpecs) - FindInt("failures", result, FailedSpecs),
-                Passed = FindInt("failures", result, FailedSpecs) == 0 && string.IsNullOrEmpty(standardError)
+                FailedSpecs = FindInt(_FAILURE, result, FailedSpecs),
+                PassedSpecs = FindInt("examples", result, PassedSpecs) - FindInt(_FAILURE, result, FailedSpecs),
+                Passed = FindInt(_FAILURE, result, FailedSpecs) == 0 && string.IsNullOrEmpty(standardError)
             };
 
-            // advertise what what the score is 
-            Console.WriteLine( getString() );
             // 
             return _res;
         }
@@ -79,20 +79,7 @@ namespace SlackerRunner
             return string.IsNullOrEmpty(match) ? 0 : double.Parse(match);
         }
 
-        /// <summary>
-        /// Returns summary of the tests parsed
-        /// </summary>
-        /// <returns></returns>
-        public string getString() 
-        {
-            return _res.Info + Environment.NewLine +
-                _res.Trace + Environment.NewLine + 
-                "Passed: " +_res.Passed+ Environment.NewLine + 
-                "Passed Specs: " +_res.PassedSpecs + Environment.NewLine + 
-                "Failed Specs: " +_res.FailedSpecs + Environment.NewLine + 
-                "Seconds: " +_res.Seconds+ Environment.NewLine;
-        }
-        
+      
 
     }
 }

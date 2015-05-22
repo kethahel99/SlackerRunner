@@ -1,0 +1,2 @@
+if object_id('tempdb..#OperationResult') is not null drop table #OperationResult;
+create table #OperationResult(message_code VARCHAR(100) NOT NULL, severity INT NOT NULL, field_name sysname NULL, message NVARCHAR(MAX) NOT NULL, operation_details NVARCHAR(MAX) NULL, call_info NVARCHAR(MAX) NULL);

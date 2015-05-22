@@ -1,5 +1,10 @@
-﻿using System.Text;
+﻿//
+using System;
+using System.Text;
+//
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+
 
 namespace SlackerRunner.UnitTests
 {
@@ -13,7 +18,7 @@ namespace SlackerRunner.UnitTests
             sb.AppendLine(".F.*");
             sb.AppendLine(" ");
             sb.AppendLine("Finished in 0.11845 seconds");
-            sb.AppendLine("3 examples, 1 failures");
+            sb.AppendLine("3 examples, 1 failure");
             sb.AppendLine("");
             return sb.ToString();
         }
@@ -34,27 +39,31 @@ namespace SlackerRunner.UnitTests
         public void ParseReturnsFailedSpecsWhenAllPassed()
         {
             var resultsParser = new ResultsParser();
-            SlackerResults SlackerResults = resultsParser.Parse(ResultAllPassed(), null);
-            Assert.AreEqual(SlackerResults.FailedSpecs, 0);
-            Assert.AreEqual(SlackerResults.PassedSpecs, 3);
+            SlackerResults res = resultsParser.Parse(ResultAllPassed(), null);
+            // advertise what what the score is 
+            Console.WriteLine(res.getString());
+            // Proof it 
+            Assert.AreEqual(res.FailedSpecs, 0);
+            Assert.AreEqual(res.PassedSpecs, 3);
         }
 
         [TestMethod]
         public void ParseReturnsFailedSpecsWhenSomeFailed()
         {
             var resultsParser = new ResultsParser();
-            SlackerResults SlackerResults = resultsParser.Parse(ResultSomeFailed(), null);
-            Assert.AreEqual(SlackerResults.FailedSpecs, 1);
-            Assert.AreEqual(SlackerResults.PassedSpecs, 2);
+            SlackerResults res = resultsParser.Parse(ResultSomeFailed(), null);
+            // advertise what what the score is 
+            Console.WriteLine(res.getString());
+            // Proof it 
+            Assert.AreEqual(res.FailedSpecs, 1);
+            Assert.AreEqual(res.PassedSpecs, 2);
         }
 
         [TestMethod]
         public void ParseReturnsFalseWhenStandardErrorNotNull()
         {
             var resultsParser = new ResultsParser();
-
             SlackerResults SlackerResults = resultsParser.Parse(ResultAllPassed(), "StandardError");
-
             Assert.IsFalse(SlackerResults.Passed);
         }
 
@@ -62,9 +71,7 @@ namespace SlackerRunner.UnitTests
         public void ValidateReturnsFalseWhenOutResultsHaveFailedScenario()
         {
             var resultsParser = new ResultsParser();
-
             SlackerResults SlackerResults = resultsParser.Parse(ResultSomeFailed(), "StandardError");
-
             Assert.IsFalse(SlackerResults.Passed);
         }
 
@@ -72,9 +79,7 @@ namespace SlackerRunner.UnitTests
         public void ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsEmpty()
         {
             var resultsParser = new ResultsParser();
-
             SlackerResults SlackerResults = resultsParser.Parse(ResultAllPassed(), "");
-
             Assert.IsTrue(SlackerResults.Passed);
         }
 
@@ -82,9 +87,7 @@ namespace SlackerRunner.UnitTests
         public void ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsNull()
         {
             var resultsParser = new ResultsParser();
-
             SlackerResults SlackerResults = resultsParser.Parse(ResultAllPassed(), null);
-
             Assert.IsTrue(SlackerResults.Passed);
         }
     }

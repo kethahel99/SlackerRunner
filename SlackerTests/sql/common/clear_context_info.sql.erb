@@ -1,0 +1,3 @@
+declare @null_context_info_bin varbinary(128);
+set @null_context_info_bin = convert(varbinary(128), '');
+set context_info @null_context_info_bin;

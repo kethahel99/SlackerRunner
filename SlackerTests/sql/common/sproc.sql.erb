@@ -1,0 +1,21 @@
+% params = options[:params]
+% sproc_name = options[:sproc_name]
+% out_params = options[:out_params]
+% out_param_count = out_params.count
+% out_param_vars = out_params.merge(out_params){|k, v| v.is_a?(Hash) ? v.to_a[0][0] : k}
+%
+delete from #OperationResult;
+%
+<% out_params.each do |param| %>
+declare @<%= out_param_vars[param[0]] %> <%= param[1].is_a?(Hash) ? param[1].to_a[0][1] : param[1] %>;
+<% end %>
+%
+exec <%= sproc_name %>
+<%= sproc_params(params, out_param_vars) %>;
+
+<% if out_param_count > 0 %>
+select
+<%   out_param_vars.each_with_index do |param, index| %>
+	@<%= param[1] %> as [<%= param[1] %>]<%= index < out_param_count - 1 ? ',' : ';' %>
+<%   end %>
+<% end %>

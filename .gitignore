@@ -4,6 +4,7 @@
 *.exe
 *.trx
 *.pdb
+*.suo
 
 # directories
 ###################
