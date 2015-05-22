@@ -5,13 +5,13 @@ This project is based on the Cucumber runner at Codeplex
 https://cukesfortfs.codeplex.com/
 
 
-Intro 
+Intro
 ============
 Slacker TFS / VS test runner.  Allows you to run Slacker tests from within Visual Studio and during Continuous Integration under TFS.  This is not a TestRunner, rather a process runner that can be run by UnitTests and will bring back number of failures and passed Slacker tests back to TFS.
 
 
 
-Slacker 
+Slacker
 ============
 https://github.com/vassilvk/slacker
 
@@ -31,3 +31,11 @@ set http_proxy=http://username:password@proxyserver:8080
 Open up a Ruby command prompt and type:
 
 gem install slacker
+
+
+
+Quick start
+============
+1. Open \SlackerTests\database.yml and put in your Ms Sql database and credentials.  The tests that ship with the solution are basic database system test and should run against empty database.
+
+2. Run the UnitTetss.
