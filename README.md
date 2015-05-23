@@ -38,4 +38,4 @@ Quick start
 ============
 1. Open \SlackerTests\database.yml and put in your Ms Sql database and credentials.  The tests that ship with the solution are basic database system test and should run against empty database.
 
-2. Run the UnitTetss.
+2. Run the UnitTests.
