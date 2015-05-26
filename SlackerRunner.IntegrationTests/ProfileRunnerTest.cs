@@ -13,11 +13,12 @@ namespace SlackerRunner.IntegrationTests
         private static string testPath = Path.Combine("..", "..", "..", "SlackerTests");
         
 
-        [TestMethod, ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void FileNotFoundThrows()
+        [TestMethod] 
+        public void FileNotFound()
         {
             string testDirectory = Path.GetFullPath(testPath);
             SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sample\filedoesnotexist.rb", "testoutput.txt");
+            Assert.IsFalse(SlackerResults.Passed, "Test should have failed.");
         }
 
         [TestMethod]

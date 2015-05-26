@@ -57,7 +57,12 @@ namespace SlackerRunner
                 where += Environment.NewLine.Length;
                 count++;
             }
-            return result.Substring(last, where - last - Environment.NewLine.Length );
+            
+            // Must have encountered error
+            if (where - last - Environment.NewLine.Length < 0)
+                return string.Empty;
+            else
+                return result.Substring(last, where - last - Environment.NewLine.Length );
         }
 
 
