@@ -25,16 +25,30 @@ namespace SlackerRunner
         /// <returns></returns>
         public SlackerResults Parse(string result, string standardError)
         {
+
+            // For safety 
+            if (standardError == null)
+                standardError = "";
+
             // Extract results 
-            _res = new SlackerResults
-            {
-                Header = getLine(result, 1),
-                Trace = getLine(result, 2),
-                Seconds = FindDouble("seconds", result, seconds),
-                FailedSpecs = FindInt(_FAILURE, result, FailedSpecs),
-                PassedSpecs = FindInt("examples", result, PassedSpecs) - FindInt(_FAILURE, result, FailedSpecs),
-                Passed = FindInt(_FAILURE, result, FailedSpecs) == 0 && string.IsNullOrEmpty(standardError)
-            };
+            _res = new SlackerResults();
+            // Fill it 
+            _res.Header = getLine(result, 1);
+            _res.Trace = getLine(result, 2);
+            _res.Seconds = FindDouble("seconds", result, seconds);
+            _res.FailedSpecs = FindInt(_FAILURE, result, FailedSpecs);
+            
+            // Check for error in result and standardError
+            bool error = Regex.IsMatch(result + standardError, "error", RegexOptions.IgnoreCase);
+            // If no failures found already, use that to communicate the error found
+            // in that case it's usually outside of a good run, like bad connection to the database
+            if (error && _res.FailedSpecs == 0 )
+                _res.FailedSpecs++;
+            
+            // Get passed and calculate
+            _res.PassedSpecs = FindInt("examples", result, PassedSpecs) - _res.FailedSpecs;
+            _res.Passed = _res.FailedSpecs == 0 && string.IsNullOrEmpty(standardError);
+
 
             // 
             return _res;

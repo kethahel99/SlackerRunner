@@ -35,6 +35,29 @@ namespace SlackerRunner.UnitTests
             return sb.ToString();
         }
 
+        private static string UnforseenError()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("Beachcomber ((local))");
+            sb.AppendLine("...");
+            sb.AppendLine(" ");
+            sb.AppendLine("ODBC::Error: 28000 (18456) [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'something'.");
+            sb.AppendLine("");
+            return sb.ToString();
+        }
+
+        [TestMethod]
+        public void ParseUnforseenError()
+        {
+            var resultsParser = new ResultsParser();
+            SlackerResults res = resultsParser.Parse(UnforseenError(), null);
+            // advertise what what the score is 
+            Console.WriteLine(res.getString());
+            // Proof it 
+            Assert.IsTrue(res.FailedSpecs > 0);
+            Assert.IsFalse( res.Passed );
+        }
+
         [TestMethod]
         public void ParseReturnsFailedSpecsWhenAllPassed()
         {
