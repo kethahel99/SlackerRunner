@@ -18,8 +18,8 @@ namespace SlackerRunner.UnitTests
             ProcessStartInfo processStartInfo = new ProcessStartInfoBuilder().Build(testDirectory, batchFileName, profile, outputFileName);
 
             Assert.AreEqual(processStartInfo.FileName, "cmd.exe");
-            Assert.AreEqual(processStartInfo.Arguments, "/c " + Path.Combine(testDirectory, batchFileName) + " " + profile + " " + outputFileName);
-            Assert.AreEqual(processStartInfo.WorkingDirectory, testDirectory);
+            Assert.AreEqual(processStartInfo.Arguments, "/c \"" + Path.Combine(testDirectory, batchFileName) + "\" " + profile + " " + outputFileName);
+            Assert.AreEqual(processStartInfo.WorkingDirectory, Path.GetDirectoryName(testDirectory) );
             Assert.IsFalse(processStartInfo.UseShellExecute);
             Assert.IsTrue(processStartInfo.RedirectStandardInput);
             Assert.IsTrue(processStartInfo.RedirectStandardOutput);

@@ -15,7 +15,7 @@ namespace SlackerRunner.IntegrationTests
         [TestMethod, Category("SmokeTestLive")]
         public void RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue()
         {
-            string testDirectory = Path.GetFullPath(testPath);
+            string testDirectory = Path.GetFullPath(testPath) + "\\";
             SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sample\sample1.rb", "testoutput.txt");
             Assert.IsTrue(SlackerResults.Passed, "Smoke tests failed for live, see smokeTestLive.txt for details.");
         }

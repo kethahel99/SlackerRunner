@@ -53,6 +53,14 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SlackerTests\spec\sample\sample1.rb">
+      <Link>ref\sample1.rb</Link>
+    </None>
+    <None Include="..\SlackerTests\spec\sample\sample2.rb">
+      <Link>ref\sample2.rb</Link>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

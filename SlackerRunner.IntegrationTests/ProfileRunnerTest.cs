@@ -16,23 +16,27 @@ namespace SlackerRunner.IntegrationTests
         [TestMethod] 
         public void FileNotFound()
         {
-            string testDirectory = Path.GetFullPath(testPath);
+            string testDirectory = Path.GetFullPath(testPath) + "\\";
             SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sample\filedoesnotexist.rb", "testoutput.txt");
+            // Proof 
             Assert.IsFalse(SlackerResults.Passed, "Test should have failed.");
+            Assert.IsTrue(SlackerResults.FailedSpecs == 1);
         }
 
         [TestMethod]
         public void TestFileSample1()
         {
-            string testDirectory = Path.GetFullPath(testPath);
+            string testDirectory = Path.GetFullPath(testPath) + "\\";
             SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sample\sample1.rb", "testoutput.txt");
+            // Proof
+            Assert.IsTrue(SlackerResults.PassedSpecs == 2);
             Assert.IsTrue(SlackerResults.Passed, "Test should have succeeded.");
         }
 
         [TestMethod]
         public void TestFileSample2()
         {
-            string testDirectory = Path.GetFullPath(testPath);
+            string testDirectory = Path.GetFullPath(testPath) + "\\";
             SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sample\sample2.rb", "testoutput.txt");
             // Proof it, 4 failures
             Assert.IsTrue( SlackerResults.FailedSpecs == 4);
