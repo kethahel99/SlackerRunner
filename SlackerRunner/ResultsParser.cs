@@ -63,6 +63,10 @@ namespace SlackerRunner
             int last= 0;
             int count = 0;
             
+            // Trap, no need to process empty string
+            if( result == string.Empty )
+                return string.Empty;
+
             // Retrive the line asked for, cut out line endings 
             while ( count != lineNumber)
             {

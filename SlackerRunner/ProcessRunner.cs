@@ -30,6 +30,10 @@ namespace SlackerRunner
 
                 StandardError = process.StandardError.ReadToEnd();
                 StandardOutput = process.StandardOutput.ReadToEnd();
+
+                // Advertise
+                if (StandardError != "")
+                    Console.WriteLine("Error=" + StandardError);
             }
         }
 

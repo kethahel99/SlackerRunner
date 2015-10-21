@@ -16,7 +16,7 @@ namespace SlackerRunner.IntegrationTests
         [TestMethod] 
         public void FileNotFound()
         {
-            string testDirectory = Path.GetFullPath(testPath) + "\\";
+            string testDirectory = Path.GetFullPath(testPath) +"\\";
             SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sample\filedoesnotexist.rb", "testoutput.txt");
             // Proof 
             Assert.IsFalse(SlackerResults.Passed, "Test should have failed.");
