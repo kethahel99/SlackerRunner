@@ -34,6 +34,17 @@ namespace SlackerRunner.IntegrationTests
         }
 
         [TestMethod]
+        public void TestFileSample1DirWithSpace()
+        {
+            string testDirectory = Path.GetFullPath(testPath) + "\\";
+            SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sam ple\sample1.rb", "testoutput.txt");
+            // Proof
+            Assert.IsTrue(SlackerResults.PassedSpecs == 2);
+            Assert.IsTrue(SlackerResults.Passed, "Test should have succeeded.");
+        }
+
+
+        [TestMethod]
         public void TestFileSample2()
         {
             string testDirectory = Path.GetFullPath(testPath) + "\\";
