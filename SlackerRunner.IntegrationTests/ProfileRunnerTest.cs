@@ -1,57 +1,63 @@
 ﻿//
 using System;
 using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 
 namespace SlackerRunner.IntegrationTests
 {
-    [TestClass]
+    
     public class ProfileRunnerTest
     {
-        // Relative path to test dir 
-        private static string testPath = Path.Combine("..", "..", "..", "SlackerTests");
-        
 
-        [TestMethod] 
+        [Fact] 
         public void FileNotFound()
         {
-            string testDirectory = Path.GetFullPath(testPath) +"\\";
-            SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sample\filedoesnotexist.rb", "testoutput.txt");
+            SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\filedoesnotexist.rb", "testoutput.txt");
             // Proof 
-            Assert.IsFalse(SlackerResults.Passed, "Test should have failed.");
-            Assert.IsTrue(SlackerResults.FailedSpecs == 1);
+            Assert.False(SlackerResults.Passed, "Test should have failed.");
+            Assert.True(SlackerResults.FailedSpecs == 1);
+            Assert.False( SlackerResults.PassedSpecs > 0 );
         }
 
-        [TestMethod]
+        [Fact]
         public void TestFileSample1()
         {
-            string testDirectory = Path.GetFullPath(testPath) + "\\";
-            SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sample\sample1.rb", "testoutput.txt");
+            SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb", "testoutput.txt");
             // Proof
-            Assert.IsTrue(SlackerResults.PassedSpecs == 2);
-            Assert.IsTrue(SlackerResults.Passed, "Test should have succeeded.");
+            Assert.True(SlackerResults.PassedSpecs == 2);
+            Assert.True(SlackerResults.Passed, "Test should have succeeded.");
         }
 
-        [TestMethod]
+        [Fact]
         public void TestFileSample1DirWithSpace()
         {
-            string testDirectory = Path.GetFullPath(testPath) + "\\";
-            SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sam ple\sample1.rb", "testoutput.txt");
+            SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sam ple\sample1.rb", "testoutput.txt");
             // Proof
-            Assert.IsTrue(SlackerResults.PassedSpecs == 2);
-            Assert.IsTrue(SlackerResults.Passed, "Test should have succeeded.");
+            Assert.True(SlackerResults.PassedSpecs == 2);
+            Assert.True(SlackerResults.Passed, "Test should have succeeded.");
         }
 
 
-        [TestMethod]
+        [Fact]
         public void TestFileSample2()
         {
-            string testDirectory = Path.GetFullPath(testPath) + "\\";
-            SlackerResults SlackerResults = new SlackerService().Run(testDirectory, "run.bat", @".\spec\sample\sample2.rb", "testoutput.txt");
+            SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample2.rb", "testoutput.txt");
             // Proof it, 4 failures
-            Assert.IsTrue( SlackerResults.FailedSpecs == 4);
-            Assert.IsFalse( SlackerResults.Passed, "Test should NOT have succeeded.");
+            Assert.True(SlackerResults.FailedSpecs == 4);
+            // and two passed
+            Assert.True(SlackerResults.PassedSpecs == 2);
+            // Overall not passed 
+            Assert.False(SlackerResults.Passed, "Test should NOT have succeeded.");
+        }
+
+        [Fact]
+        public void TestLongSubDirName()
+        {
+            SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"some_long_folder\below_that_long_folder_yet\and_this_one_longer_yet_for_long_name_testing\smpl.rb", "testoutput.txt");
+            // Proof it
+            Assert.True(SlackerResults.PassedSpecs == 2);
+            Assert.True(SlackerResults.Passed, "Test should have succeeded.");
         }
     }
 

@@ -1,13 +1,12 @@
 ﻿using System.Diagnostics;
 using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace SlackerRunner.UnitTests
 {
-    [TestClass]
     public class ProcessStartInfoBuilderTest
     {
-        [TestMethod]
+        [Fact]
         public void BuildReturnsStartInfoWithCorrectParameters()
         {
             const string testDirectory = "F://AutomatedTests/";
@@ -17,15 +16,15 @@ namespace SlackerRunner.UnitTests
 
             ProcessStartInfo processStartInfo = new ProcessStartInfoBuilder().Build(testDirectory, batchFileName, profile, outputFileName);
 
-            Assert.AreEqual(processStartInfo.FileName, "cmd.exe");
-            Assert.AreEqual(processStartInfo.Arguments, "/C " + batchFileName + " \"" + profile + "\" " + outputFileName);
-            Assert.AreEqual(processStartInfo.WorkingDirectory, Path.GetDirectoryName(testDirectory) );
-            Assert.IsFalse(processStartInfo.UseShellExecute);
-            Assert.IsFalse(processStartInfo.RedirectStandardInput);
-            Assert.IsTrue(processStartInfo.RedirectStandardOutput);
-            Assert.IsTrue(processStartInfo.RedirectStandardError);
-            Assert.AreEqual(processStartInfo.WindowStyle, ProcessWindowStyle.Hidden);
-            Assert.IsTrue(processStartInfo.CreateNoWindow);
+            Assert.Equal(processStartInfo.FileName, "cmd.exe");
+            Assert.Equal(processStartInfo.Arguments, "/C " + batchFileName + " \"" + profile + "\" " + outputFileName);
+            Assert.Equal(processStartInfo.WorkingDirectory, Path.GetDirectoryName(testDirectory) );
+            Assert.False(processStartInfo.UseShellExecute);
+            Assert.False(processStartInfo.RedirectStandardInput);
+            Assert.True(processStartInfo.RedirectStandardOutput);
+            Assert.True(processStartInfo.RedirectStandardError);
+            Assert.Equal(processStartInfo.WindowStyle, ProcessWindowStyle.Hidden);
+            Assert.True(processStartInfo.CreateNoWindow);
         }
     }
 }

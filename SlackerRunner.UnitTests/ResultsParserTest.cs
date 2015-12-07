@@ -2,13 +2,11 @@
 using System;
 using System.Text;
 //
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using Xunit;
 
 
 namespace SlackerRunner.UnitTests
 {
-    [TestClass]
     public class ResultsParserTest
     {
         private static string ResultSomeFailed()
@@ -19,6 +17,19 @@ namespace SlackerRunner.UnitTests
             sb.AppendLine(" ");
             sb.AppendLine("Finished in 0.11845 seconds");
             sb.AppendLine("3 examples, 1 failure");
+            sb.AppendLine("");
+            return sb.ToString();
+        }
+
+
+        private static string ResultOnePassed()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("Beachcomber ((local))");
+            sb.AppendLine("...");
+            sb.AppendLine(" ");
+            sb.AppendLine("Finished in 0.11845 seconds");
+            sb.AppendLine("1 example, 0 failures");
             sb.AppendLine("");
             return sb.ToString();
         }
@@ -46,7 +57,7 @@ namespace SlackerRunner.UnitTests
             return sb.ToString();
         }
 
-        [TestMethod]
+        [Fact]
         public void ParseUnforseenError()
         {
             var resultsParser = new ResultsParser();
@@ -54,11 +65,11 @@ namespace SlackerRunner.UnitTests
             // advertise what what the score is 
             Console.WriteLine(res.getString());
             // Proof it 
-            Assert.IsTrue(res.FailedSpecs > 0);
-            Assert.IsFalse( res.Passed );
+            Assert.True(res.FailedSpecs > 0);
+            Assert.False( res.Passed );
         }
 
-        [TestMethod]
+        [Fact]
         public void ParseReturnsFailedSpecsWhenAllPassed()
         {
             var resultsParser = new ResultsParser();
@@ -66,11 +77,24 @@ namespace SlackerRunner.UnitTests
             // advertise what what the score is 
             Console.WriteLine(res.getString());
             // Proof it 
-            Assert.AreEqual(res.FailedSpecs, 0);
-            Assert.AreEqual(res.PassedSpecs, 3);
+            Assert.Equal(res.FailedSpecs, 0);
+            Assert.Equal(res.PassedSpecs, 3);
         }
 
-        [TestMethod]
+        [Fact]
+        public void ParseReturnsFailedSpecsWhenOnePassed()
+        {
+            var resultsParser = new ResultsParser();
+            SlackerResults res = resultsParser.Parse(ResultOnePassed(), null);
+            // advertise what what the score is 
+            Console.WriteLine(res.getString());
+            // Proof it 
+            Assert.Equal(res.FailedSpecs, 0);
+            Assert.Equal(res.PassedSpecs, 1);
+        }
+
+
+        [Fact]
         public void ParseReturnsFailedSpecsWhenSomeFailed()
         {
             var resultsParser = new ResultsParser();
@@ -78,40 +102,40 @@ namespace SlackerRunner.UnitTests
             // advertise what what the score is 
             Console.WriteLine(res.getString());
             // Proof it 
-            Assert.AreEqual(res.FailedSpecs, 1);
-            Assert.AreEqual(res.PassedSpecs, 2);
+            Assert.Equal(res.FailedSpecs, 1);
+            Assert.Equal(res.PassedSpecs, 2);
         }
 
-        [TestMethod]
+        [Fact]
         public void ParseReturnsFalseWhenStandardErrorNotNull()
         {
             var resultsParser = new ResultsParser();
             SlackerResults SlackerResults = resultsParser.Parse(ResultAllPassed(), "StandardError");
-            Assert.IsFalse(SlackerResults.Passed);
+            Assert.False(SlackerResults.Passed);
         }
 
-        [TestMethod]
+        [Fact]
         public void ValidateReturnsFalseWhenOutResultsHaveFailedScenario()
         {
             var resultsParser = new ResultsParser();
             SlackerResults SlackerResults = resultsParser.Parse(ResultSomeFailed(), "StandardError");
-            Assert.IsFalse(SlackerResults.Passed);
+            Assert.False(SlackerResults.Passed);
         }
 
-        [TestMethod]
+        [Fact]
         public void ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsEmpty()
         {
             var resultsParser = new ResultsParser();
             SlackerResults SlackerResults = resultsParser.Parse(ResultAllPassed(), "");
-            Assert.IsTrue(SlackerResults.Passed);
+            Assert.True(SlackerResults.Passed);
         }
 
-        [TestMethod]
+        [Fact]
         public void ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsNull()
         {
             var resultsParser = new ResultsParser();
             SlackerResults SlackerResults = resultsParser.Parse(ResultAllPassed(), null);
-            Assert.IsTrue(SlackerResults.Passed);
+            Assert.True(SlackerResults.Passed);
         }
     }
 }

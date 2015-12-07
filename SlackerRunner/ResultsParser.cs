@@ -12,7 +12,7 @@ namespace SlackerRunner
         const string _FAILURE = "failure";
         readonly Regex seconds = new Regex(@"(?<seconds>\d+(.\d+)?)\sseconds", RegexOptions.Compiled);
         readonly Regex FailedSpecs = new Regex(@"(?<failure>\d+)\sfailure", RegexOptions.Compiled);
-        readonly Regex PassedSpecs = new Regex(@"(?<examples>\d+)\sexamples", RegexOptions.Compiled);
+        readonly Regex PassedSpecs = new Regex(@"(?<example>\d+)\sexample", RegexOptions.Compiled);
         //
         private SlackerResults _res = new SlackerResults();
 
@@ -46,7 +46,7 @@ namespace SlackerRunner
                 _res.FailedSpecs++;
             
             // Get passed and calculate
-            _res.PassedSpecs = FindInt("examples", result, PassedSpecs) - _res.FailedSpecs;
+            _res.PassedSpecs = FindInt("example", result, PassedSpecs) - _res.FailedSpecs;
             _res.Passed = _res.FailedSpecs == 0 && string.IsNullOrEmpty(standardError);
 
 

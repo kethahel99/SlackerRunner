@@ -1,4 +1,4 @@
-# Method "describe" opens up an example group.
+﻿# Method "describe" opens up an example group.
 
 describe 'My database' do
   # Simple inline query example.

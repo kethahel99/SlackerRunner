@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using Rhino.Mocks;
 
 namespace SlackerRunner.UnitTests
 {
-    [TestClass]
+    
     public class SlackerServiceTest
     {
-        [TestMethod]
+        [Fact]
         public void RunCallsProfileRunnerAndUsesImpersonationWithUserDetails()
         {
             var user = new User();
@@ -26,7 +26,7 @@ namespace SlackerRunner.UnitTests
             profileRunner.VerifyAllExpectations();
         }
 
-        [TestMethod]
+        [Fact]
         public void RunCallsProfileRunner()
         {
             var profileRunner = MockRepository.GenerateMock<IProfileRunner>();

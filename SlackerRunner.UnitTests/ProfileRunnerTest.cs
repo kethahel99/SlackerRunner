@@ -1,9 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 using Rhino.Mocks;
 
 namespace SlackerRunner.UnitTests
 {
-    [TestClass]
     public class ProfileRunnerTest
     {
         private const string Profile = "profile";
@@ -13,7 +12,7 @@ namespace SlackerRunner.UnitTests
         private const string BatchFileName = "run.bat";
         private const string OutputFileName = "output.txt";
 
-        [TestMethod]
+        [Fact]
         public void RunCallsProcessRunnerAndResultsValidatorAndSetsPassedToTrueWhenValid()
         {
             var SlackerResults = new SlackerResults();
@@ -27,29 +26,29 @@ namespace SlackerRunner.UnitTests
             var SlackerService = new ProfileRunner(processRunner, resultsParser, FileCreator, ReadOutputFile, LogResults);
             SlackerResults SlackerResultsReturned = SlackerService.Run(TestDirectory, BatchFileName, Profile, OutputFileName);
 
-            Assert.AreSame(SlackerResults, SlackerResultsReturned);
+            Assert.Same(SlackerResults, SlackerResultsReturned);
             processRunner.VerifyAllExpectations();
         }
 
         private static void FileCreator(string testDirectory, string outputFileName)
         {
-            Assert.AreEqual(testDirectory, TestDirectory);
-            Assert.AreEqual(outputFileName, OutputFileName);
+            Assert.Equal(testDirectory, TestDirectory);
+            Assert.Equal(outputFileName, OutputFileName);
         }
 
 
         private static void LogResults(string testDirectory, string outputFileName, string standardError, string standardOutput)
         {
-            Assert.AreEqual(testDirectory, TestDirectory);
-            Assert.AreEqual(outputFileName, OutputFileName);
-            Assert.AreEqual(standardError, StandardError);
-            Assert.AreEqual(standardOutput, StandardOutput);
+            Assert.Equal(testDirectory, TestDirectory);
+            Assert.Equal(outputFileName, OutputFileName);
+            Assert.Equal(standardError, StandardError);
+            Assert.Equal(standardOutput, StandardOutput);
         }
 
         private static string ReadOutputFile(string testDirectory, string outputFileName)
         {
-            Assert.AreEqual(testDirectory, TestDirectory);
-            Assert.AreEqual(outputFileName, OutputFileName);
+            Assert.Equal(testDirectory, TestDirectory);
+            Assert.Equal(outputFileName, OutputFileName);
 
             return TestDirectory + OutputFileName;
         }
