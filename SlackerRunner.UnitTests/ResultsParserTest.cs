@@ -16,7 +16,7 @@ namespace SlackerRunner.UnitTests
             sb.AppendLine("............FFF............");
             sb.AppendLine(" ");
             sb.AppendLine("Finished in 0.11845 seconds");
-            sb.AppendLine("24 examples, 3 failure");
+            sb.AppendLine("27 examples, 3 failure");
             sb.AppendLine("");
             return sb.ToString();
         }
@@ -104,7 +104,7 @@ namespace SlackerRunner.UnitTests
             Console.WriteLine(res.getString());
             // Proof it 
             Assert.Equal(res.FailedSpecs, 3);
-            Assert.Equal(res.PassedSpecs, 21);
+            Assert.Equal(res.PassedSpecs, 24);
         }
 
         [Fact]
