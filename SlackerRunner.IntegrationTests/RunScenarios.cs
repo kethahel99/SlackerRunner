@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.IO;
+using System.Diagnostics;
 using Xunit;
 
 namespace SlackerRunner.IntegrationTests
@@ -10,6 +11,7 @@ namespace SlackerRunner.IntegrationTests
     {
 
         [Fact, Category("SmokeTestLive")]
+        //[Fact]
         public void RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue()
         {
             SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb", "testoutput.txt");
@@ -25,5 +27,18 @@ namespace SlackerRunner.IntegrationTests
             new SlackerService().Run(testDirectory, "run.bat", "passingProfile", "testoutput.txt", user);
         }
         */
+
+      [Fact]
+      public void CheckSlackerExitCode()
+      {
+        var startInfo = new ProcessStartInfo("slacker");
+        startInfo.WorkingDirectory = @"C:\work\_solvas\put slacker runner here\SlackerRunner\SlackerTests\";
+        Process proc = Process.Start(startInfo);
+        proc.WaitForExit();
+        Assert.True( proc.ExitCode != 0);
+      }
+
+
+
     }
 }
