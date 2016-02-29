@@ -10,25 +10,30 @@ namespace SlackerRunner.IntegrationTests
     public class RunScenarios
     {
 
-        [Fact, Category("SmokeTestLive")]
-        //[Fact]
-        public void RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue()
-        {
-            SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb", "testoutput.txt");
-            Assert.True(SlackerResults.Passed, "Smoke tests failed for live, see smokeTestLive.txt for details.");
-        }
-        
-        /*
-        [Fact, Category("SmokeTestLive"), ExpectedException(typeof(Win32Exception))]
-        public void RunWithPassingProfileForSmokeTestLiveBuildErrorsWithInvalidUser()
-        {
-            string testDirectory = Path.GetFullPath(testPath);
-            var user = new User { Domain = "InvalidDomain", Name = "InvalidName", Password = "InvalidPassword" };
-            new SlackerService().Run(testDirectory, "run.bat", "passingProfile", "testoutput.txt", user);
-        }
-        */
-
+      // [Fact, Category("SmokeTestLive")]
       [Fact]
+      public void RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue()
+      {
+          SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb", "testoutput.txt");
+          Assert.True(SlackerResults.Passed, "Smoke tests failed for live, see smokeTestLive.txt for details.");
+      }
+
+        
+      [Fact]
+      public void RunWithPassingProfileForSmokeTestLiveBuildErrorsWithInvalidUser()
+      {
+          string testDirectory = Path.GetFullPath(SpecsTester.RUN_TEST_DIR);
+          var user = new User { Domain = "InvalidDomain", Name = "InvalidName", Password = "InvalidPassword" };
+          var exception = Record.Exception(() =>
+          {
+            new SlackerService().Run(testDirectory, "run.bat", "passingProfile", "testoutput.txt", user);
+          });
+          Assert.IsAssignableFrom<Win32Exception>(exception);
+          Assert.Equal( "The user name or password is incorrect", exception.Message );
+      }
+
+
+      [Fact(Skip ="NotReady")]
       public void CheckSlackerExitCode()
       {
         var startInfo = new ProcessStartInfo("slacker");

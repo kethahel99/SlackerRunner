@@ -13,10 +13,10 @@ namespace SlackerRunner.UnitTests
         {
             var sb = new StringBuilder();
             sb.AppendLine("Beachcomber ((local))");
-            sb.AppendLine("............FFF............*");
+            sb.AppendLine("............FFF............");
             sb.AppendLine(" ");
             sb.AppendLine("Finished in 0.11845 seconds");
-            sb.AppendLine("3 examples, 0 failure");
+            sb.AppendLine("24 examples, 3 failure");
             sb.AppendLine("");
             return sb.ToString();
         }
@@ -94,6 +94,7 @@ namespace SlackerRunner.UnitTests
         }
 
 
+        // This is the main parser test 
         [Fact]
         public void ParseReturnsFailedSpecsWhenSomeFailed()
         {
@@ -102,8 +103,8 @@ namespace SlackerRunner.UnitTests
             // advertise what what the score is 
             Console.WriteLine(res.getString());
             // Proof it 
-            Assert.Equal(res.FailedSpecs, 1);
-            Assert.Equal(res.PassedSpecs, 2);
+            Assert.Equal(res.FailedSpecs, 3);
+            Assert.Equal(res.PassedSpecs, 21);
         }
 
         [Fact]
