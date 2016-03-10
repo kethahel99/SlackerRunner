@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace SlackerRunner
 {
@@ -9,6 +10,7 @@ namespace SlackerRunner
 
         public ProcessRunner(IProcessStartInfoBuilder processStartInfoBuilder, Func<IProcess> processCreator)
         {
+            Console.WriteLine("Slacker runner, version=" + RuntimeVersion.GetVersion() );
             this.processStartInfoBuilder = processStartInfoBuilder;
             this.processCreator = processCreator;
         }

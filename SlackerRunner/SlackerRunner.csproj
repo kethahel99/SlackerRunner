@@ -50,6 +50,7 @@
     <Compile Include="ProfileRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultsParser.cs" />
+    <Compile Include="RuntimeVersion.cs" />
     <Compile Include="SlackerResults.cs" />
     <Compile Include="SlackerService.cs" />
     <Compile Include="User.cs" />
