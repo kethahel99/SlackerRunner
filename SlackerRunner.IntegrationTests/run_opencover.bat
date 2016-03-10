@@ -1,0 +1,1 @@
+build_tools\OpenCover.4.6.166\tools\OpenCover.Console.exe  (-register:"user" -target:"build_tools\xunit_console_runner\xunit.console.exe" "-targetargs: bin\Debug\SlackerRunner.IntegrationTests.dll -noshadow -nunit open_xunit_results.xml" -output:coverage.xml
