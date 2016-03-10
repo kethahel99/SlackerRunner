@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+  <Modules>
+    <Module skippedDueTo="Filter" hash="8E-E0-99-57-5F-F7-A4-02-65-0C-A5-EE-EE-E0-FE-C3-21-02-44-92">
+      <FullName>C:\WINDOWS\assembly\GAC_32\mscorlib\2.0.0.0__b77a5c561934e089\mscorlib.dll</FullName>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="F9-04-A8-31-CD-FB-23-72-95-63-5D-14-9A-A0-66-8E-7F-44-93-7A">
+      <FullName>C:\WINDOWS\assembly\GAC_32\mscorlib\2.0.0.0__b77a5c561934e089\sorttbls.nlp</FullName>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="6E-30-2E-50-36-FB-60-2C-8E-50-C0-83-54-8B-CC-EA-A8-91-B6-CC">
+      <FullName>C:\WINDOWS\assembly\GAC_32\mscorlib\2.0.0.0__b77a5c561934e089\sortkey.nlp</FullName>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="D9-51-D2-3D-8C-16-B3-35-50-E2-97-23-20-65-AF-AE-3E-3C-3D-FC">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\nunit-console-x86.exe</FullName>
+      <ModuleName>nunit-console-x86</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="F2-ED-FF-09-01-C9-D7-BC-29-AC-A6-93-C5-97-8A-0D-43-DD-8D-F2">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit-console-runner.dll</FullName>
+      <ModuleName>nunit-console-runner</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="36-B9-FF-C0-07-EA-59-4D-23-2E-FD-CD-5A-45-CF-C0-2C-42-2A-98">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.dll</FullName>
+      <ModuleName>nunit.core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="14-C3-4B-3E-39-7A-EE-C0-B9-2F-83-44-2F-04-8A-F7-48-7B-67-DE">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit.util.dll</FullName>
+      <ModuleName>nunit.util</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="5E-95-A6-AD-88-48-98-B1-62-7F-4E-5A-C1-0E-F3-B7-85-56-44-E8">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.interfaces.dll</FullName>
+      <ModuleName>nunit.core.interfaces</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="55-BA-A4-A1-F6-E9-77-45-55-59-ED-C2-F7-90-65-6A-E2-0A-F0-D1">
+      <FullName>C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</FullName>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="5B-58-14-72-A0-28-85-4B-B5-A1-BA-11-BB-9D-9D-05-65-A3-5E-54">
+      <FullName>C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll</FullName>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="06-27-0C-FC-C3-23-F5-AA-2C-D5-FE-4B-08-2E-CE-01-09-7B-2F-D1">
+      <FullName>C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll</FullName>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="CB-29-2C-91-2E-AE-28-D8-A5-84-C7-B9-DB-F2-0B-51-CC-CD-72-80">
+      <FullName>C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll</FullName>
+      <ModuleName>System.Runtime.Remoting</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="A6-15-3E-19-99-17-0F-DA-B2-A8-9F-43-BD-42-2D-79-C3-56-53-54">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</FullName>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="29-BC-32-15-21-E8-F9-6D-87-31-AF-AD-0B-21-31-A6-BB-2F-E4-00">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\nunit-agent-x86.exe</FullName>
+      <ModuleName>nunit-agent-x86</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="36-B9-FF-C0-07-EA-59-4D-23-2E-FD-CD-5A-45-CF-C0-2C-42-2A-98">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.dll</FullName>
+      <ModuleName>nunit.core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="14-C3-4B-3E-39-7A-EE-C0-B9-2F-83-44-2F-04-8A-F7-48-7B-67-DE">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit.util.dll</FullName>
+      <ModuleName>nunit.util</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="5E-95-A6-AD-88-48-98-B1-62-7F-4E-5A-C1-0E-F3-B7-85-56-44-E8">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.interfaces.dll</FullName>
+      <ModuleName>nunit.core.interfaces</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="31-4C-59-B7-5C-AF-0C-72-D6-7E-ED-4D-87-55-B7-49-31-7E-69-0F">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</FullName>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="E0-F1-79-63-0F-43-2B-D0-42-64-3B-65-A6-A2-45-73-1F-DD-FC-3F">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Remoting\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll</FullName>
+      <ModuleName>System.Runtime.Remoting</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="AD-56-8F-5F-20-FC-6D-01-BA-F5-88-25-06-84-53-56-62-E9-A7-DA">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</FullName>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2E-7C-50-4B-F1-9F-44-D6-53-A0-86-3B-B1-FC-68-7E-74-0B-0F-A3">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</FullName>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="3C-2F-D5-5A-62-D9-E8-75-DD-B1-5E-F6-CF-7E-C8-B9-DD-96-DB-A6">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</FullName>
+      <ModuleName>System.Web</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="A0-DB-04-6A-C0-30-DF-0D-03-D3-79-7B-95-DB-86-60-21-70-6C-41">
+      <FullName>C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll</FullName>
+      <ModuleName>System.Web</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="36-B9-FF-C0-07-EA-59-4D-23-2E-FD-CD-5A-45-CF-C0-2C-42-2A-98">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.dll</FullName>
+      <ModuleName>nunit.core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="31-4C-59-B7-5C-AF-0C-72-D6-7E-ED-4D-87-55-B7-49-31-7E-69-0F">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</FullName>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="53-25-23-C6-63-70-35-C6-0C-82-04-1A-0A-BF-1A-E7-1F-EA-74-A3">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\pnunit.framework.dll</FullName>
+      <ModuleName>pnunit.framework</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="21-69-E9-47-C6-F8-02-12-31-E6-18-DE-8E-43-24-C9-AB-F7-C2-BE">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\pnunit-agent.exe</FullName>
+      <ModuleName>pnunit-agent</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="5E-95-A6-AD-88-48-98-B1-62-7F-4E-5A-C1-0E-F3-B7-85-56-44-E8">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.interfaces.dll</FullName>
+      <ModuleName>nunit.core.interfaces</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="6F-B0-CF-EA-D1-13-C4-0B-14-D0-76-B2-5A-50-51-D6-F4-4B-56-5B">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\OpenCover.4.6.166\SampleSln\BomTest\bin\Debug\BomTest.dll</FullName>
+      <ModuleName>BomTest</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="A2-D0-DB-C9-20-FB-37-90-D4-D6-25-E5-C4-7B-E0-42-CA-32-C0-51">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\OpenCover.4.6.166\SampleSln\BomTest\bin\Debug\nunit.framework.dll</FullName>
+      <ModuleName>nunit.framework</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="F2-ED-FF-09-01-C9-D7-BC-29-AC-A6-93-C5-97-8A-0D-43-DD-8D-F2">
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\NUnit.Runners.2.6.4\tools\lib\nunit-console-runner.dll</FullName>
+      <ModuleName>nunit-console-runner</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="E0-F1-79-63-0F-43-2B-D0-42-64-3B-65-A6-A2-45-73-1F-DD-FC-3F">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Remoting\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll</FullName>
+      <ModuleName>System.Runtime.Remoting</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="AD-56-8F-5F-20-FC-6D-01-BA-F5-88-25-06-84-53-56-62-E9-A7-DA">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</FullName>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2E-7C-50-4B-F1-9F-44-D6-53-A0-86-3B-B1-FC-68-7E-74-0B-0F-A3">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</FullName>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module hash="9F-03-05-46-86-38-A9-45-C6-66-A4-2A-24-66-13-B0-0B-CD-62-01">
+      <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+      <FullName>C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\OpenCover.4.6.166\SampleSln\BomTest\bin\Debug\Bom.dll</FullName>
+      <ModuleName>Bom</ModuleName>
+      <Files>
+        <File uid="1" fullPath="C:\work\_solvas\zzTFS_2015\xTest\TestWebSite\packages\OpenCover.4.6.166\SampleSln\Bom\BomManager.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>&lt;Module&gt;</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>Bom.BomManager</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.Int32 Bom.BomManager::MethodToTest(System.Collections.Generic.IEnumerable`1&lt;System.Int32&gt;)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="5" uspid="1" ordinal="0" offset="0" sl="13" sc="9" el="13" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="2" ordinal="1" offset="1" sl="14" sc="13" el="14" ec="53" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="5" uspid="3" ordinal="2" offset="20" sl="15" sc="9" el="15" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="4" ordinal="0" offset="3" sl="14" path="0" offsetend="5" fileid="1" />
+                <BranchPoint vc="4" uspid="5" ordinal="1" offset="3" sl="14" path="1" offsetend="12" fileid="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="5" uspid="1" ordinal="0" offset="0" sl="13" sc="9" el="13" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663298</MetadataToken>
+              <Name>System.Void Bom.BomManager::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="5" uspid="6" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+    <Module skippedDueTo="Filter" hash="B7-10-4F-1B-6D-57-21-B9-85-03-68-4E-D4-19-A6-00-93-3C-4E-7D">
+      <FullName>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</FullName>
+      <ModuleName>System.Core</ModuleName>
+      <Classes />
+    </Module>
+  </Modules>
+</CoverageSession>
