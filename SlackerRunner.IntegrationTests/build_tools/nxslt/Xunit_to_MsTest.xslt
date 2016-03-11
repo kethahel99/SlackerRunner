@@ -48,30 +48,25 @@
             <ResultSummary>
                 <xsl:attribute name="outcome">
                     <xsl:choose>
-                        <xsl:when test="/assembly/@failed &gt; 0">Failed</xsl:when>
+                        <xsl:when test="/assemblies/assembly/collection/@failed &gt; 0">Failed</xsl:when>
                         <xsl:otherwise>Completed</xsl:otherwise>
                     </xsl:choose>
                 </xsl:attribute>
                 <Counters error="0" timeout="0" aborted="0" passedButRunAborted="0" notRunnable="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0">
                     <xsl:attribute name="total">
-                        <xsl:value-of select="/assembly/@total"/>
+                        <xsl:value-of select="/assemblies/assembly/collection/@total"/>
                     </xsl:attribute>
                     <xsl:attribute name="executed">
-                        <!--
-                        Fixit orn 
-                        <xsl:value-of select="/assembly/@total – /assembly/@skipped"/>
-                        -->
-                      
-                       <xsl:value-of select="/assembly/@total"/>
+                      <xsl:value-of select="/assemblies/assembly/collection/@total - /assemblies/assembly/collection/@skipped"/>
                     </xsl:attribute>
                     <xsl:attribute name="notExecuted">
-                        <xsl:value-of select="/assembly/@skipped"/>
+                        <xsl:value-of select="/assemblies/assembly/collection/@skipped"/>
                     </xsl:attribute>
                     <xsl:attribute name="passed">
-                        <xsl:value-of select="/assembly/@passed"/>
+                        <xsl:value-of select="/assemblies/assembly/collection/@passed"/>
                     </xsl:attribute>
                     <xsl:attribute name="failed">
-                        <xsl:value-of select="/assembly/@failed"/>
+                        <xsl:value-of select="/assemblies/assembly/collection/@failed"/>
                     </xsl:attribute>
                     <xsl:attribute name="inconclusive">
                         <xsl:value-of select="'0'"/>
@@ -187,8 +182,10 @@
                             <xsl:call-template name="secondsToDuration">
                                 <xsl:with-param name="seconds" select="@time"/>
                             </xsl:call-template>
+                            <xsl:value-of select="@time"/>
                             -->
-                          <xsl:value-of select="@time"/>
+                          
+                          <xsl:value-of select='format-number(@time, "00:00:00.0000000")' />
                         </xsl:attribute>
                         <xsl:attribute name="testId">
                             <xsl:call-template name="testIdGuid">
