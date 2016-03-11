@@ -54,7 +54,7 @@ namespace SlackerRunner.IntegrationTests
     }
 
     // Testing failure 
-    [Fact]
+    //[Fact]
     [Fact(Skip ="Acivate by hand when neeeded, to test failure bahaviour")]  
     public void TestFileNotPassing3()
     {

@@ -58,7 +58,6 @@
     <None Include="packages.config" />
     <None Include="run_opencover.bat" />
     <None Include="run_xunit.bat" />
-    <None Include="test.trx" />
     <ProjectReference Include="..\SlackerRunner\SlackerRunner.csproj">
       <Name>SlackerRunner</Name>
       <Project>{28BB7D57-4BD7-4298-9FCF-7375C87401E3}</Project>

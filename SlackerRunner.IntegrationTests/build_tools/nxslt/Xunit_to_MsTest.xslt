@@ -161,13 +161,13 @@
                 <xsl:for-each select="//test">
                     <xsl:variable name="pos" select="position()" />
                     <UnitTestResult testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
-            <xsl:attribute name="startTime">
-              <xsl:value-of select="$startDateTime"/>
-            </xsl:attribute>
-            <xsl:attribute name="endTime">
-              <xsl:value-of select="$startDateTime"/>
-            </xsl:attribute>
-            <xsl:attribute name="testName">
+                      <xsl:attribute name="startTime">
+                        <xsl:value-of select="$startDateTime"/>
+                      </xsl:attribute>
+                      <xsl:attribute name="endTime">
+                        <xsl:value-of select="$startDateTime"/>
+                      </xsl:attribute>
+                        <xsl:attribute name="testName">
                             <xsl:value-of select="@method"/>
                         </xsl:attribute>
                         <xsl:attribute name="computerName">
