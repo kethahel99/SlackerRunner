@@ -9,7 +9,7 @@
     </xsl:variable>
 
   <xsl:variable name="startDateTime">
-    <xsl:value-of select="concat(/assembly/@run-date, 'T', /assembly/@run-time)"/>
+    <xsl:value-of select="concat(/assemblies/assembly/@run-date, 'T', /assemblies/assembly/@run-time)"/>
   </xsl:variable>
 
   <!-- Set computer name and userName once so we can re-use. Hard coded until we can get the values passed -->
@@ -74,7 +74,6 @@
                 </Counters>
                 <RunInfos />
             </ResultSummary>
-      <!--
         <Times>
         <xsl:attribute name="creation">
           <xsl:value-of select="$startDateTime"/>
@@ -89,7 +88,6 @@
           <xsl:value-of select="$startDateTime"/>
         </xsl:attribute>
       </Times>
-      -->
             <TestDefinitions>
                 <xsl:for-each select="//test">
                     <xsl:variable name="pos" select="position()" />
@@ -163,14 +161,12 @@
                 <xsl:for-each select="//test">
                     <xsl:variable name="pos" select="position()" />
                     <UnitTestResult testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
-            <!--
             <xsl:attribute name="startTime">
               <xsl:value-of select="$startDateTime"/>
             </xsl:attribute>
             <xsl:attribute name="endTime">
               <xsl:value-of select="$startDateTime"/>
             </xsl:attribute>
-            -->
             <xsl:attribute name="testName">
                             <xsl:value-of select="@method"/>
                         </xsl:attribute>
@@ -178,13 +174,6 @@
                             <xsl:value-of select="$computerName"/>
                         </xsl:attribute>
                         <xsl:attribute name="duration">
-                          <!--
-                            <xsl:call-template name="secondsToDuration">
-                                <xsl:with-param name="seconds" select="@time"/>
-                            </xsl:call-template>
-                            <xsl:value-of select="@time"/>
-                            -->
-                          
                           <xsl:value-of select='format-number(@time, "00:00:00.0000000")' />
                         </xsl:attribute>
                         <xsl:attribute name="testId">
@@ -211,6 +200,9 @@
                             </xsl:choose>
                         </xsl:attribute>
                         <Output>
+                            <!--
+                            <xsl:value-of select="./output"/>
+                            -->
                             <xsl:for-each select="./failure">
                                 <ErrorInfo>
                                     <Message>
