@@ -192,27 +192,27 @@
                   <xsl:value-of select="'Passed'"/>
                 </xsl:when>
                 <xsl:when test="@result='Fail'">
-                                    <xsl:value-of select="'Failed'"/>
+                  <xsl:value-of select="'Failed'"/>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:value-of select="'NotExecuted'"/>
+                <xsl:value-of select="'NotExecuted'"/>
                 </xsl:otherwise>
-                            </xsl:choose>
-                        </xsl:attribute>
+                </xsl:choose>
+                </xsl:attribute>
                         <Output>
-                            <!--
+                          <StdOut>
                             <xsl:value-of select="./output"/>
-                            -->
-                            <xsl:for-each select="./failure">
-                                <ErrorInfo>
-                                    <Message>
-                                        <xsl:value-of select="./message"/>
-                                    </Message>
-                                    <StackTrace>
-                                      <xsl:value-of select="./stack-trace"/>
-                                    </StackTrace>
-                                </ErrorInfo>
-                            </xsl:for-each>
+                          </StdOut>
+                          <xsl:for-each select="./failure">
+                            <ErrorInfo>
+                              <Message>
+                                <xsl:value-of select="./message"/>
+                              </Message>
+                              <StackTrace>
+                                <xsl:value-of select="./stack-trace"/>
+                              </StackTrace>
+                            </ErrorInfo>
+                          </xsl:for-each>
                         </Output>
                     </UnitTestResult>
                 </xsl:for-each>
