@@ -47,13 +47,18 @@
     <Compile Include="SpecsTester.cs" />
     <Compile Include="SpecsTesterResolver.cs" />
     <Compile Include="SpecTestFile.cs" />
+    <Content Include="xunit_results.xml" />
     <None Include="..\SlackerTests\spec\sample\sample1.rb">
       <Link>ref\sample1.rb</Link>
     </None>
     <None Include="..\SlackerTests\spec\sample\sample2.rb">
       <Link>ref\sample2.rb</Link>
     </None>
+    <None Include="conver_xunit_to_trx.bat" />
     <None Include="packages.config" />
+    <None Include="run_opencover.bat" />
+    <None Include="run_xunit.bat" />
+    <None Include="test.trx" />
     <ProjectReference Include="..\SlackerRunner\SlackerRunner.csproj">
       <Name>SlackerRunner</Name>
       <Project>{28BB7D57-4BD7-4298-9FCF-7375C87401E3}</Project>
