@@ -200,34 +200,12 @@
                 </xsl:choose>
                 </xsl:attribute>
                         <Output>
-                          <DebugTrace>
-                            Debug Trace
+                          <xsl:variable name="theoutput">
                             <xsl:value-of select="./output"/>
-                          </DebugTrace>
+                          </xsl:variable>
                           <StdOut>
-                            StdOut
-                            <xsl:value-of select="./output"/>
+                            <xsl:value-of select="$theoutput"/>
                           </StdOut>
-                          <StdErr>
-                            StdErr
-                            <xsl:value-of select="./output"/>
-                          </StdErr>
-                          <TextMessages>
-                            TextMsg
-                            <xsl:value-of select="./output"/>
-                          </TextMessages>
-                          <TraceInfo>
-                            TraceInfo
-                            <xsl:value-of select="./output"/>
-                          </TraceInfo>
-                          <ErrorInfo>
-                            ErrorInfo
-                            <xsl:value-of select="./output"/>
-                          </ErrorInfo>
-                          <Exception>
-                            Exception
-                            <xsl:value-of select="./output"/>
-                          </Exception>
                           <xsl:for-each select="./failure">
                             <ErrorInfo>
                               <Message>
@@ -235,6 +213,8 @@
                               </Message>
                               <StackTrace>
                                 <xsl:value-of select="./stack-trace"/>
+                                ---
+                                <xsl:value-of select="$theoutput"/>
                               </StackTrace>
                             </ErrorInfo>
                           </xsl:for-each>
