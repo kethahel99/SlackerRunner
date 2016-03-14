@@ -119,7 +119,7 @@
                         </Execution>
                         <TestMethod adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" >
                             <xsl:attribute name="name">
-                                <xsl:value-of select="@method"/>
+                                <xsl:value-of select="@name"/>
                             </xsl:attribute>
                             <xsl:attribute name="codeBase">
                                 <xsl:value-of select="concat(//environment/@cwd,/assembly/@name)"/>
@@ -168,7 +168,7 @@
                         <xsl:value-of select="$startDateTime"/>
                       </xsl:attribute>
                         <xsl:attribute name="testName">
-                            <xsl:value-of select="@method"/>
+                            <xsl:value-of select="@name"/>
                         </xsl:attribute>
                         <xsl:attribute name="computerName">
                             <xsl:value-of select="$computerName"/>
@@ -200,9 +200,34 @@
                 </xsl:choose>
                 </xsl:attribute>
                         <Output>
+                          <DebugTrace>
+                            Debug Trace
+                            <xsl:value-of select="./output"/>
+                          </DebugTrace>
                           <StdOut>
+                            StdOut
                             <xsl:value-of select="./output"/>
                           </StdOut>
+                          <StdErr>
+                            StdErr
+                            <xsl:value-of select="./output"/>
+                          </StdErr>
+                          <TextMessages>
+                            TextMsg
+                            <xsl:value-of select="./output"/>
+                          </TextMessages>
+                          <TraceInfo>
+                            TraceInfo
+                            <xsl:value-of select="./output"/>
+                          </TraceInfo>
+                          <ErrorInfo>
+                            ErrorInfo
+                            <xsl:value-of select="./output"/>
+                          </ErrorInfo>
+                          <Exception>
+                            Exception
+                            <xsl:value-of select="./output"/>
+                          </Exception>
                           <xsl:for-each select="./failure">
                             <ErrorInfo>
                               <Message>
