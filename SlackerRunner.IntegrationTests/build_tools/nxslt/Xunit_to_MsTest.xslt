@@ -93,7 +93,7 @@
                     <xsl:variable name="pos" select="position()" />
                     <UnitTest>
                         <xsl:attribute name="name">
-                            <xsl:value-of select="@method"/>
+                            <xsl:value-of select="@name"/>
                         </xsl:attribute>
                         <xsl:attribute name="storage">
                             <xsl:value-of select="concat(//environment/@cwd,/assembly/@name)"/>
