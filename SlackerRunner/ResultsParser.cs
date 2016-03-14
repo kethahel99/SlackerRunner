@@ -37,7 +37,7 @@ namespace SlackerRunner
             _res.Trace = getLine(result, 2);
             _res.Seconds = FindDouble("seconds", result, seconds);
             _res.FailedSpecs = FindInt(_FAILURE, result, FailedSpecs);
-            
+
             // Check for error in result and standardError
             bool error = Regex.IsMatch(result + standardError, "error", RegexOptions.IgnoreCase);
             // If no failures found already, use that to communicate the error found

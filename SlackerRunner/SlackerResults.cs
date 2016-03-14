@@ -17,11 +17,12 @@ namespace SlackerRunner
         public int PassedSpecs { get; set; }
         public bool Passed { get; set; }
 
-        /// <summary>
-        /// Returns summary of the tests parsed
-        /// </summary>
-        /// <returns></returns>
-        public string getString()
+
+    /// <summary>
+    /// Returns summary of the tests parsed
+    /// </summary>
+    /// <returns></returns>
+    public string getString()
         {
             return this.Header + Environment.NewLine +
                 this.Trace + Environment.NewLine +
