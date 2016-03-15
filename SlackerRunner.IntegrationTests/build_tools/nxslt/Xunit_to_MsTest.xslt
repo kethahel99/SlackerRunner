@@ -21,10 +21,29 @@
     <xsl:value-of select="'TeamBuildUser'"/>
   </xsl:variable>
 
+
+  
   <xsl:template match="/">
         <TestRun xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+            <!-- Collect totals from test that were run -->
+            <xsl:variable name="totalTests">
+              <xsl:value-of select="sum(//assemblies/assembly/collection/@total)" />
+            </xsl:variable>
+            <xsl:variable name="totalExecuted">
+              <xsl:value-of select="sum(//assemblies/assembly/collection/@total) - sum(//assemblies/assembly/collection/@skipped)" />
+            </xsl:variable>
+            <xsl:variable name="totalNotExecuted">
+              <xsl:value-of select="sum(//assemblies/assembly/collection/@skipped)" />
+            </xsl:variable>
+            <xsl:variable name="totalPassed">
+              <xsl:value-of select="sum(//assemblies/assembly/collection/@passed)" />
+            </xsl:variable>
+            <xsl:variable name="totalFailed">
+              <xsl:value-of select="sum(//assemblies/assembly/collection/@failed)" />
+            </xsl:variable>
+            <!-- Collect totals from test that were run -->
             <xsl:attribute name="id">
-                <xsl:value-of select="concat($guidStub,'30db1d215203')"/>
+              <xsl:value-of select="concat($guidStub,'30db1d215203')"/>
             </xsl:attribute>
             <xsl:attribute name="runUser">
               <xsl:value-of select="concat($computerName,'',$userName)" />
@@ -36,11 +55,11 @@
                 <Description>This is a default test run configuration for a local test run.</Description>
                 <Deployment>
                     <xsl:attribute name="runDeploymentRoot">
-                        <xsl:value-of select="//environment/@cwd" />
+                        <xsl:value-of select="/assemblies/assembly/@environment" />
                     </xsl:attribute>
                     <DeploymentItem filename="C:temppowerlinkTrunkRhinoRhino.Mocks.dll">
                         <xsl:attribute name="filename">
-                            <xsl:value-of select="/assembly/@name"/>
+                            <xsl:value-of select="/assemblies/assembly/@name"/>
                         </xsl:attribute>
                     </DeploymentItem>
                 </Deployment>
@@ -54,19 +73,19 @@
                 </xsl:attribute>
                 <Counters error="0" timeout="0" aborted="0" passedButRunAborted="0" notRunnable="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0">
                     <xsl:attribute name="total">
-                        <xsl:value-of select="/assemblies/assembly/collection/@total"/>
+                      <xsl:value-of select="$totalTests"/>
                     </xsl:attribute>
                     <xsl:attribute name="executed">
-                      <xsl:value-of select="/assemblies/assembly/collection/@total - /assemblies/assembly/collection/@skipped"/>
+                      <xsl:value-of select="$totalExecuted"/>
                     </xsl:attribute>
                     <xsl:attribute name="notExecuted">
-                        <xsl:value-of select="/assemblies/assembly/collection/@skipped"/>
+                        <xsl:value-of select="$totalNotExecuted"/>
                     </xsl:attribute>
                     <xsl:attribute name="passed">
-                        <xsl:value-of select="/assemblies/assembly/collection/@passed"/>
+                        <xsl:value-of select="$totalPassed"/>
                     </xsl:attribute>
                     <xsl:attribute name="failed">
-                        <xsl:value-of select="/assemblies/assembly/collection/@failed"/>
+                        <xsl:value-of select="$totalFailed" />
                     </xsl:attribute>
                     <xsl:attribute name="inconclusive">
                         <xsl:value-of select="'0'"/>
