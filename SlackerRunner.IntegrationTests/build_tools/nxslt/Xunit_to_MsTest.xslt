@@ -16,13 +16,10 @@
   <xsl:variable name="computerName">
     <xsl:value-of select="'TeamBuildServer'"/>
   </xsl:variable>
-
   <xsl:variable name="userName">
     <xsl:value-of select="'TeamBuildUser'"/>
   </xsl:variable>
-
-
-  
+ 
   <xsl:template match="/">
         <TestRun xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
             <!-- Collect totals from test that were run -->
@@ -51,20 +48,13 @@
             <xsl:attribute name="name">
                 <xsl:value-of select="concat($userName,'@',$computerName,' ',$startDateTime)"/>
             </xsl:attribute>
-            <TestSettings name="Local Test Run" id="c136642c-2e64-4f99-9ec3-30db1d215203">
-                <Description>This is a default test run configuration for a local test run.</Description>
-                <Deployment>
-                    <xsl:attribute name="runDeploymentRoot">
-                        <xsl:value-of select="/assemblies/assembly/@environment" />
-                    </xsl:attribute>
-                    <DeploymentItem filename="C:temppowerlinkTrunkRhinoRhino.Mocks.dll">
-                        <xsl:attribute name="filename">
-                            <xsl:value-of select="/assemblies/assembly/@name"/>
-                        </xsl:attribute>
-                    </DeploymentItem>
-                </Deployment>
-            </TestSettings>
-            <ResultSummary>
+              <TestSettings name="Deftault" id="c136642c-2e64-4f99-9ec3-30db1d215203">
+                  <Description>
+                    Environment:<xsl:value-of select="/assemblies/assembly/@environment" />
+                    Test framework:<xsl:value-of select="/assemblies/assembly/@test-framework" />
+                  </Description>
+              </TestSettings>
+              <ResultSummary>
                 <xsl:attribute name="outcome">
                     <xsl:choose>
                         <xsl:when test="/assemblies/assembly/collection/@failed &gt; 0">Failed</xsl:when>
@@ -226,7 +216,7 @@
                             <xsl:value-of select="$theoutput"/>
                           </StdOut>
                           <xsl:for-each select="./failure">
-                            <ErrorInfo>
+                          <ErrorInfo>
                               <Message>
                                 <xsl:value-of select="./message"/>
                               </Message>
