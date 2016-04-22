@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Xunit.Abstractions;
 
 namespace SlackerRunner
 {
@@ -25,10 +26,11 @@ namespace SlackerRunner
 
         public SlackerResults Run(string testDirectory, string batchFileName, string profile, string outputFileName)
         {
-            createOutputFile(testDirectory, outputFileName);
+            //createOutputFile(testDirectory, outputFileName);
             processRunner.Run(testDirectory, batchFileName, profile, outputFileName);
             logResults(testDirectory, outputFileName, processRunner.StandardError, processRunner.StandardOutput);
-            return resultsParser.Parse(readOutputFile(testDirectory, outputFileName), processRunner.StandardError);
+            //return resultsParser.Parse(readOutputFile(testDirectory, outputFileName), processRunner.StandardError);
+            return resultsParser.Parse(processRunner.StandardOutput, processRunner.StandardError);
         }
 
         private static void CreateOutputFile(string testDirectory, string outputFileName)
@@ -40,8 +42,8 @@ namespace SlackerRunner
         {
             Console.WriteLine("Standard Error: " + standardError);
             Console.WriteLine("Standard Output: " + standardOutput);
-            Console.WriteLine(outputFileName + ":");
-            Console.WriteLine(File.ReadAllText(OutputFileFullName(testDirectory, outputFileName)));
+            //Console.WriteLine(outputFileName + ":");
+            //Console.WriteLine(File.ReadAllText(OutputFileFullName(testDirectory, outputFileName)));
         }
 
         private static string OutputFileFullName(string testDirectory, string outputFileName)

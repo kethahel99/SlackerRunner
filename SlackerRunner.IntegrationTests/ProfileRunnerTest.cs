@@ -1,8 +1,9 @@
 ﻿//
 using System;
 using System.IO;
-using System.Reflection;
+//
 using Xunit;
+
 
 
 namespace SlackerRunner.IntegrationTests
@@ -75,16 +76,19 @@ namespace SlackerRunner.IntegrationTests
     public void TestRunBatMissing()
     {
       // The directory that the slacker resides in
-      String testDir = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(typeof(SpecTestFile).Assembly.Location) ));
+      String testDir = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(typeof(SpecTestFile).Assembly.Location)));
+
 
       // Wrap the Exception 
-      Exception ex = Record.Exception(new Assert.ThrowsDelegate(() =>
+      Exception ex = Assert.Throws<SlackerException>(
+      delegate
       {
         SlackerResults SlackerResults = new SlackerService().Run(testDir, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb", "testoutput.txt");
-      }));
-
+      });
+      
+      
       // Check the Exception thrown 
-      Assert.True(ex is SlackerException);
+      Assert.Equal("The run.bat runner file is missing, please copy it from the SlackerRunner package to the execution directory.", ex.Message );
     }
 
     [Fact]
