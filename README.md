@@ -45,3 +45,4 @@ Quick start
 Add SlackerRunner to your VS solution
 ============
 PM> Install-Package SlackerRunner  
+Then copy the run.bat from the packages SlackerRunner directory to your execution directory.
