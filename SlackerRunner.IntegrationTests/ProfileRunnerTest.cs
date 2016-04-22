@@ -1,6 +1,7 @@
 ﻿//
 using System;
 using System.IO;
+using System.Reflection;
 using Xunit;
 
 
@@ -61,11 +62,29 @@ namespace SlackerRunner.IntegrationTests
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb", "testoutput.txt");
       // Proof it, 4 failures
       Assert.True(SlackerResults.FailedSpecs == 0 );
-      //Assert.True(SlackerResults.FailedSpecs == 0, SlackerResults.StandardOutput);
       // and two passed
       Assert.True(SlackerResults.PassedSpecs == 0);
       // Overall not passed 
       Assert.False(SlackerResults.Passed, "Test should NOT have succeeded.");
+    }
+
+
+    // There is no run.bat file in the assembly directory, 
+    // the runner has to throw SlackerException 
+    [Fact]
+    public void TestRunBatMissing()
+    {
+      // The directory that the slacker resides in
+      String testDir = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(typeof(SpecTestFile).Assembly.Location) ));
+
+      // Wrap the Exception 
+      Exception ex = Record.Exception(new Assert.ThrowsDelegate(() =>
+      {
+        SlackerResults SlackerResults = new SlackerService().Run(testDir, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb", "testoutput.txt");
+      }));
+
+      // Check the Exception thrown 
+      Assert.True(ex is SlackerException);
     }
 
     [Fact]

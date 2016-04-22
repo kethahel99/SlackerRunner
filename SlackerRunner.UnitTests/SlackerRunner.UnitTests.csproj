@@ -47,8 +47,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultsParserTest.cs" />
     <Compile Include="SlackerServiceTest.cs" />
+    <None Include="__run.bat" />
     <None Include="packages.config" />
-    <None Include="run.bat" />
     <ProjectReference Include="..\SlackerRunner\SlackerRunner.csproj">
       <Name>SlackerRunner</Name>
       <Project>{28BB7D57-4BD7-4298-9FCF-7375C87401E3}</Project>
