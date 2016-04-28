@@ -3,6 +3,7 @@ using System.IO;
 
 namespace SlackerRunner
 {
+  /*
     public class ProcessStartInfoBuilder : IProcessStartInfoBuilder
     {
         public ProcessStartInfo Build(string testDirectory, string batchFileName, string profile, string outputFileName)
@@ -24,4 +25,5 @@ namespace SlackerRunner
             return proc;
         }
     }
+    */
 }

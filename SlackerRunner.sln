@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C295798-0AE1-458F-8DE1-0DF68360FBBF}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,8 +13,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackerRunner", "SlackerRunner\SlackerRunner.csproj", "{28BB7D57-4BD7-4298-9FCF-7375C87401E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackerRunner.IntegrationTests", "SlackerRunner.IntegrationTests\SlackerRunner.IntegrationTests.csproj", "{B272CCCD-A5FD-40B9-A761-B8E5F1105475}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackerRunner.UnitTests", "SlackerRunner.UnitTests\SlackerRunner.UnitTests.csproj", "{74530590-226F-4033-862E-3617E7D44090}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +28,6 @@ Global
 		{B272CCCD-A5FD-40B9-A761-B8E5F1105475}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B272CCCD-A5FD-40B9-A761-B8E5F1105475}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B272CCCD-A5FD-40B9-A761-B8E5F1105475}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74530590-226F-4033-862E-3617E7D44090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74530590-226F-4033-862E-3617E7D44090}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74530590-226F-4033-862E-3617E7D44090}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74530590-226F-4033-862E-3617E7D44090}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

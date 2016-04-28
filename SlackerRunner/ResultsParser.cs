@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace SlackerRunner
 {
-    public class ResultsParser : IResultsParser
+    public class ResultsParser //: IResultsParser
     {
         // Regexs 
         const string _FAILURE = "failure";
@@ -40,9 +40,9 @@ namespace SlackerRunner
 
             // Check for error in result and standardError
             bool error = Regex.IsMatch(result + standardError, "error", RegexOptions.IgnoreCase);
-            // Trap run.bat not found 
-            if(standardError.IndexOf("run.bat")>-1)
-                throw new SlackerException("The run.bat runner file is missing, please copy it from the SlackerRunner package to the execution directory.");
+            // Trap slacker not found 
+            if(standardError.IndexOf("'slacker' is not recognized") >-1)
+                throw new SlackerException("Not able to run slacker, slacker might not be configured correctly.");
 
             // If no failures found already, use that to communicate the error found
             // in that case it's usually outside of a good run, like bad connection to the database

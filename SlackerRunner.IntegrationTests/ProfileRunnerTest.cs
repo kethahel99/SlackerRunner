@@ -1,9 +1,8 @@
 ﻿//
 using System;
 using System.IO;
-//
+using System.Reflection;
 using Xunit;
-
 
 
 namespace SlackerRunner.IntegrationTests
@@ -16,7 +15,7 @@ namespace SlackerRunner.IntegrationTests
     [Fact]
     public void FileNotFound()
     {
-      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\filedoesnotexist.rb", "testoutput.txt");
+      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\filedoesnotexist.rb");
       // Proof 
       Assert.False(SlackerResults.Passed, "Test should have failed.");
       Assert.True(SlackerResults.FailedSpecs == 1);
@@ -26,7 +25,7 @@ namespace SlackerRunner.IntegrationTests
     [Fact]
     public void TestFileSample1()
     {
-      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb", "testoutput.txt");
+      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb" );
       // Proof
       Assert.True(SlackerResults.PassedSpecs == 2);
       Assert.True(SlackerResults.Passed, "Test should have succeeded.");
@@ -35,7 +34,7 @@ namespace SlackerRunner.IntegrationTests
     [Fact]
     public void TestFileSample1DirWithSpace()
     {
-      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sam ple\sample1.rb", "testoutput.txt");
+      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sam ple\sample1.rb" );
       // Proof
       Assert.True(SlackerResults.PassedSpecs == 2);
       Assert.True(SlackerResults.Passed, "Test should have succeeded.");
@@ -46,7 +45,7 @@ namespace SlackerRunner.IntegrationTests
     [Fact]
     public void TestFileNotPassing2()
     {
-      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample2.rb", "testoutput.txt");
+      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample2.rb");
       // Proof it, 4 failures
       Assert.True(SlackerResults.FailedSpecs == 4);
       // and two passed
@@ -60,7 +59,7 @@ namespace SlackerRunner.IntegrationTests
     [Fact(Skip ="Acivate by hand when neeeded, to test failure bahaviour")]  
     public void TestFileNotPassing3()
     {
-      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb", "testoutput.txt");
+      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb");
       // Proof it, 4 failures
       Assert.True(SlackerResults.FailedSpecs == 0 );
       // and two passed
@@ -70,31 +69,27 @@ namespace SlackerRunner.IntegrationTests
     }
 
 
-    // There is no run.bat file in the assembly directory, 
     // the runner has to throw SlackerException 
     [Fact]
     public void TestRunBatMissing()
     {
       // The directory that the slacker resides in
-      String testDir = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(typeof(SpecTestFile).Assembly.Location)));
-
+      String testDir = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(typeof(SpecTestFile).Assembly.Location) ));
 
       // Wrap the Exception 
-      Exception ex = Assert.Throws<SlackerException>(
-      delegate
+      Exception ex = Record.Exception(new Assert.ThrowsDelegate(() =>
       {
-        SlackerResults SlackerResults = new SlackerService().Run(testDir, "run.bat", SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb", "testoutput.txt");
-      });
-      
-      
+        SlackerResults SlackerResults = new SlackerService().Run(testDir, SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb");
+      }));
+
       // Check the Exception thrown 
-      Assert.Equal("The run.bat runner file is missing, please copy it from the SlackerRunner package to the execution directory.", ex.Message );
+      Assert.True(ex is SlackerException);
     }
 
     [Fact]
     public void TestLongSubDirName()
     {
-      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, "run.bat", SpecsTester.SPEC_TEST_DIR + @"some_long_folder\below_that_long_folder_yet\and_this_one_longer_yet_for_long_name_testing\smpl.rb", "testoutput.txt");
+      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"some_long_folder\below_that_long_folder_yet\and_this_one_longer_yet_for_long_name_testing\smpl.rb" );
       // Proof it
       Assert.True(SlackerResults.PassedSpecs == 2);
       Assert.True(SlackerResults.Passed, "Test should have succeeded.");

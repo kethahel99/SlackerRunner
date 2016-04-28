@@ -23,7 +23,7 @@ namespace SlackerRunner.IntegrationTests
         [Theory, ClassData(typeof(SpecsTesterResolver))]
         public void runSpecs(SpecTestFile rbFile)
         {
-            SlackerResults SlackerResults = new SlackerService().Run(RUN_TEST_DIR, "run.bat", LONG_SPEC_TEST_DIR + rbFile.FileName, "testoutput.txt");
+            SlackerResults SlackerResults = new SlackerService().Run(RUN_TEST_DIR, LONG_SPEC_TEST_DIR + rbFile.FileName );
             Assert.True(SlackerResults.Passed, "Test should have succeeded.");
         }
 
