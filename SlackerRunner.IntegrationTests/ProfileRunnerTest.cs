@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using Xunit;
+using Xunit.Extensions;
 
 
 namespace SlackerRunner.IntegrationTests
@@ -15,11 +16,30 @@ namespace SlackerRunner.IntegrationTests
     [Fact]
     public void FileNotFound()
     {
-      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\filedoesnotexist.rb");
+      Exception ex = Record.Exception(() =>
+      {
+        SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\filedoesnotexist.rb");
+      });
       // Proof 
-      Assert.False(SlackerResults.Passed, "Test should have failed.");
-      Assert.True(SlackerResults.FailedSpecs == 1);
-      Assert.False(SlackerResults.PassedSpecs > 0);
+      // Check the Exception thrown 
+      Assert.NotNull(ex);
+      Assert.True(ex is SlackerException);
+      Assert.True( ex.Message.IndexOf("The file does not exist, file=") > -1 );
+    }
+
+    // Testing faliure
+    [Fact]
+    public void DirectoryNotFound()
+    {
+      Exception ex = Record.Exception(() =>
+      {
+        SlackerResults SlackerResults = new SlackerService().Run( "does not exist", SpecsTester.SPEC_TEST_DIR + @"sample\filedoesnotexist.rb");
+      });
+      // Proof 
+      // Check the Exception thrown 
+      Assert.NotNull(ex);
+      Assert.True(ex is SlackerException);
+      Assert.True(ex.Message.IndexOf("The directory does not exist, directory=") > -1);
     }
 
     [Fact]
@@ -68,22 +88,34 @@ namespace SlackerRunner.IntegrationTests
       Assert.False(SlackerResults.Passed, "Test should NOT have succeeded.");
     }
 
-
-    // the runner has to throw SlackerException 
-    [Fact]
-    public void TestRunBatMissing()
+    [Fact(Skip = "Acivate by hand when neeeded, to test slacker not found exception")]
+    //[Fact]
+    public void TestSlackerMissing()
     {
       // The directory that the slacker resides in
       String testDir = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(typeof(SpecTestFile).Assembly.Location) ));
-
+      
       // Wrap the Exception 
-      Exception ex = Record.Exception(new Assert.ThrowsDelegate(() =>
+      Exception ex = Record.Exception( () =>
       {
         SlackerResults SlackerResults = new SlackerService().Run(testDir, SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb");
-      }));
+        //Assert.NotNull(SlackerResults);
+      });
 
       // Check the Exception thrown 
+      Assert.NotNull(ex);
       Assert.True(ex is SlackerException);
+    }
+    
+
+    [Fact]
+    public void Repro()
+    {
+      Exception ex = Record.Exception(() =>
+      {
+        SlackerResults SlackerResults = new SlackerService().Run("", SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb");
+      });
+      Assert.NotNull(ex);
     }
 
     [Fact]

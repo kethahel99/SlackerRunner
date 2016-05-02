@@ -11,6 +11,9 @@ namespace SlackerRunner
   {
     private StringBuilder _StandArdOutput = new StringBuilder();
     private StringBuilder _ErrorOutput = new StringBuilder();
+    // Default timeout for individual test
+    private int SlackerTimeOutValueMillisec = 60 * 1000;
+
 
     public ProcessRunner()
     {
@@ -43,10 +46,10 @@ namespace SlackerRunner
         procSI.RedirectStandardError = true;
         procSI.WindowStyle = ProcessWindowStyle.Hidden;
         procSI.CreateNoWindow = true;
-
         // process start info
         process.StartInfo = procSI;
 
+        // Retrieve the outputs
         using (AutoResetEvent outputWaitHandle = new AutoResetEvent(false))
         using (AutoResetEvent errorWaitHandle = new AutoResetEvent(false))
         {
@@ -61,6 +64,7 @@ namespace SlackerRunner
               _StandArdOutput.AppendLine(e.Data);
             }
           };
+
           process.ErrorDataReceived += (sender, e) =>
           {
             if (e.Data == null)
@@ -73,22 +77,30 @@ namespace SlackerRunner
             }
           };
 
+          // Go for it 
           process.Start();
           process.BeginOutputReadLine();
           process.BeginErrorReadLine();
 
-          if (process.WaitForExit(15000) &&
-              outputWaitHandle.WaitOne(15000) &&
-              errorWaitHandle.WaitOne(15000))
+
+          // Make sure there is no timeout issues
+          if (process.WaitForExit(SlackerTimeOutValueMillisec) && 
+            outputWaitHandle.WaitOne(SlackerTimeOutValueMillisec) && 
+            errorWaitHandle.WaitOne(SlackerTimeOutValueMillisec))
           {
-            // Process completed. Check process.ExitCode here.
-            Console.WriteLine("~~~ process ended, exitcode=" + process.ExitCode);
-            Console.WriteLine("~~~ process standard out=" + _StandArdOutput );
+            // Process completed
+            Console.WriteLine("process ended, exitcode=" + process.ExitCode);
+            Console.WriteLine("process standard out=" + _StandArdOutput );
+            // Throws when Slacker has an error
+            if (process.ExitCode != 0)
+              throw new SlackerException("Slacker error, exitcode=" + process.ExitCode);
           }
           else
           {
             // Timed out.
-            Console.WriteLine("~~~ timeout");
+            Console.WriteLine("timeout");
+            // Throws when Slacker times out
+            throw new SlackerException("Slacker timeout error, default timeout is set to=" + ( SlackerTimeOutValueMillisec  / 1000 ) + " seconds" );
           }
 
           // Advertise
@@ -97,21 +109,8 @@ namespace SlackerRunner
         }
       }
     }
-/*
-    void OutputHandler(object sendingProcess, DataReceivedEventArgs outLine)
-    {
-      //* Do your stuff with the output (write to console/log/StringBuilder)
-      _StandArdOutput.Append(outLine.Data);
-      Console.WriteLine("~~~" + outLine.Data);
-    }
 
-    void ErrorOutputHandler(object sendingProcess, DataReceivedEventArgs outLine)
-    {
-      //* Do your stuff with the output (write to console/log/StringBuilder)
-      _ErrorOutput.Append( outLine.Data );
-      Console.WriteLine("~~~" + outLine.Data);
-    }
-    */
 
-  }
+
+  }  // EOF
 }

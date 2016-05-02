@@ -40,8 +40,10 @@ namespace SlackerRunner
 
             // Check for error in result and standardError
             bool error = Regex.IsMatch(result + standardError, "error", RegexOptions.IgnoreCase);
+            
             // Trap slacker not found 
-            if(standardError.IndexOf("'slacker' is not recognized") >-1)
+            if(standardError.IndexOf("'slacker' is not recognized") >-1 ||  // not installed yet, or path issue
+               standardError.IndexOf("cannot load such file") > -1 )  // Ruby configuration bad
                 throw new SlackerException("Not able to run slacker, slacker might not be configured correctly.");
 
             // If no failures found already, use that to communicate the error found
