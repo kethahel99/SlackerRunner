@@ -1,5 +1,11 @@
 # SlackerRunner
 
+
+Note -- Version 2.x breaks compatability with 1.x, if you update from 1.x you will have to adjust your code slightly, see the UnitTests.
+============
+
+
+
 This project is based on the Cucumber runner at Codeplex
 ============
 https://cukesfortfs.codeplex.com/
@@ -45,4 +51,4 @@ Quick start
 Add SlackerRunner to your VS solution
 ============
 PM> Install-Package SlackerRunner  
-Then copy the run.bat from the packages SlackerRunner directory to your execution directory.
+

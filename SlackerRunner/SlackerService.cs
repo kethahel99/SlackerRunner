@@ -16,24 +16,38 @@ namespace SlackerRunner
             this.impersonatorCreator = impersonatorCreator;
             this.profileRunner = profileRunner;
         }
-        
-        public SlackerResults Run(string testdirectory, string profile, User user)
+
+        /// <summary>
+        /// Runs the test in the given testfile.
+        /// </summary>
+        /// <param name="testdirectory">Base directory where database.yml is located. </param>
+        /// <param name="testfile">The test file to run.</param>
+        /// <param name="user">Imprisonate user.</param>
+        /// <returns></returns>
+        public SlackerResults Run(string testdirectory, string testfile, User user)
         {
             using (impersonatorCreator(user))
             {
-                return profileRunner.Run(testdirectory, profile );
+                return profileRunner.Run(testdirectory, testfile);
             }
         }
 
-        public SlackerResults Run(string testdirectory, string profile )
+        /// <summary>
+        /// Runs the test in the given testfile.
+        /// </summary>
+        /// <param name="testdirectory">Base directory where database.yml is located. </param>
+        /// <param name="testfile">The test file to run.</param>
+        /// <returns></returns>
+        public SlackerResults Run(string testdirectory, string testfile)
         {
             // Make sure directory and file exist before heading further
             if (!Directory.Exists(testdirectory))
               throw new SlackerException("The directory does not exist, directory=" + testdirectory);      
-            if (!File.Exists(profile))
-              throw new SlackerException("The file does not exist, file=" + profile);
+            if (!File.Exists(testfile))
+              throw new SlackerException("The file does not exist, file=" + testfile);
 
-            return profileRunner.Run(testdirectory, profile);
+            // Go for it
+            return profileRunner.Run(testdirectory, testfile);
         }
 
 
