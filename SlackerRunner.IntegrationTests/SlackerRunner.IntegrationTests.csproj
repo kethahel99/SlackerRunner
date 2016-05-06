@@ -58,7 +58,6 @@
     <None Include="..\SlackerTests\spec\sample\sample2.rb">
       <Link>ref\sample2.rb</Link>
     </None>
-    <None Include="conver_xunit_to_trx.bat" />
     <None Include="packages.config" />
     <None Include="run_opencover.bat" />
     <None Include="run_xunit.bat" />
