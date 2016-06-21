@@ -17,7 +17,7 @@ namespace SlackerRunner
 
     public ProcessRunner()
     {
-      Console.WriteLine("Slacker runner, version=" + RuntimeVersion.GetVersion());
+      Logger.Log("Slacker runner, version=" + RuntimeVersion.GetVersion());
     }
 
     public string StandardOutput
@@ -89,8 +89,8 @@ namespace SlackerRunner
             errorWaitHandle.WaitOne(SlackerTimeOutValueMillisec))
           {
             // Process completed
-            Console.WriteLine("process ended, exitcode=" + process.ExitCode);
-            Console.WriteLine("process standard out=" + _StandArdOutput );
+            Logger.Log("process ended, exitcode=" + process.ExitCode);
+            Logger.Log("process standard out=" + _StandArdOutput );
             // Throws when Slacker has an error
             if (process.ExitCode != 0)
               throw new SlackerException("Slacker error, exitcode=" + process.ExitCode);
@@ -98,14 +98,14 @@ namespace SlackerRunner
           else
           {
             // Timed out.
-            Console.WriteLine("timeout");
+            Logger.Log("run timeout");
             // Throws when Slacker times out
             throw new SlackerException("Slacker timeout error, default timeout is set to=" + ( SlackerTimeOutValueMillisec  / 1000 ) + " seconds" );
           }
 
           // Advertise
           if (StandardError != "")
-            Console.WriteLine("Error=" + StandardError);
+            Logger.Log("Error=" + StandardError);
         }
       }
     }

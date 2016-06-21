@@ -38,8 +38,8 @@ namespace SlackerRunner
         }
         private static void LogResults(string testDirectory, string outputFileName, string standardError, string standardOutput)
         {
-            Console.WriteLine("~~~ Standard Error: " + standardError);
-            Console.WriteLine("~~~~ Standard Output: " + standardOutput);
+          Logger.Log("~~~ Standard Error: " + standardError);
+          Logger.Log("~~~~ Standard Output: " + standardOutput);
         }
         private static string OutputFileFullName(string testDirectory, string outputFileName)
         {

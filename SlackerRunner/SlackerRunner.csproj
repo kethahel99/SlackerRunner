@@ -6,7 +6,8 @@
     <AssemblyName>SlackerRunner</AssemblyName>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <OutputType>Library</OutputType>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
@@ -41,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Impersonator.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="ProcessRunner.cs" />
     <Compile Include="ProcessStartInfoBuilder.cs" />
     <Compile Include="ProfileRunner.cs" />
