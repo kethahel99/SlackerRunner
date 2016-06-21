@@ -1,0 +1,5 @@
+
+
+2.0.0.11 - 6/21/2016
+------------------------------
+Added simple logger to consolidate logging and make it visible when run by Ms runners.
