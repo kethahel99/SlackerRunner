@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SlackerRunner
 {
@@ -26,16 +25,9 @@ namespace SlackerRunner
         public ProfileRunner()
             : this(new ProcessRunner(), new ResultsParser(), CreateOutputFile, ReadOutputFile, LogResults) { }
 
-
         public SlackerResults Run(string testDirectory, string testFile)
         {
           processRunner.Run(testDirectory, testFile);
-          return resultsParser.Parse(processRunner.StandardOutput, processRunner.StandardError);
-        }
-
-        public SlackerResults Run(string testDirectory, string testFile, TestContext testContextInstance)
-        {
-          processRunner.Run(testDirectory, testFile, testContextInstance);
           return resultsParser.Parse(processRunner.StandardOutput, processRunner.StandardError);
         }
      

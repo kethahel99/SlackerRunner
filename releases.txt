@@ -1,10 +1,5 @@
 
 
-2.0.0.12 - 6/22/2016
+2.0.0.14 - 6/21/2016
 ------------------------------
-Added Microsoft specific TestContext to be able to log out the Ms output stream
-
-
-2.0.0.11 - 6/21/2016
-------------------------------
-Added simple logger to consolidate logging and make it visible when run by Ms runners
+Added simple logger to consolidate logging, make it visible when run by VS runner in debug console

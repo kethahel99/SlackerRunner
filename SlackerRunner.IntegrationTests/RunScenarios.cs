@@ -10,8 +10,8 @@ namespace SlackerRunner.IntegrationTests
     public class RunScenarios
     {
 
-      // [Fact, Category("SmokeTestLive")]
-      [Fact]
+      [Fact, Category("SmokeTestLive")]
+      //[Fact]
       public void RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue()
       {
           SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb");

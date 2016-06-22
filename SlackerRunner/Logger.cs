@@ -1,37 +1,27 @@
 ﻿using System;
 using System.IO;
 using System.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 
 namespace SlackerRunner
 {
   public class Logger
   {
+
     /// <summary>
     /// Logs out the passed text to output
     /// </summary>
     public static void Log(string Text)
     {
-      Log( null, Text);
-    }
 
-    /// <summary>
-    /// Logs out the passed text to output
-    /// </summary>
-    public static void Log( TestContext testContextInstance, string Text)
-    {
+      //DateTime time = DateTime.Now;
+      //string theTime = String.Format("{0:d/M/yyyy HH:mm:ss:fff}", time);
+      //string textlineOut = "~~~ " + theTime + ", " + Text + Environment.NewLine;
       string textlineOut = "~~~ " + Text;
 
       // Log it
+      Console.WriteLine(textlineOut);
       Trace.WriteLine(textlineOut);
-      
-      // And MS output if avail
-      if (testContextInstance != null)
-        testContextInstance.WriteLine(textlineOut);
-
     }
-    
 
   }
 }

@@ -6,10 +6,12 @@
     <AssemblyName>SlackerRunner.IntegrationTests</AssemblyName>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <OutputType>Library</OutputType>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion></ProductVersion>
+    <ProductVersion>
+    </ProductVersion>
     <ProjectGuid>{B272CCCD-A5FD-40B9-A761-B8E5F1105475}</ProjectGuid>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <RootNamespace>SlackerRunner.IntegrationTests</RootNamespace>
@@ -48,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultsParserTest.cs" />
     <Compile Include="RunScenarios.cs" />
+    <Compile Include="SpecificSpecTester.cs" />
     <Compile Include="SpecsTester.cs" />
     <Compile Include="SpecsTesterResolver.cs" />
     <Compile Include="SpecTestFile.cs" />
