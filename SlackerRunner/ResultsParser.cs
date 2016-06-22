@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace SlackerRunner
 {
-    public class ResultsParser //: IResultsParser
+    public class ResultsParser 
     {
         // Regexs 
         const string _FAILURE = "failure";

@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 
 namespace SlackerRunner
 {
@@ -29,8 +31,13 @@ namespace SlackerRunner
       get { return _ErrorOutput.ToString(); }
     }
 
-    public void Run( string testDirectory, string profile )
+    public void Run(string testDirectory, string profile)
     {
+      Run( testDirectory,  profile, null);
+    }
+
+     public void Run(string testDirectory, string profile, TestContext testContextInstance )
+     {
       using (var process = new Process())
       {
 
@@ -89,8 +96,8 @@ namespace SlackerRunner
             errorWaitHandle.WaitOne(SlackerTimeOutValueMillisec))
           {
             // Process completed
-            Logger.Log("process ended, exitcode=" + process.ExitCode);
-            Logger.Log("process standard out=" + _StandArdOutput );
+            Logger.Log( testContextInstance, "process ended, exitcode=" + process.ExitCode);
+            Logger.Log( testContextInstance, "process standard out=" + _StandArdOutput );
             // Throws when Slacker has an error
             if (process.ExitCode != 0)
               throw new SlackerException("Slacker error, exitcode=" + process.ExitCode);
@@ -98,14 +105,14 @@ namespace SlackerRunner
           else
           {
             // Timed out.
-            Logger.Log("run timeout");
+            Logger.Log( testContextInstance, "run timeout");
             // Throws when Slacker times out
             throw new SlackerException("Slacker timeout error, default timeout is set to=" + ( SlackerTimeOutValueMillisec  / 1000 ) + " seconds" );
           }
 
           // Advertise
           if (StandardError != "")
-            Logger.Log("Error=" + StandardError);
+            Logger.Log( testContextInstance, "Error=" + StandardError);
         }
       }
     }
