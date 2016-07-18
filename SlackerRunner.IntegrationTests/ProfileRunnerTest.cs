@@ -74,7 +74,7 @@ namespace SlackerRunner.IntegrationTests
 
     // Testing failure 
     //[Fact]
-    [Fact(Skip ="Acivate by hand when neeeded, to test failure bahaviour")]  
+    [Fact(Skip ="Activate by hand when neeeded, to test failure bahaviour")]  
     public void TestFileNotPassing3()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb");
