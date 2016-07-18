@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A35773F6-BA8F-4E3A-85DB-083A6466A0DE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SlackerTests</RootNamespace>
+    <AssemblyName>SlackerTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="config\config_common.rb" />
+    <None Include="config\config_dev.rb" />
+    <None Include="database.yml" />
+    <None Include="features\failing.feature" />
+    <None Include="features\passing.feature" />
+    <None Include="features\step_definitions\all_steps.rb" />
+    <None Include="features\support\env.rb" />
+    <None Include="lib\helpers\config_helper.rb" />
+    <None Include="lib\helpers\my_helper.rb" />
+    <None Include="spec\sam ple\sample1.rb" />
+    <None Include="spec\sample\sample1.rb" />
+    <None Include="spec\sample\sample2.rb" />
+    <None Include="spec\sample\sample3.rb" />
+    <None Include="spec\sample\sampledir1\sample dir 2\sample1.rb" />
+    <None Include="spec\some_long_folder\below_that_long_folder_yet\and_this_one_longer_yet_for_long_name_testing\and_a_lot_longer_than_that_when_all_is_said_and_done\the_long_filename.rb" />
+    <None Include="spec\some_long_folder\below_that_long_folder_yet\and_this_one_longer_yet_for_long_name_testing\smpl.rb" />
+    <None Include="spec\some_long_folder\below_that_long_folder_yet\and_this_one_longer_yet_for_long_name_testing\smpl2.rb" />
+    <None Include="sql\common\clear_context_info.sql.erb" />
+    <None Include="sql\common\create_operation_result.sql.erb" />
+    <None Include="sql\common\query_operation_result.sql.erb" />
+    <None Include="sql\common\select_vars.sql.erb" />
+    <None Include="sql\common\sproc.sql.erb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\placeholder.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
