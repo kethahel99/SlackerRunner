@@ -1,16 +1,12 @@
-﻿//
-using System;
+﻿using System;
 using System.IO;
 using Xunit;
 
-
 namespace SlackerRunner.IntegrationTests
 {
-
   public class ProfileRunnerTest
   {
-
-    // Testing faliure
+    // Testing failure
     [Fact]
     public void FileNotFound()
     {
@@ -22,10 +18,10 @@ namespace SlackerRunner.IntegrationTests
       // Check the Exception thrown 
       Assert.NotNull(ex);
       Assert.True(ex is SlackerException);
-      Assert.True( ex.Message.IndexOf("The file does not exist, file=") > -1 );
+      Assert.True(ex.Message.IndexOf("The file does not exist, file=") > -1);
     }
 
-    // Testing faliure
+    // Testing failure
     [Fact]
     public void DirectoryNotFound()
     {
@@ -45,8 +41,7 @@ namespace SlackerRunner.IntegrationTests
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb" );
       // Proof
-      Assert.True(SlackerResults.PassedSpecs == 2);
-      Assert.True(SlackerResults.Passed, "Test should have succeeded.");
+      Assert.True(SlackerResults.PassedSpecs == 2, SlackerResults.Message);
     }
 
     [Fact]
@@ -54,47 +49,45 @@ namespace SlackerRunner.IntegrationTests
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sam ple\sample1.rb" );
       // Proof
-      Assert.True(SlackerResults.PassedSpecs == 2);
-      Assert.True(SlackerResults.Passed, "Test should have succeeded.");
+      Assert.True(SlackerResults.PassedSpecs == 2, SlackerResults.Message);
     }
-
-
+    
     // Testing failure 
     [Fact]
     public void TestFileNotPassing2()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample2.rb");
       // Proof it, 4 failures
-      Assert.True(SlackerResults.FailedSpecs == 4);
+      Assert.True(SlackerResults.FailedSpecs == 4, SlackerResults.Message);
       // and two passed
-      Assert.True(SlackerResults.PassedSpecs == 2);
+      Assert.True(SlackerResults.PassedSpecs == 2, SlackerResults.Message);
       // Overall not passed 
-      Assert.False(SlackerResults.Passed, "Test should NOT have succeeded.");
+      Assert.False(SlackerResults.Passed, SlackerResults.Message);
     }
 
     // Testing failure 
     //[Fact]
-    [Fact(Skip ="Activate by hand when neeeded, to test failure bahaviour")]  
+    [Fact(Skip ="Activate by hand when needed to test failure behavior")]  
     public void TestFileNotPassing3()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb");
       // Proof it, 4 failures
-      Assert.True(SlackerResults.FailedSpecs == 0 );
+      Assert.True(SlackerResults.FailedSpecs == 0, SlackerResults.Message);
       // and two passed
-      Assert.True(SlackerResults.PassedSpecs == 0);
+      Assert.True(SlackerResults.PassedSpecs == 0, SlackerResults.Message);
       // Overall not passed 
-      Assert.False(SlackerResults.Passed, "Test should NOT have succeeded.");
+      Assert.False(SlackerResults.Passed, SlackerResults.Message);
     }
 
-    [Fact(Skip = "Acivate by hand when neeeded, to test slacker not found exception")]
+    [Fact(Skip = "Acivate by hand when neeeded to test slacker not found exception")]
     //[Fact]
     public void TestSlackerMissing()
     {
       // The directory that the slacker resides in
-      String testDir = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(typeof(SpecTestFile).Assembly.Location) ));
+      String testDir = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(typeof(SpecTestFile).Assembly.Location)));
       
       // Wrap the Exception 
-      Exception ex = Record.Exception( () =>
+      Exception ex = Record.Exception(() =>
       {
         SlackerResults SlackerResults = new SlackerService().Run(testDir, SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb");
         //Assert.NotNull(SlackerResults);
@@ -105,7 +98,6 @@ namespace SlackerRunner.IntegrationTests
       Assert.True(ex is SlackerException);
     }
     
-
     [Fact]
     public void Repro()
     {
@@ -122,7 +114,7 @@ namespace SlackerRunner.IntegrationTests
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"some_long_folder\below_that_long_folder_yet\and_this_one_longer_yet_for_long_name_testing\smpl.rb" );
       // Proof it
       Assert.True(SlackerResults.PassedSpecs == 2);
-      Assert.True(SlackerResults.Passed, "Test should have succeeded.");
+      Assert.True(SlackerResults.Passed, SlackerResults.Message);
     }
   }
 
