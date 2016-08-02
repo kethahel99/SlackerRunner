@@ -48,7 +48,9 @@
     </CodeAnalysisDependentAssemblyPaths>
     <Compile Include="ProfileRunnerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultsParserTest.cs" />
     <Compile Include="RunScenarios.cs" />
+    <Compile Include="SpecificSpecTester.cs" />
     <Compile Include="SpecsTester.cs" />
     <Compile Include="SpecsTesterResolver.cs" />
     <Compile Include="SpecTestFile.cs" />
@@ -87,6 +89,9 @@
       <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="xunit_results.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

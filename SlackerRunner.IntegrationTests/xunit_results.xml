@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assemblies>
+  <assembly name="C:\work\_solvas\put slacker runner here\SlackerRunner\SlackerRunner.IntegrationTests\bin\Debug\SlackerRunner.IntegrationTests.DLL" environment="64-bit .NET 4.0.30319.42000 [collection-per-class, parallel (4 threads)]" test-framework="xUnit.net 2.1.0.3179" run-date="2016-06-21" run-time="11:18:19" config-file="C:\work\_solvas\put slacker runner here\SlackerRunner\SlackerRunner.IntegrationTests\build_tools\xunit_console_runner\xunit.console.exe.Config" total="23" passed="19" failed="1" skipped="3" time="5.889" errors="0">
+    <errors />
+    <collection total="8" passed="8" failed="0" skipped="0" name="Test collection for SlackerRunner.IntegrationTests.ResultsParserTest" time="0.350">
+      <test name="SlackerRunner.IntegrationTests.ResultsParserTest.ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsNull" type="SlackerRunner.IntegrationTests.ResultsParserTest" method="ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsNull" time="0.1995383" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ResultsParserTest.ParseReturnsFailedSpecsWhenOnePassed" type="SlackerRunner.IntegrationTests.ResultsParserTest" method="ParseReturnsFailedSpecsWhenOnePassed" time="0.0214697" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ResultsParserTest.ValidateReturnsFalseWhenOutResultsHaveFailedScenario" type="SlackerRunner.IntegrationTests.ResultsParserTest" method="ValidateReturnsFalseWhenOutResultsHaveFailedScenario" time="0.0355116" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ResultsParserTest.ParseReturnsFalseWhenStandardErrorNotNull" type="SlackerRunner.IntegrationTests.ResultsParserTest" method="ParseReturnsFalseWhenStandardErrorNotNull" time="0.0120176" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ResultsParserTest.ParseReturnsFailedSpecsWhenAllPassed" type="SlackerRunner.IntegrationTests.ResultsParserTest" method="ParseReturnsFailedSpecsWhenAllPassed" time="0.0182028" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ResultsParserTest.ParseUnforseenError" type="SlackerRunner.IntegrationTests.ResultsParserTest" method="ParseUnforseenError" time="0.0242899" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ResultsParserTest.ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsEmpty" type="SlackerRunner.IntegrationTests.ResultsParserTest" method="ValidateReturnsTrueWhenOutputResultsPassedAndErrorIsEmpty" time="0.0173573" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ResultsParserTest.ParseReturnsFailedSpecsWhenSomeFailed" type="SlackerRunner.IntegrationTests.ResultsParserTest" method="ParseReturnsFailedSpecsWhenSomeFailed" time="0.0213804" result="Pass" />
+    </collection>
+    <collection total="3" passed="2" failed="0" skipped="1" name="Test collection for SlackerRunner.IntegrationTests.RunScenarios" time="4.343">
+      <test name="SlackerRunner.IntegrationTests.RunScenarios.RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue" type="SlackerRunner.IntegrationTests.RunScenarios" method="RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue" time="2.0774704" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.RunScenarios.RunWithPassingProfileForSmokeTestLiveBuildErrorsWithInvalidUser" type="SlackerRunner.IntegrationTests.RunScenarios" method="RunWithPassingProfileForSmokeTestLiveBuildErrorsWithInvalidUser" time="2.2659271" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.RunScenarios.CheckSlackerExitCode" type="SlackerRunner.IntegrationTests.RunScenarios" method="CheckSlackerExitCode" time="0" result="Skip">
+        <reason><![CDATA[NotReady]]></reason>
+      </test>
+    </collection>
+    <collection total="3" passed="2" failed="1" skipped="0" name="Test collection for SlackerRunner.IntegrationTests.SpecsTester" time="4.006">
+      <test name="SlackerRunner.IntegrationTests.SpecsTester.runSpecs(rbFile: below_that_long_folder_yet/and_this_one_longer_yet_for_long_name_testing/smpl.rb)" type="SlackerRunner.IntegrationTests.SpecsTester" method="runSpecs" time="1.4266394" result="Fail">
+        <failure exception-type="SlackerRunner.SlackerException">
+          <message><![CDATA[SlackerRunner.SlackerException : Slacker error, exitcode=1]]></message>
+          <stack-trace><![CDATA[   at SlackerRunner.ProcessRunner.Run(String testDirectory, String profile) in C:\work\_solvas\put slacker runner here\SlackerRunner\SlackerRunner\ProcessRunner.cs:line 97
+   at SlackerRunner.ProfileRunner.Run(String testDirectory, String testFile) in C:\work\_solvas\put slacker runner here\SlackerRunner\SlackerRunner\ProfileRunner.cs:line 31
+   at SlackerRunner.SlackerService.Run(String testdirectory, String testfile) in C:\work\_solvas\put slacker runner here\SlackerRunner\SlackerRunner\SlackerService.cs:line 50
+   at SlackerRunner.IntegrationTests.SpecsTester.runSpecs(SpecTestFile rbFile) in C:\work\_solvas\put slacker runner here\SlackerRunner\SlackerRunner.IntegrationTests\SpecsTester.cs:line 23]]></stack-trace>
+        </failure>
+      </test>
+      <test name="SlackerRunner.IntegrationTests.SpecsTester.runSpecs(rbFile: below_that_long_folder_yet/and_this_one_longer_yet_for_long_name_testing/smpl2.rb)" type="SlackerRunner.IntegrationTests.SpecsTester" method="runSpecs" time="1.3217066" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.SpecsTester.runSpecs(rbFile: below_that_long_folder_yet/and_this_one_longer_yet_for_long_name_testing/and_a_lot_longer_than_that_when_all_is_said_and_done/the_long_filename.rb)" type="SlackerRunner.IntegrationTests.SpecsTester" method="runSpecs" time="1.2579537" result="Pass" />
+    </collection>
+    <collection total="9" passed="7" failed="0" skipped="2" name="Test collection for SlackerRunner.IntegrationTests.ProfileRunnerTest" time="5.753">
+      <test name="SlackerRunner.IntegrationTests.ProfileRunnerTest.TestFileSample1" type="SlackerRunner.IntegrationTests.ProfileRunnerTest" method="TestFileSample1" time="2.0023248" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ProfileRunnerTest.Repro" type="SlackerRunner.IntegrationTests.ProfileRunnerTest" method="Repro" time="0.0094285" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ProfileRunnerTest.TestLongSubDirName" type="SlackerRunner.IntegrationTests.ProfileRunnerTest" method="TestLongSubDirName" time="1.3022975" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ProfileRunnerTest.TestFileSample1DirWithSpace" type="SlackerRunner.IntegrationTests.ProfileRunnerTest" method="TestFileSample1DirWithSpace" time="1.1828241" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ProfileRunnerTest.TestFileNotPassing3" type="SlackerRunner.IntegrationTests.ProfileRunnerTest" method="TestFileNotPassing3" time="0" result="Skip">
+        <reason><![CDATA[Acivate by hand when neeeded, to test failure bahaviour]]></reason>
+      </test>
+      <test name="SlackerRunner.IntegrationTests.ProfileRunnerTest.TestFileNotPassing2" type="SlackerRunner.IntegrationTests.ProfileRunnerTest" method="TestFileNotPassing2" time="1.2525569" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ProfileRunnerTest.TestSlackerMissing" type="SlackerRunner.IntegrationTests.ProfileRunnerTest" method="TestSlackerMissing" time="0" result="Skip">
+        <reason><![CDATA[Acivate by hand when neeeded, to test slacker not found exception]]></reason>
+      </test>
+      <test name="SlackerRunner.IntegrationTests.ProfileRunnerTest.FileNotFound" type="SlackerRunner.IntegrationTests.ProfileRunnerTest" method="FileNotFound" time="0.0020413" result="Pass" />
+      <test name="SlackerRunner.IntegrationTests.ProfileRunnerTest.DirectoryNotFound" type="SlackerRunner.IntegrationTests.ProfileRunnerTest" method="DirectoryNotFound" time="0.0017097" result="Pass" />
+    </collection>
+  </assembly>
+</assemblies>
