@@ -1,7 +1,7 @@
 # SlackerRunner
 
-## Build status 
-https://ornatwork.visualstudio.com/_apis/public/build/definitions/6cbc977a-4720-4711-b5a1-0b9c4b56f6b4/1/badge
+<img src="https://ornatwork.visualstudio.com/_apis/public/build/definitions/6cbc977a-4720-4711-b5a1-0b9c4b56f6b4/1/badge"/>
+
 
 # Note 
 Version 2.x breaks compatability with 1.x, if you update from 1.x you will have to adjust your code slightly, see the UnitTests.
