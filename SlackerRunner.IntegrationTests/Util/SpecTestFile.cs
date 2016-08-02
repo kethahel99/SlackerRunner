@@ -1,7 +1,7 @@
 ﻿//
 using System;
 
-namespace SlackerRunner.IntegrationTests
+namespace SlackerRunner.IntegrationTests.Util
 {
 
     /// <summary>

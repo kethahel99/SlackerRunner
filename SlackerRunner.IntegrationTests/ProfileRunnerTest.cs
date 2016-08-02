@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using Xunit;
+using System.ComponentModel;
+using SlackerRunner.IntegrationTests.Util;
 
 namespace SlackerRunner.IntegrationTests
 {
@@ -36,7 +38,8 @@ namespace SlackerRunner.IntegrationTests
       Assert.True(ex.Message.IndexOf("The directory does not exist, directory=") > -1);
     }
 
-    [Fact]
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
     public void TestFileSample1()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb" );
@@ -44,16 +47,18 @@ namespace SlackerRunner.IntegrationTests
       Assert.True(SlackerResults.PassedSpecs == 2, SlackerResults.Message);
     }
 
-    [Fact]
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
     public void TestFileSample1DirWithSpace()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sam ple\sample1.rb" );
       // Proof
       Assert.True(SlackerResults.PassedSpecs == 2, SlackerResults.Message);
     }
-    
+
     // Testing failure 
-    [Fact]
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
     public void TestFileNotPassing2()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample2.rb");
@@ -66,13 +71,13 @@ namespace SlackerRunner.IntegrationTests
     }
 
     // Testing failure 
+    [Fact(Skip = "Live database needed")]
     //[Fact]
-    [Fact(Skip ="Activate by hand when needed to test failure behavior")]  
     public void TestFileNotPassing3()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample3.rb");
       // Proof it, 4 failures
-      Assert.True(SlackerResults.FailedSpecs == 0, SlackerResults.Message);
+      Assert.True(SlackerResults.FailedSpecs == 2, SlackerResults.Message);
       // and two passed
       Assert.True(SlackerResults.PassedSpecs == 0, SlackerResults.Message);
       // Overall not passed 
@@ -107,8 +112,9 @@ namespace SlackerRunner.IntegrationTests
       });
       Assert.NotNull(ex);
     }
-
-    [Fact]
+    
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
     public void TestLongSubDirName()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"some_long_folder\below_that_long_folder_yet\and_this_one_longer_yet_for_long_name_testing\smpl.rb" );

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Xunit;
+using SlackerRunner.IntegrationTests.Util;
 
 namespace SlackerRunner.IntegrationTests
 {
