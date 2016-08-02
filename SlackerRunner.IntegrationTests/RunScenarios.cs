@@ -9,7 +9,7 @@ namespace SlackerRunner.IntegrationTests
   //features are run
   public class RunScenarios
   {
-    [Fact, Category("SmokeTestLive")]
+    [Fact(Skip = "Live database needed")]
     //[Fact]
     public void RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue()
     {

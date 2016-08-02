@@ -16,7 +16,8 @@ namespace SlackerRunner.IntegrationTests
     /// Runs all the Slacker spec tests in the some_long_folder 
     /// </summary>
     /// <param name="rbFile"></param>
-    [Theory, ClassData(typeof(SpecsTesterResolver))]
+    [Theory(Skip = "Live database needed"), ClassData(typeof(SpecsTesterResolver))]
+    //[Theory, ClassData(typeof(SpecsTesterResolver))]
     public void runSpecs(SpecTestFile rbFile)
     {
       SlackerResults SlackerResults = new SlackerService().Run(RUN_TEST_DIR, LONG_SPEC_TEST_DIR + rbFile.FileName );

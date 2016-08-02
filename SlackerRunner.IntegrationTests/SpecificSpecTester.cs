@@ -12,7 +12,8 @@ namespace SlackerRunner.IntegrationTests
     /// Runs the Spec test in the file specified 
     /// </summary>
     /// <param name="rbFile"></param>
-    [Fact]
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
     public void RunThisSpec()
     {
       Assert.True(TestFile(@"sample\sample1.rb"), "Test should have succeeded.");
