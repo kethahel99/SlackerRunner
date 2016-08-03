@@ -1,7 +1,12 @@
 # SlackerRunner
 
+<a href="https://ornatwork.visualstudio.com/SlackerRunner_CI/_build?_a=completed&definitionId=1">
+<img src="https://ornatwork.visualstudio.com/_apis/public/build/definitions/6cbc977a-4720-4711-b5a1-0b9c4b56f6b4/1/badge"/>
+</a>
 
-Note -- Version 2.x breaks compatability with 1.x, if you update from 1.x you will have to adjust your code slightly, see the UnitTests.
+
+# Note 
+Version 2.x breaks compatability with 1.x, if you update from 1.x you will have to adjust your code slightly, see the UnitTests.
 ============
 
 
@@ -42,7 +47,7 @@ gem install slacker
 
 Quick start
 ============
-1. Open \SlackerTests\database.yml and put in your Ms Sql database and credentials.  The tests that ship with the solution are basic database system test and should run against empty Ms Sql Server database.
+1. Open \SlackerTests\database.yml and put in your Ms Sql database and credentials.  The tests that ship with the solution are basic database system tests and should run against empty Ms Sql Server database.
 
 2. Run the UnitTests.
 
