@@ -4,5 +4,8 @@
 #>
 param (  [string]$version = "0.0.0.7"  )
 $x = 'Version("{0}")' -f $version
+$tmp = "Updating assembly Version: " 
+$tmp += $version
+write-output $tmp
 $content = Get-Content .\SlackerRunner\Properties\AssemblyInfo.cs
 $content -replace 'Version\(".*"\)',$x > .\SlackerRunner\Properties\AssemblyInfo.cs
