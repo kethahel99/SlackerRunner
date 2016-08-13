@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>SlackerRunner</id>
-        <version>2.0.0.10</version>
+        <version>0.0.0.1</version>
         <authors>Orn Kristjansson</authors>
         <owners>Deloitte</owners>
-        <licenseUrl>https://github.com/ornatwork/SlackerRunner/blob/master/README.md</licenseUrl>
-        <projectUrl>https://github.com/ornatwork/SlackerRunner</projectUrl>
+        <licenseUrl>https://github.com/deloitte-solvas/SlackerRunner/blob/master/README.md</licenseUrl>
+        <projectUrl>https://github.com/deloitte-solvas/SlackerRunner</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Slacker UnitTest Runner</description>
+        <description>Slacker Unit Test Runner</description>
         <releaseNotes />
         <copyright>Deloitte</copyright>
         <tags>Slacker Tests</tags>
