@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
@@ -12,11 +12,11 @@
     <releaseNotes />
     <copyright>Deloitte Products</copyright>
     <tags>Slacker Tests</tags>
-    <contentFiles>
-      <file src="bin\Debug\SlackerRunner.dll" target="lib\SlackerRunner.dll" />
-      <file src="bin\Debug\SlackerRunner.pdb" target="lib\SlackerRunner.pdb" />
-      <file src="..\README.md" target="README.md" />
-      <file src="..\releases.txt" target="releases.txt" />
-    </contentFiles>
   </metadata>
+  <files>
+    <file src="bin\Debug\SlackerRunner.dll" target="lib\SlackerRunner.dll" />
+    <file src="bin\Debug\SlackerRunner.pdb" target="lib\SlackerRunner.pdb" />
+    <file src="..\README.md" target="README.md" />
+    <file src="..\releases.txt" target="releases.txt" />
+  </files>
 </package>
