@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
-    <metadata>
-        <id>$id$</id>
-        <version>$version$</version>
-        <authors>Orn Kristjansson</authors>
-        <owners>$author$</owners>
-        <licenseUrl>https://github.com/deloitte-solvas/SlackerRunner/blob/master/README.md</licenseUrl>
-        <projectUrl>https://github.com/deloitte-solvas/SlackerRunner</projectUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>$description$</description>
-        <releaseNotes />
-        <copyright>Deloitte Products</copyright>
-        <tags>Slacker Tests</tags>
-        <serviceable>false</serviceable>
-    </metadata>
-    <files>
-        <file src="bin\Debug\SlackerRunner.dll" target="lib\SlackerRunner.dll" />
-        <file src="bin\Debug\SlackerRunner.pdb" target="lib\SlackerRunner.pdb" />
-        <file src="..\README.md" target="README.md" />
-        <file src="..\releases.txt" target="releases.txt" />
-    </files>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>Orn Kristjansson</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/deloitte-solvas/SlackerRunner/blob/master/README.md</licenseUrl>
+    <projectUrl>https://github.com/deloitte-solvas/SlackerRunner</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes />
+    <copyright>Deloitte Products</copyright>
+    <tags>Slacker Tests</tags>
+    <serviceable>false</serviceable>
+    <contentFiles>
+      <file src="bin\Debug\SlackerRunner.dll" target="lib\SlackerRunner.dll" />
+      <file src="bin\Debug\SlackerRunner.pdb" target="lib\SlackerRunner.pdb" />
+      <file src="..\README.md" target="README.md" />
+      <file src="..\releases.txt" target="releases.txt" />
+    </contentFiles>
+  </metadata>
 </package>
