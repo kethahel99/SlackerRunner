@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>SlackerRunner</id>
+        <version>0.0.0.1</version>
+        <authors>Orn Kristjansson</authors>
+        <owners>Deloitte</owners>
+        <licenseUrl>https://github.com/deloitte-solvas/SlackerRunner/blob/master/README.md</licenseUrl>
+        <projectUrl>https://github.com/deloitte-solvas/SlackerRunner</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Slacker Unit Test Runner</description>
+        <releaseNotes />
+        <copyright>Deloitte</copyright>
+        <tags>Slacker Tests</tags>
+        <serviceable>false</serviceable>
+    </metadata>
+    <files>
+        <file src="bin\Debug\SlackerRunner.dll" target="lib\SlackerRunner.dll" />
+        <file src="bin\Debug\SlackerRunner.pdb" target="lib\SlackerRunner.pdb" />
+        <file src="..\README.md" target="README.md" />
+        <file src="..\releases.txt" target="releases.txt" />
+    </files>
+</package>
