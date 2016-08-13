@@ -12,7 +12,6 @@
     <releaseNotes />
     <copyright>Deloitte Products</copyright>
     <tags>Slacker Tests</tags>
-    <serviceable>false</serviceable>
     <contentFiles>
       <file src="bin\Debug\SlackerRunner.dll" target="lib\SlackerRunner.dll" />
       <file src="bin\Debug\SlackerRunner.pdb" target="lib\SlackerRunner.pdb" />
