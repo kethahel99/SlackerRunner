@@ -5,9 +5,15 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C295798-0AE1-458F-8DE1-0DF68360FBBF}"
 	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		info.txt = info.txt
 		Local.testsettings = Local.testsettings
+		README.md = README.md
+		releases.txt = releases.txt
 		SlackerRunner.vsmdi = SlackerRunner.vsmdi
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		update_version.ps1 = update_version.ps1
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackerRunner", "SlackerRunner\SlackerRunner.csproj", "{28BB7D57-4BD7-4298-9FCF-7375C87401E3}"
