@@ -4,12 +4,6 @@
 <img src="https://solvas.visualstudio.com/_apis/public/build/definitions/72411e9a-cff7-4db7-aa10-5937f1785cc2/1/badge"/>
 </a>
 
-
-# Note 
-Version 2.x breaks compatibility with 1.x, if you update from 1.x you will have to adjust your code slightly, see the UnitTests.
-============
-
-
 Intro
 ============
 Allows you to run [Slacker](https://github.com/vassilvk/slacker) tests from within Visual Studio and during continuous integration under TFS/VTS.  This is not a test runner but rather a process runner for unit tests which will return [Slacker](https://github.com/vassilvk/slacker) test results back to TFS/VSTS.
