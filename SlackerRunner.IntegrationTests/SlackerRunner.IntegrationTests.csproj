@@ -50,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultsParserTest.cs" />
     <Compile Include="RunScenarios.cs" />
+    <Compile Include="SlackerExceptionTest.cs" />
     <Compile Include="SpecificSpecTester.cs" />
     <Compile Include="SpecsTester.cs" />
     <Compile Include="Util\SpecsTesterResolver.cs" />
