@@ -1,7 +1,7 @@
 # SlackerRunner
 
-<a href="https://solvas.visualstudio.com/Solvas/Global/_build?definitionId=1">
-<img src="https://solvas.visualstudio.com/_apis/public/build/definitions/72411e9a-cff7-4db7-aa10-5937f1785cc2/1/badge"/>
+<a href="https://deloitte-fintech.visualstudio.com/Solvas/Global/_build?definitionId=1">
+<img src="https://deloitte-fintech.visualstudio.com/_apis/public/build/definitions/72411e9a-cff7-4db7-aa10-5937f1785cc2/1/badge"/>
 </a>
 
 Intro
