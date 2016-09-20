@@ -10,9 +10,14 @@ namespace SlackerRunner.IntegrationTests
     [Fact]
     public void InvalidCondition()
     {
-        ProfileRunner run = new ProfileRunner();
-        run.Run( "invalid_dir", "invalid_file");
-        Assert.NotNull(run);
+      ProfileRunner run=null;
+      Exception ex = Record.Exception(() =>
+      {
+        run = new ProfileRunner();
+        run.Run("invalid_dir", "invalid_file");
+      });
+      // 
+      Assert.NotNull(run);
     }
     
   }  // EOC

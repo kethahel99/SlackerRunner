@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 
 namespace SlackerRunner
 {
   public class SlackerException : Exception
   {
     /// <summary>
-    /// Plain Exception
+    /// Basic Exception, without specific message
     /// </summary>
-    public SlackerException() : base(){}
+    public SlackerException(){}
 
     /// <summary>
     /// Exception with description
