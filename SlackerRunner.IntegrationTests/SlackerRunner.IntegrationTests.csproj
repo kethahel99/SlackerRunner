@@ -52,6 +52,7 @@
     <Compile Include="RunScenarios.cs" />
     <Compile Include="SlackerExceptionTest.cs" />
     <Compile Include="SpecificSpecTester.cs" />
+    <Compile Include="ImpersonatorTester.cs" />
     <Compile Include="SpecsTester.cs" />
     <Compile Include="Util\SpecsTesterResolver.cs" />
     <Compile Include="Util\SpecTestFile.cs" />
