@@ -9,7 +9,7 @@ namespace SlackerRunner.IntegrationTests
   {
 
     [Fact]
-    public void SmokeImpersonator()
+    public void SmokeImpersonatorWithInfo()
     {
       Exception ex = Record.Exception(() =>
       {
@@ -19,10 +19,8 @@ namespace SlackerRunner.IntegrationTests
           Assert.Null(pers);
         }
       });
-
     }
-
-
+    
   }  // EOF
 }
 
