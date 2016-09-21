@@ -9,22 +9,13 @@ namespace SlackerRunner.IntegrationTests
   {
 
     /// <summary>
-    /// Runs the Spec test in the file specified 
+    /// Runs the slacker test in the file specified 
     /// </summary>
-    /// <param name="rbFile"></param>
-    [Fact(Skip = "Live database needed")]
-    //[Fact]
+    [Fact]
     public void RunThisSpec()
     {
-      Assert.True(TestFile(@"sample\sample1.rb"), "Test should have succeeded.");
-    }
-
-
-    // runs the passed file and reports on the result
-    private bool TestFile(string specFile)
-    {
-      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + specFile );
-      return SlackerResults.Passed;
+      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb");
+      Assert.True(SlackerResults.Passed);
     }
 
   }
