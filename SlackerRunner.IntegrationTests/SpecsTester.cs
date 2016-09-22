@@ -16,13 +16,25 @@ namespace SlackerRunner.IntegrationTests
     public static string SPEC_TEST_DIR = Path.GetFullPath(Path.Combine("..", "..", "..", "SlackerTests", "spec" ) + "/");
     public static string LONG_SPEC_TEST_DIR = Path.GetFullPath(Path.Combine("..", "..", "..", "SlackerTests", "spec", "sam ple") + "/");
 
+
     /// <summary>
     /// Runs Slacker spec tests 
     /// </summary>
-    //[Theory(Skip = "Live database needed"), ClassData(typeof(IndividualSpecsTesterResolver))]
-    //[Theory(Skip = "Live database needed"), MemberData("TestFiles")]
-    [Theory, MemberData("TestFiles")]
+    [Theory(Skip = "Live database needed"), MemberData("TestFiles", typeof(SpecTestFile))]
+    //[Theory, MemberData("TestFiles", typeof(SpecTestFile))]
     public void runSpecs(ISpecTestFile File)
+    {
+      SlackerResults SlackerResults = new SlackerService().Run(RUN_TEST_DIR, LONG_SPEC_TEST_DIR + File.FileName);
+      Assert.True(SlackerResults.Passed, SlackerResults.Message);
+    }
+
+
+    /// <summary>
+    /// Runs Slacker spec tests 
+    /// </summary>
+    [Theory(Skip = "Live database needed"), MemberData("TestFiles", typeof(IndividualSpecTestFile))]
+    //[Theory, MemberData("TestFiles", typeof(IndividualSpecTestFile))]
+    public void runSpecsIndividually(ISpecTestFile File)
     {
       SlackerResults SlackerResults = new SlackerService().Run(RUN_TEST_DIR, LONG_SPEC_TEST_DIR + File.FileName);
       Assert.True(SlackerResults.Passed, SlackerResults.Message);
@@ -31,10 +43,10 @@ namespace SlackerRunner.IntegrationTests
     /// <summary>
     /// Uses the SpecTesterResolver to figure out all the test files in a directory
     /// </summary>
-    public static IEnumerable<object[]> TestFiles()
+    public static IEnumerable<object[]> TestFiles( Type type )
     {
       // Pass either SpecTestFile to run tests in a group or IndividualTestFile to run one test file at a time 
-      List<ISpecTestFile> files = SpecsTesterResolver.ProcessDirectory(LONG_SPEC_TEST_DIR, typeof(IndividualSpecTestFile));
+      List<ISpecTestFile> files = SpecsTesterResolver.ProcessDirectory(LONG_SPEC_TEST_DIR, type);
       
       // Back to caller
       foreach (ISpecTestFile file in files)

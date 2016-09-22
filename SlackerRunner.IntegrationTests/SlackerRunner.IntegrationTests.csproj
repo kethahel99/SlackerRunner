@@ -57,7 +57,6 @@
     <Compile Include="SpecificSpecTester.cs" />
     <Compile Include="ImpersonatorTester.cs" />
     <Compile Include="SpecsTester.cs" />
-    <Compile Include="Util\IndividualSpecsTesterResolver.cs" />
     <None Include="..\SlackerTests\spec\sample\sample1.rb">
       <Link>ref\sample1.rb</Link>
     </None>
