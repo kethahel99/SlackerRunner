@@ -30,6 +30,8 @@ namespace SlackerRunner.IntegrationTests
       // Assert.Equal( "The user name or password is incorrect", exception.Message );
     }
 
+
+    // See -- https://github.com/vassilvk/slacker/issues/3
     [Fact(Skip ="NotReady")]
     public void CheckSlackerExitCode()
     {
