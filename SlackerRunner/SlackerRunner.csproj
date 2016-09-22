@@ -52,13 +52,23 @@
     <Compile Include="SlackerResults.cs" />
     <Compile Include="SlackerService.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Util\IndividualSpecTestFile.cs" />
+    <Compile Include="Util\ISpecTestFile.cs" />
+    <Compile Include="Util\SpecsTesterResolver.cs" />
+    <Compile Include="Util\SpecTestFile.cs" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="SlackerRunner.nuspec" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -2,7 +2,7 @@
 using System.IO;
 using Xunit;
 using System.ComponentModel;
-using SlackerRunner.IntegrationTests.Util;
+using SlackerRunner.Util;
 
 namespace SlackerRunner.IntegrationTests
 {
