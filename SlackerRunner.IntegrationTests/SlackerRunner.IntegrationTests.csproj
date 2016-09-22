@@ -46,7 +46,6 @@
     <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
       <Visible>False</Visible>
     </CodeAnalysisDependentAssemblyPaths>
-    <Compile Include="TmpTest.cs" />
     <Compile Include="ProcessRunnerTest.cs" />
     <Compile Include="SlackerServiceTestcs.cs" />
     <Compile Include="ProfileRunnerTest.cs" />
