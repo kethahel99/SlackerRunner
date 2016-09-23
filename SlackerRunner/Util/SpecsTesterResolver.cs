@@ -19,11 +19,15 @@ namespace SlackerRunner.Util
         {
             return ProcessDirectory(targetDirectory, targetDirectory, type );
         }
-        
-        // Finds the files and returns them with relative path from start directory
-        private static List<ISpecTestFile> ProcessDirectory(string targetDirectory, string startDirectory, Type type )
+
+        /// <summary>
+        /// Process all files in the directory passed in, recurse on any directories  
+        /// that are found, and process the files they contain. 
+        /// </summary>
+        public static List<ISpecTestFile> ProcessDirectory(string targetDirectory, string startDirectory, Type type )
         {
-            List<ISpecTestFile> testFiles = new List<ISpecTestFile>();
+            //Logger.Log("~~~ directories, target=" + targetDirectory + ", startdirectory=" + startDirectory);
+            List <ISpecTestFile> testFiles = new List<ISpecTestFile>();
             // Process the list of files found in the directory. 
             string[] fileEntries = Directory.GetFiles(targetDirectory);
             foreach (string fileName in fileEntries)
@@ -41,7 +45,7 @@ namespace SlackerRunner.Util
             // Recurse into subdirectories of this directory. 
             string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
             foreach (string subdirectory in subdirectoryEntries)
-                ProcessDirectory(subdirectory, startDirectory, type);
+                testFiles.AddRange( ProcessDirectory(subdirectory, startDirectory, type) );
 
             // Back to caller 
             return testFiles;
