@@ -1,8 +1,5 @@
 ﻿using System;
-using System.IO;
 using Xunit;
-using System.ComponentModel;
-using SlackerRunner.Util;
 
 
 namespace SlackerRunner.IntegrationTests
@@ -41,5 +38,27 @@ namespace SlackerRunner.IntegrationTests
       Assert.True(ex is SlackerException);
       Assert.True(ex.Message.Equals(msg));
     }
+
+    [Fact]
+    public async void SmokeTest_SlackerExceptionWithMessageAndInner()
+    {
+      // Smoke testing SlackerException
+      string msg = "My message";
+      string innerMsg = "Null ref detected, inner exception";
+      Exception ex = await Record.ExceptionAsync(() =>
+      {
+        throw new SlackerException(msg, new NullReferenceException(innerMsg) );
+      });
+
+      // Proof 
+      // Check the Exception thrown 
+      Assert.NotNull(ex);
+      Assert.True(ex is SlackerException);
+      Assert.True(ex.Message.Equals(msg));
+      // Inner
+      Assert.True(ex.InnerException is NullReferenceException);
+      Assert.True(ex.InnerException.Message.Equals(innerMsg)); 
+    }
+    
   }
 }
