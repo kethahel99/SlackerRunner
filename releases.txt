@@ -1,9 +1,8 @@
 
 
-2.0.0.19 - 9/22/2016 
+2.0.0.21 - 9/23/2016 
 ------------------------------
 Added classes to allow specs either to be run as a group or individual tests, SpecTestFile, IndividualSpecTestFile.  See the UnitTest SlackerRunner.IntegrationTests.SpecsTester for details.
-
 
 
 2.0.0.15 - 8/3/2016 ( jdshkolnik )
