@@ -1,5 +1,5 @@
 
 Nuget
 ---------
-To package, open NuGet Package Explorer, set the correct version, remove dlls and attach the new version.
-Publish package, it will be pushed to nuget.org, it will appear there shortly.
+Packaging is now run as part of the CI build.
+

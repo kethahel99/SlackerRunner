@@ -46,7 +46,7 @@ namespace SlackerRunner.IntegrationTests
     public static IEnumerable<object[]> TestFiles( Type type )
     {
       // Pass either SpecTestFile to run tests in a group or IndividualTestFile to run one test file at a time 
-      List<ISpecTestFile> files = SpecsTesterResolver.ProcessDirectory(LONG_SPEC_TEST_DIR, type);
+      List<ISpecTestFile> files = Util.SpecsTesterResolver.ProcessDirectory(LONG_SPEC_TEST_DIR, type);
       
       // Back to caller
       foreach (ISpecTestFile file in files)

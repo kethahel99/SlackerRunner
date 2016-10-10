@@ -28,6 +28,7 @@ namespace SlackerRunner.Util
         {
             //Logger.Log("~~~ directories, target=" + targetDirectory + ", startdirectory=" + startDirectory);
             List <ISpecTestFile> testFiles = new List<ISpecTestFile>();
+
             // Process the list of files found in the directory. 
             string[] fileEntries = Directory.GetFiles(targetDirectory);
             foreach (string fileName in fileEntries)
@@ -36,9 +37,8 @@ namespace SlackerRunner.Util
                 var fileUri = new Uri(fileName);
                 var referenceUri = new Uri(startDirectory);
                 ISpecTestFile relativeFile = (ISpecTestFile)Activator.CreateInstance(type);
-                //ISpecTestFile relativeFile = new IndividualSpecTestFile();
                 relativeFile.FileName = Uri.UnescapeDataString( referenceUri.MakeRelativeUri(fileUri).ToString() );
-                // Absolute path file location
+                // Relative path file location
                 testFiles.Add(relativeFile);
             }
 
