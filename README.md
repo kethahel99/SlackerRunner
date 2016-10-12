@@ -34,6 +34,6 @@ To add SlackerRunner to your VS solution from the Nuget Package Manager console
 ------------
 `PM> Install-Package SlackerRunner`  
 
-The Nuget package feed is [located here](https://www.nuget.org/packages/SlackerRunner/)
+The Nuget package feed is [located here](https://www.nuget.org/packages/SlackerRunner/).
 
 
