@@ -1,16 +1,21 @@
 
 
-2.0.0.21 - 9/23/2016 
+2.3.0.2 - 10/12/2016 
+------------------------------
+Added standard output and error from Slacker when Slacker exits with non 0 exitcode
+
+
+2.2.0.21 - 9/23/2016 
 ------------------------------
 Added classes to allow specs either to be run as a group or individual tests, SpecTestFile, IndividualSpecTestFile.  See the UnitTest SlackerRunner.IntegrationTests.SpecsTester for details.
 
 
-2.0.0.15 - 8/3/2016 ( jdshkolnik )
+2.2.0.15 - 8/3/2016 ( jdshkolnik )
 ------------------------------
 Added new SlackerResults.Message property which contains the full result string. This message becomes the second parameter to the Unittest assert statements.
 
 
-2.0.0.14 - 6/21/2016
+2.2.0.14 - 6/21/2016
 ------------------------------
 Added simple logger to consolidate logging, make it visible when run by VS runner in debug console
 
