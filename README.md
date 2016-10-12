@@ -7,7 +7,7 @@ Build status
 
 Intro
 ============
-Allows you to run [Slacker](https://github.com/vassilvk/slacker) tests from within Visual Studio and during continuous integration under TFS/VTS.  This is not a test runner but rather a process runner for unit tests which will return [Slacker](https://github.com/vassilvk/slacker) test results back to VS/TFS/VSTS.
+Allows you to run [Slacker](https://github.com/vassilvk/slacker) tests from within Visual Studio and during continuous integration under TFS/VSTS.  This is not a test runner but rather a process runner for unit tests which will return [Slacker](https://github.com/vassilvk/slacker) test results back to VS/TFS/VSTS.
 
 This project is based on the [Cucumber runner at Codeplex](https://cukesfortfs.codeplex.com/)
 
