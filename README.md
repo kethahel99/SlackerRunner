@@ -1,9 +1,6 @@
 # SlackerRunner
 
-Build status  
-<a href="https://deloitte-fintech.visualstudio.com/Platform/_build?definitionId=17">
-<img src="https://deloitte-fintech.visualstudio.com/_apis/public/build/definitions/b620f5de-3806-47e5-8cf2-fb39e823213a/17/badge"/>
-</a>
+[![Build status](https://deloitte-fintech.visualstudio.com/_apis/public/build/definitions/b620f5de-3806-47e5-8cf2-fb39e823213a/17/badge)](https://deloitte-fintech.visualstudio.com/Platform/_build?definitionId=17)
 
 Intro
 ============
