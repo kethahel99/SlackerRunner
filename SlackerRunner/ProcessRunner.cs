@@ -10,7 +10,7 @@ namespace SlackerRunner
 {
   public class ProcessRunner
   {
-    private StringBuilder _StandArdOutput = new StringBuilder();
+    private StringBuilder _StandardOutput = new StringBuilder();
     private StringBuilder _ErrorOutput = new StringBuilder();
     // Default timeout for individual test
     private int SlackerTimeOutValueMillisec = 60 * 1000;
@@ -23,7 +23,7 @@ namespace SlackerRunner
 
     public string StandardOutput
     {
-      get { return _StandArdOutput.ToString(); }
+      get { return _StandardOutput.ToString(); }
     }
     public string StandardError
     {
@@ -62,7 +62,7 @@ namespace SlackerRunner
             }
             else
             {
-              _StandArdOutput.AppendLine(e.Data);
+              _StandardOutput.AppendLine(e.Data);
             }
           };
 
@@ -91,15 +91,15 @@ namespace SlackerRunner
           {
             // Process completed
             Logger.Log(  "process ended, exitcode=" + process.ExitCode);
-            Logger.Log(  "process standard out=" + _StandArdOutput );
+            Logger.Log(  "process standard out=" + _StandardOutput);
             // Throws when Slacker has an error
             if (process.ExitCode != 0)
-              throw new SlackerException("Slacker error, exitcode=" + process.ExitCode);
+              throw new SlackerException("Slacker error, exitcode=" + process.ExitCode, new Exception( StandardOutput + " - " + StandardError ) );
           }
           else
           {
             // Timed out.
-            Logger.Log(  "run timeout");
+            Logger.Log( "run timeout");
             // Throws when Slacker times out
             throw new SlackerException("Slacker timeout error, default timeout is set to=" + ( SlackerTimeOutValueMillisec  / 1000 ) + " seconds" );
           }
