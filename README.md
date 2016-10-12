@@ -22,7 +22,7 @@ Getting Started
 ------------
 
 1. Install [Slacker](https://github.com/vassilvk/slacker/wiki/Installation "Slacker Installation and Requirements")
-2. If behind a proxy server use the following line:
+2. If behind a proxy server, use the following line:
   * `set http_proxy=http://username:password@proxyserver:8080`
 3. Open `\SlackerTests\database.yml` and put in your MS SQL database and credentials. The tests that ship with the solution are basic database system tests and should run against empty MS SQL database.
 4. Run the UnitTests.  
