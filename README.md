@@ -1,8 +1,8 @@
 # SlackerRunner
 
 Build status  
-<a href="https://deloitte-fintech.visualstudio.com/Solvas/Global/_build?definitionId=1">
-<img src="https://deloitte-fintech.visualstudio.com/_apis/public/build/definitions/72411e9a-cff7-4db7-aa10-5937f1785cc2/1/badge"/>
+<a href="https://deloitte-fintech.visualstudio.com/Platform/_build?definitionId=17">
+<img src="https://deloitte-fintech.visualstudio.com/_apis/public/build/definitions/b620f5de-3806-47e5-8cf2-fb39e823213a/17/badge"/>
 </a>
 
 Intro
