@@ -12,7 +12,6 @@ namespace SlackerRunner
     /// </summary>
     public static void Log(string Text)
     {
-
       //DateTime time = DateTime.Now;
       //string theTime = String.Format("{0:d/M/yyyy HH:mm:ss:fff}", time);
       //string textlineOut = "~~~ " + theTime + ", " + Text + Environment.NewLine;

@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assemblies>
+  <assembly name="I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\App.Db.Slacker\bin\Debug\App.Db.Slacker.dll" environment="64-bit .NET 4.0.30319.42000" test-framework="xUnit.net 1.8.0.1545" run-date="2016-03-14" run-time="12:54:57" total="2" passed="2" failed="0" skipped="0" time="1.313" errors="0">
+    <errors />
+    <collection total="2" passed="2" failed="0" skipped="0" name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\App.Db.Slacker\bin\Debug\App.Db.Slacker.dll" time="1.313">
+      <test name="App.Db.Slacker.SlackerRunner.SpecificSpecTester.RunThisSpec" type="App.Db.Slacker.SlackerRunner.SpecificSpecTester" method="RunThisSpec" time="0.845" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+Cannot find directory "I:/Agent/PROD-Jason_Bourne/_work/5c0e0f53/CDO Team/spec/App.Db.Slacker/debug"
+
+]]></output>
+      </test>
+      <test name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_code_part.rb)" type="App.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.468" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+Cannot find directory "I:/Agent/PROD-Jason_Bourne/_work/5c0e0f53/CDO Team/spec/App.Db.Slacker/debug"
+
+]]></output>
+      </test>
+    </collection>
+  </assembly>
+  <assembly name="I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\Beachcomber.Db.Slacker\bin\Debug\Beachcomber.Db.Slacker.dll" environment="64-bit .NET 4.0.30319.42000" test-framework="xUnit.net 1.8.0.1545" run-date="2016-03-14" run-time="12:54:59" total="32" passed="32" failed="0" skipped="0" time="74.079" errors="0">
+    <errors />
+    <collection total="32" passed="32" failed="0" skipped="0" name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\Beachcomber.Db.Slacker\bin\Debug\Beachcomber.Db.Slacker.dll" time="74.079">
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecificSpecTester.RunThisSpec" type="Beachcomber.Db.Slacker.SlackerRunner.SpecificSpecTester" method="RunThisSpec" time="1.095" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.14501 seconds (files took 0.39404 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(authorization/tf_authorization_verdict.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="30.312" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+..........................................................
+
+Finished in 29.69 seconds (files took 0.34803 seconds to load)
+58 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(authorization/tf_role_authorization_permission.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="6.840" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...................
+
+Finished in 6.23 seconds (files took 0.34803 seconds to load)
+19 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(authorization/tf_user_role_strands.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="10.866" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+............................
+
+Finished in 10.26 seconds (files took 0.33703 seconds to load)
+28 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(client_format/boolean_to_client_format.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.802" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.16602 seconds (files took 0.35404 seconds to load)
+3 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_code_part.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.725" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.05101 seconds (files took 0.37904 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_get.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.785" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+..
+
+Finished in 0.18202 seconds (files took 0.33403 seconds to load)
+2 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_put.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.771" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.17802 seconds (files took 0.32903 seconds to load)
+3 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/tf_config_value.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="1.516" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+........................
+
+Finished in 0.93109 seconds (files took 0.32403 seconds to load)
+24 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(context_info/context_info.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.663" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.031 seconds (files took 0.33303 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(excel_export/excel_export_meta.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.760" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.15802 seconds (files took 0.33403 seconds to load)
+3 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(excel_export/excel_export_seed.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.681" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+..
+
+Finished in 0.08101 seconds (files took 0.32903 seconds to load)
+2 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(holiday_schedule/put_get.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="1.395" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.79508 seconds (files took 0.31703 seconds to load)
+3 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_code/is_valid_lookup_code.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.818" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.20702 seconds (files took 0.34603 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_code/lookup_code_description.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.964" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.33403 seconds (files took 0.34003 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_code/tf_lookup_code.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="1.175" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+....
+
+Finished in 0.57506 seconds (files took 0.33303 seconds to load)
+4 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_type/put_get.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.666" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.06101 seconds (files took 0.33503 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(message/tf_message.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.633" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.05201 seconds (files took 0.32503 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(model/model_field_base_type_name.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.670" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.06901 seconds (files took 0.33203 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(model/model_type_format.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.858" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+....
+
+Finished in 0.26803 seconds (files took 0.31503 seconds to load)
+4 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(operation_result/add_operation_message.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.622" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.033 seconds (files took 0.33103 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(report_destination/report_destination_seed.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.608" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.031 seconds (files took 0.32103 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(string_list/separated_string_to_string_list.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.682" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.09301 seconds (files took 0.32703 seconds to load)
+3 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(string_list/string_list_to_table.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.752" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.....
+
+Finished in 0.15302 seconds (files took 0.32603 seconds to load)
+5 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(string_list/table_to_string_list.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.809" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.....
+
+Finished in 0.16402 seconds (files took 0.33903 seconds to load)
+5 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/maker_checker.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="2.099" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+........
+
+Finished in 1.25 seconds (files took 0.43104 seconds to load)
+8 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/role_put.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.936" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+..
+
+Finished in 0.31803 seconds (files took 0.33803 seconds to load)
+2 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_del.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.677" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.08201 seconds (files took 0.33003 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_id.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.663" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.05101 seconds (files took 0.34103 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_put.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.824" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+....
+
+Finished in 0.23302 seconds (files took 0.32103 seconds to load)
+4 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_put_get.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.645" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.05801 seconds (files took 0.32103 seconds to load)
+1 example, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_role_association_action.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="1.767" result="Pass">
+        <output><![CDATA[Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.........
+
+Finished in 1.18 seconds (files took 0.32503 seconds to load)
+9 examples, 0 failures
+
+
+]]></output>
+      </test>
+    </collection>
+  </assembly>
+  <assembly name="I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\Beachcomber.Db.SqlClr.Spec\bin\Debug\Beachcomber.Db.SqlClr.Spec.dll" environment="64-bit .NET 4.0.30319.42000" test-framework="xUnit.net 1.8.0.1545" run-date="2016-03-14" run-time="12:56:13" total="24" passed="24" failed="0" skipped="0" time="6.536" errors="0">
+    <errors />
+    <collection total="24" passed="24" failed="0" skipped="0" name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\Beachcomber.Db.SqlClr.Spec\bin\Debug\Beachcomber.Db.SqlClr.Spec.dll" time="6.536">
+      <test name="Given Date.IsInvalidClientFormat, it returns true if characters are passed when expecting numbers." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.606" result="Pass" />
+      <test name="Given Date.IsInvalidClientFormat, it returns false if numbers are passed when expecting numbers." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.000" result="Pass" />
+      <test name="Given Date.IsInvalidClientFormat, it returns true if invalid characters are passed when expecting date in MMM/d/yyyy." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.001" result="Pass" />
+      <test name="Given Date.IsInvalidClientFormat, it returns true if invalid characters are passed when expecting date in MMMM/d/yyyy." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.001" result="Pass" />
+      <test name="Given Date.IsInvalidClientFormat, it returns true if invalid characters are passed when expecting literals." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.001" result="Pass" />
+      <test name="Given Date.IsInvalidClientFormat, it returns true if numbers are passed to escaped numeric format value." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.001" result="Pass" />
+      <test name="Given Date.IsInvalidClientFormat, it returns false if date are passed when expecting date." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.000" result="Pass" />
+      <test name="Given Date.IsInvalidClientFormat, it returns false if month is passed when expecting month." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.030" result="Pass" />
+      <test name="Given Date.IsInvalidClientFormat, it returns false if day of week is passed when expecting day of week." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.009" result="Pass" />
+      <test name="Given Date.IsInvalidClientFormat, it returns false if date and time are passed when expecting date and time." type="Beachcomber.Db.SqlClr.Spec.DateIsInvalidFormatSpec" method="DateIsInvalidClientFormatTest" time="0.001" result="Pass" />
+      <test name="Given Date.ToClientFormat, it formats year values correctly." type="Beachcomber.Db.SqlClr.Spec.DateToClientFormatSpec" method="DateTest" time="0.041" result="Pass" />
+      <test name="Given Date.ToClientFormat, it formats month values correctly." type="Beachcomber.Db.SqlClr.Spec.DateToClientFormatSpec" method="DateTest" time="0.003" result="Pass" />
+      <test name="Given Date.ToClientFormat, it formats weekday values correctly." type="Beachcomber.Db.SqlClr.Spec.DateToClientFormatSpec" method="DateTest" time="0.002" result="Pass" />
+      <test name="Given Date.ToClientFormat, it formats day of the month values correctly." type="Beachcomber.Db.SqlClr.Spec.DateToClientFormatSpec" method="DateTest" time="0.002" result="Pass" />
+      <test name="Given Date.ToClientFormat, it formats hour values correctly." type="Beachcomber.Db.SqlClr.Spec.DateToClientFormatSpec" method="DateTest" time="0.003" result="Pass" />
+      <test name="Given Date.ToClientFormat, it formats second values correctly." type="Beachcomber.Db.SqlClr.Spec.DateToClientFormatSpec" method="DateTest" time="0.001" result="Pass" />
+      <test name="Given Date.ToClientFormat, it formats special cases and complex formats correctly." type="Beachcomber.Db.SqlClr.Spec.DateToClientFormatSpec" method="DateTest" time="0.003" result="Pass" />
+      <test name="Given Date.ToClientFormat, it passes performance test for large number of iterations" type="Beachcomber.Db.SqlClr.Spec.DateToClientFormatSpec" method="DateTest" time="5.812" result="Pass" />
+      <test name="Given ClientFormat.IsInvalidNumber, it returns true if characters are passed when expecting numbers." type="Beachcomber.Db.SqlClr.Spec.NumberIsInvalidFormatSpec" method="NumberIsInvalidClientFormatTest" time="0.014" result="Pass" />
+      <test name="Given ClientFormat.IsInvalidNumber, it returns false if numbers are passed when expecting numbers." type="Beachcomber.Db.SqlClr.Spec.NumberIsInvalidFormatSpec" method="NumberIsInvalidClientFormatTest" time="0.000" result="Pass" />
+      <test name="Given ClientFormat.IsInvalidNumber, it returns false if numbers are passed when expecting numbers with additional format info." type="Beachcomber.Db.SqlClr.Spec.NumberIsInvalidFormatSpec" method="NumberIsInvalidClientFormatTest" time="0.001" result="Pass" />
+      <test name="Given ClientFormat.IsInvalidNumber, it returns false if numbers are passed with empty format." type="Beachcomber.Db.SqlClr.Spec.NumberIsInvalidFormatSpec" method="NumberIsInvalidClientFormatTest" time="0.000" result="Pass" />
+      <test name="Given ClientFormat.IsInvalidNumber, it returns true if characters are passed with empty format." type="Beachcomber.Db.SqlClr.Spec.NumberIsInvalidFormatSpec" method="NumberIsInvalidClientFormatTest" time="0.000" result="Pass" />
+      <test name="Given Text.RegexReplace, it replaces non-numeric values correctly." type="Beachcomber.Db.SqlClr.Spec.TextRegexReplaceSpec" method="RegexReplaceTest" time="0.004" result="Pass" />
+    </collection>
+  </assembly>
+  <assembly name="I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\Beachcomber.Lib.Spec\bin\Debug\Beachcomber.Lib.Spec.dll" environment="64-bit .NET 4.0.30319.42000" test-framework="xUnit.net 1.8.0.1545" run-date="2016-03-14" run-time="12:56:20" total="74" passed="74" failed="0" skipped="0" time="9.278" errors="0">
+    <errors />
+    <collection total="74" passed="74" failed="0" skipped="0" name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\Beachcomber.Lib.Spec\bin\Debug\Beachcomber.Lib.Spec.dll" time="9.278">
+      <test name="Given a preset ActiveDirectoryGroupMonitor.DbCodeToTimerMap, ActiveDirectoryGroupMonitor correctly monitors the groups" type="Beachcomber.Lib.Spec.ActiveDirectoryGroupMonitorSpec" method="PollSpec" time="2.813" result="Pass">
+        <output><![CDATA[Retrieved configuration settings
+]]></output>
+      </test>
+      <test name="Given a set of templates, the template is generated successfully" type="Beachcomber.Lib.Spec.BeachcomberRazorTemplateSpec" method="TemplateSpecAll" time="0.055" result="Pass" />
+      <test name="Given a BeachcomberContext, a BrokerQueueClient should be able to process one message at a time" type="Beachcomber.Lib.Spec.BrokerQueueClientSpec" method="BrokerQueueClientTest" time="0.281" result="Pass" />
+      <test name="Given a BeachcomberContext, a BrokerQueueClient should be able to process multiple messages at a time" type="Beachcomber.Lib.Spec.BrokerQueueClientSpec" method="BrokerQueueClientTest" time="0.044" result="Pass" />
+      <test name="Given CommonMarkHelper, it correctly converts a Markdown input to a text input" type="Beachcomber.Lib.Spec.CommonMarkHelperSpec" method="DetailsTagTest" time="0.006" result="Pass" />
+      <test name="Given CommonMarkHelper, it correctly converts a Markdown input to HTML input" type="Beachcomber.Lib.Spec.CommonMarkHelperSpec" method="DetailsTagTest" time="0.037" result="Pass" />
+      <test name="Given a BeachcomberContext, a model specification can be extracted based on a model stored procedure" type="Beachcomber.Lib.Spec.DbModelProcessorSpec" method="DbModelProcessing" time="0.863" result="Pass" />
+      <test name="Given a BeachcomberContext, a deep model tree can be generated based on a single model name" type="Beachcomber.Lib.Spec.DbModelProcessorSpec" method="DbModelProcessing" time="0.208" result="Pass" />
+      <test name="Given a BeachcomberContext, a deep model tree can be deducted based on a list of model names" type="Beachcomber.Lib.Spec.DbModelProcessorSpec" method="DbModelProcessing" time="0.014" result="Pass" />
+      <test name="Given a BeachcomberContext, the system throws an exception when trying to get a non-existing model" type="Beachcomber.Lib.Spec.DbModelProcessorSpec" method="DbModelProcessing" time="0.070" result="Pass" />
+      <test name="Given DotLiquidExtensions, tag &quot;bullet_details&quot; is correctly registered and performs as expected" type="Beachcomber.Lib.Spec.DotLiquidExtensionsSpec" method="DetailsTagTest" time="0.035" result="Pass" />
+      <test name="Given DotLiquidExtensions, tag &quot;bullet_list&quot; is correctly registered and performs as expected" type="Beachcomber.Lib.Spec.DotLiquidExtensionsSpec" method="DetailsTagTest" time="0.003" result="Pass" />
+      <test name="Given DotLiquidExtensions, filter &quot;zn&quot; is correctly registered and performs as expected" type="Beachcomber.Lib.Spec.DotLiquidExtensionsSpec" method="DetailsTagTest" time="0.018" result="Pass" />
+      <test name="Given DotLiquidExtensions, filter &quot;markdown&quot; is correctly registered and performs as expected" type="Beachcomber.Lib.Spec.DotLiquidExtensionsSpec" method="DetailsTagTest" time="0.007" result="Pass" />
+      <test name="Given DotLiquidExtensions, ExcelExportDatasetDimensions can be used in a dotLiquid template to perform arithmetic operations" type="Beachcomber.Lib.Spec.DotLiquidExtensionsSpec" method="DetailsTagTest" time="0.020" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport handles hierarchical data" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="1.159" result="Pass" />
+      <test name="Given a BeachcomberContext, ColumnAddress works as expected" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.003" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport correctly handles grid strored procedures and appropriately overrides the return_type request parameter" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.167" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport correctly handles various style exports" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.349" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport correctly handles grid strored procedures with custom Excel template" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.066" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport correctly handles grid strored procedures by calling them with return_type=EXCEL" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.091" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport correctly uses the custom excel target file returned by the metadata" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.070" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport correctly generates output file name based on the grid title" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.066" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport correctly handles grid strored procedures with custom Excel templates" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.166" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport populates a default excel workbook with the resultset of a stored procedure" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.088" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport populates an excel workbook with multiple resultsets from a stored procedure" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.117" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport correctly handles type conversions" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.097" result="Pass" />
+      <test name="Given a BeachcomberContext, ExcelExport correctly handles Excel export metadata" type="Beachcomber.Lib.Spec.ExcelExportSpec" method="ExcelExportSpecAll" time="0.124" result="Pass" />
+      <test name="Given an ExecutionSurface with preloaded test data, the surface contents is as expected" type="Beachcomber.Lib.Spec.ExecutionSurfaceSpec" method="ExecutionSurfaceSpecAll" time="0.510" result="Pass" />
+      <test name="Given an ExecutionSurface with preloaded test data, authorization works as expected" type="Beachcomber.Lib.Spec.ExecutionSurfaceSpec" method="ExecutionSurfaceSpecAll" time="0.424" result="Pass" />
+      <test name="Given an ExecutionSurface with preloaded test data, authorization works as expected as it relates to role inheritance" type="Beachcomber.Lib.Spec.ExecutionSurfaceSpec" method="ExecutionSurfaceSpecAll" time="0.351" result="Pass" />
+      <test name="Given an Xml string with an array, it correctly gets converted to an IEnumerable" type="Beachcomber.Lib.Spec.ExtensionsSpec" method="XmlToFlexSpecArrays" time="0.059" result="Pass" />
+      <test name="Given an object and a Flex, extension method ToObject properly populates an object with the contents of a Flex" type="Beachcomber.Lib.Spec.ExtensionsSpec" method="ToObjectSpec" time="0.009" result="Pass" />
+      <test name="Given an object and a Flex, extension method ToObject properly populates an object with the contents of a Flex ins strict mode" type="Beachcomber.Lib.Spec.ExtensionsSpec" method="ToObjectSpec" time="0.000" result="Pass" />
+      <test name="Given an object and a Flex, extension method ToObject properly throws in strict mode" type="Beachcomber.Lib.Spec.ExtensionsSpec" method="ToObjectSpec" time="0.000" result="Pass" />
+      <test name="Given a Flex object, it correctly gets converted to an Xml string" type="Beachcomber.Lib.Spec.ExtensionsSpec" method="FlexToXmlSpec" time="0.004" result="Pass" />
+      <test name="Given an Xml string, it can be converted to a Flex" type="Beachcomber.Lib.Spec.ExtensionsSpec" method="XmlToFlexSpec" time="0.038" result="Pass" />
+      <test name="Given an IEnumerable&lt;T&gt;, extension method ForEach can be used to enumerate all its elements" type="Beachcomber.Lib.Spec.ExtensionsSpec" method="ForEachSpec" time="0.004" result="Pass" />
+      <test name="Given Flex, it can be converted to Json" type="Beachcomber.Lib.Spec.FlexSpec" method="UnderscoreSpec" time="0.018" result="Pass" />
+      <test name="Given Flex, a Json value can be converted to a Flex" type="Beachcomber.Lib.Spec.FlexSpec" method="UnderscoreSpec" time="0.019" result="Pass" />
+      <test name="Given a BeachcomberContext, a grid meta can converted to Json" type="Beachcomber.Lib.Spec.GridMetaSpec" method="MetaJsonSpec" time="0.028" result="Pass" />
+      <test name="Given a string, it can be underscored using the Inflector extension methods" type="Beachcomber.Lib.Spec.InflectorSpec" method="UnderscoreSpec" time="0.000" result="Pass" />
+      <test name="Given an arbitrary anonymous object, it correctly converts it to a Json string" type="Beachcomber.Lib.Spec.JsonHelperSpec" method="AnonymousObjectToJsonSpec" time="0.006" result="Pass" />
+      <test name="Given an arbitrary Flex, it correctly converts it to a Json string" type="Beachcomber.Lib.Spec.JsonHelperSpec" method="FlexToJsonSpec" time="0.010" result="Pass" />
+      <test name="Given a Json string, it correctly converts it to a .NET object" type="Beachcomber.Lib.Spec.JsonHelperSpec" method="JsonToObject" time="0.008" result="Pass" />
+      <test name="Given a BeachcomberContext, calling a sproc which divides by zero throws an exception (ANSI_WARNINGS is set to ON)" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.014" result="Pass" />
+      <test name="Given a BeachcomberContext, sprocs can be executed dynamically through its Sproc property" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.012" result="Pass" />
+      <test name="Given a BeachcomberContext, sprocs with named params can be invoked" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.011" result="Pass" />
+      <test name="Given a BeachcomberContext, sprocs with optional params can be invoked" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.019" result="Pass" />
+      <test name="Given a BeachcomberContext, sprocs with 'out' params can be invoked" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.010" result="Pass" />
+      <test name="Given a BeachcomberContext, sprocs with xml 'out' params can be invoked" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.063" result="Pass" />
+      <test name="Given a BeachcomberContext, a sproc can be called with arbitrary number of parameters - it will ignore parameters which it does not accept" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.008" result="Pass" />
+      <test name="Given a BeachcomberContext, an array of objects is passed to the udnerlying sproc as a table" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.155" result="Pass" />
+      <test name="Given a BeachcomberContext, an array with disjointed elements can be passed as a parameter to a sproc which takes a table valued parameter" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.012" result="Pass" />
+      <test name="Given a BeachcomberContext, a complex object can be passed to a sproc which takes an XML input parameter" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.022" result="Pass" />
+      <test name="Given a BeachcomberContext, an object is passed to the udnerlying sproc as a table" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.009" result="Pass" />
+      <test name="Given a BeachcomberContext, an array of objects is passed to the udnerlying sproc as a table and used by it" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.069" result="Pass" />
+      <test name="Given a BeachcomberContext, a sproc's resultset which contains a hierarchy_child_id and hierarchy_parent_id is compiled into a hierarchical resultset" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.032" result="Pass" />
+      <test name="Given a BeachcomberContext, a hierarchical result pushes all orphans to the top of the hierarchy" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.009" result="Pass" />
+      <test name="Given a BeachcomberContext, a hierarchical result does not omit children of missing parents when there is a single record in the recordset" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.008" result="Pass" />
+      <test name="Given a BeachcomberContext, a hierarchical result omits shallow circular reference chains" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.007" result="Pass" />
+      <test name="Given a BeachcomberContext, a hierarchical result omits deep circular reference chains" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.007" result="Pass" />
+      <test name="Given a BeachcomberContext, a sproc which accepts INT parameters can be called with a string representation of an INT" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.015" result="Pass" />
+      <test name="Given a BeachcomberContext, a sproc which accepts INT parameters can be called with an empty string which is internally converted to NULL" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.007" result="Pass" />
+      <test name="Given a BeachcomberContext, a sproc returns an error message in the operation result and stops the sproc execution when an error message is reported" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.075" result="Pass" />
+      <test name="Given a BeachcomberContext, an error message includes the SQL call-stack when enabled" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.044" result="Pass" />
+      <test name="Given a BeachcomberContext, a sproc returns a warning message in the operation result and stops the sproc execution when a warning message is reported" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.019" result="Pass" />
+      <test name="Given a BeachcomberContext, a sproc returns an info message in the operation result and does not stop the sproc execution when an info message is reported" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.017" result="Pass" />
+      <test name="Given a BeachcomberContext, a sproc can respond with a collection of messages" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.020" result="Pass" />
+      <test name="Given a BeachcomberContext, a nested sproc returns an error message in the operation result and stops the sproc execution when an error message is reported" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.021" result="Pass" />
+      <test name="Given a BeachcomberContext, a nested sproc returns a warning message in the operation result and stops the sproc execution when a warning message is reported" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.019" result="Pass" />
+      <test name="Given a BeachcomberContext, a nested sproc returns an info message in the operation result and does not stop the sproc execution when an info message is reported" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.018" result="Pass" />
+      <test name="Given a BeachcomberContext, a nested sproc can respond with a collection of messages" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.024" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc can be called with a pre and post closure with an open connection" type="Beachcomber.Lib.Spec.SprocSpec" method="SprocSpecAll" time="0.007" result="Pass" />
+    </collection>
+  </assembly>
+  <assembly />
+  <assembly />
+  <assembly />
+  <assembly name="I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\Beachcomber.Web.Spec\bin\Debug\Beachcomber.Web.Spec.dll" environment="64-bit .NET 4.0.30319.42000" test-framework="xUnit.net 1.8.0.1545" run-date="2016-03-14" run-time="12:56:33" total="38" passed="38" failed="0" skipped="0" time="6.920" errors="0">
+    <errors />
+    <collection total="38" passed="38" failed="0" skipped="0" name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\5c0e0f53\CDO Team\spec\Beachcomber.Web.Spec\bin\Debug\Beachcomber.Web.Spec.dll" time="6.920">
+      <test name="Given a BeachcomberContext, DirectFileController can be used to import an Excel file directly into a table" type="Beachcomber.Web.Spec.DirectFileControllerSpec" method="ImportSpec" time="4.193" result="Pass" />
+      <test name="Given a BeachcomberContext, DirectFileController offers option to load worksheets with missing fields" type="Beachcomber.Web.Spec.DirectFileControllerSpec" method="ImportSpec" time="0.159" result="Pass" />
+      <test name="Given a BeachcomberContext, DirectFileController offers option to load worksheets with extra fields" type="Beachcomber.Web.Spec.DirectFileControllerSpec" method="ImportSpec" time="0.149" result="Pass" />
+      <test name="Given a BeachcomberContext, DirectFileController detects missing worksheets" type="Beachcomber.Web.Spec.DirectFileControllerSpec" method="ImportSpec" time="0.092" result="Pass" />
+      <test name="Given a BeachcomberContext, DirectFileController offers an option to run a post-load stored procedure as part of the import operation" type="Beachcomber.Web.Spec.DirectFileControllerSpec" method="ImportSpec" time="0.331" result="Pass">
+        <output><![CDATA[Retrieved Active Users
+Retrieved Execution Surface
+]]></output>
+      </test>
+      <test name="Given a BeachcomberContext, DirectFileController correctly processes operation result messages generated by the post-load stored procedure" type="Beachcomber.Web.Spec.DirectFileControllerSpec" method="ImportSpec" time="0.176" result="Pass" />
+      <test name="Given a BeachcomberContext, Assert" type="Beachcomber.Web.Spec.ModelControllerSpec" method="DbCallSpec" time="0.001" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when a single property-value filter is specified as a request parameter" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.627" result="Pass">
+        <output><![CDATA[Retrieved configuration settings
+]]></output>
+      </test>
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when a multi property-value filter is specified as a request parameter" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.052" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when an exact string match filter is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.033" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when an exact string match filter is executed with the wrong string value" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.032" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when a &quot;like&quot; string match filter is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.037" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when an exact string match filter is executed with the wrong string value" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.034" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when numeric greater than comparison is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.035" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when numeric greater than comparison is executed with a number equal to the max" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.033" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when numeric less than comparison is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.034" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when numeric less than comparison is executed with a number equal to the min" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.031" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when numeric equal to comparison is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.032" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when numeric equal to comparison is executed with a number which does not exist in the database model" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.030" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when date greater than comparison is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.037" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when date greater than comparison is executed with a number equal to the max" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.036" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when date less than comparison is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.035" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when date less than comparison is executed with a number equal to the min" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.032" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when date equal to comparison is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.034" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when date equal to comparison is executed with a date which does not exist in the database model" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.032" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when true boolean equal to comparison is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.031" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when false boolean equal to comparison is executed" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.032" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when true boolean equal to comparison is executed against a field which is all false" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.035" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when false boolean equal to comparison is executed against a field which is all true" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocFilteredGetSpec" time="0.033" result="Pass" />
+      <test name="Given a BeachcomberContext, SprocController can call simple sprocs with parameters" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocCallSpec" time="0.030" result="Pass" />
+      <test name="Given a BeachcomberContext, SprocController correctly handles ISO 8601 dates as parameters" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocCallSpec" time="0.032" result="Pass" />
+      <test name="Given a BeachcomberContext, SprocController can call sprocs with XML out parameters" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocCallSpec" time="0.039" result="Pass" />
+      <test name="Given a BeachcomberContext, SprocController correctly handles XML typed elements" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocCallSpec" time="0.028" result="Pass" />
+      <test name="Given a BeachcomberContext, SprocController correctly reports field SQL data types" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocCallSpec" time="0.037" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a list of records on GET without a specified ID" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocCallSpec" time="0.043" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller returns a single record when GET is called with an ID parameter" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocCallSpec" time="0.054" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller creates a single new record when _put sproc is called" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocCallSpec" time="0.120" result="Pass" />
+      <test name="Given a BeachcomberContext, Sproc Controller performs a record edit when _put sproc is called on an existing record" type="Beachcomber.Web.Spec.SprocControllerSpec" method="SprocCallSpec" time="0.089" result="Pass" />
+    </collection>
+  </assembly>
+</assemblies>

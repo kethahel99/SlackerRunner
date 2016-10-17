@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-results name="Test results" date="2016-03-10" time="16:28:58" total="298" failures="0" not-run="0">
+  <test-suite name="xUnit.net Tests" success="True" time="160.696">
+    <results>
+      <test-suite name="I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\App.Db.Slacker\bin\Debug\App.Db.Slacker.dll" success="True" time="44.928">
+        <results>
+          <test-suite name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\App.Db.Slacker\bin\Debug\App.Db.Slacker.dll" success="True" time="44.928">
+            <results>
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecificSpecTester.RunThisSpec" executed="True" success="True" time="0.163" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/calculations/FractionOfAmount.function.rb)" executed="True" success="True" time="1.018" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/calculations/IsEqual.function.rb)" executed="True" success="True" time="0.900" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/calendar_and_workflow/DateAddMonth.rb)" executed="True" success="True" time="0.723" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/calendar_and_workflow/DateAddPeriod.rb)" executed="True" success="True" time="0.719" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/calendar_and_workflow/SetDayOfMonth.rb)" executed="True" success="True" time="0.578" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/data_dictionary/DD_ConvertToTableValue.rb)" executed="True" success="True" time="0.719" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/data_dictionary/DD_DisplayValueParse.rb)" executed="True" success="True" time="1.826" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/data_dictionary/DD_PropertyDesc.rb)" executed="True" success="True" time="0.715" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/data_dictionary/DD_PropertyModelFieldBaseType.rb)" executed="True" success="True" time="0.691" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/data_dictionary/DD_PropertyValueDesc.rb)" executed="True" success="True" time="3.322" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/data_dictionary/DD_PropertyValueIsExpression.rb)" executed="True" success="True" time="0.649" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/event/EventApplicationIdsToXML.rb)" executed="True" success="True" time="0.731" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/event/EventId.rb)" executed="True" success="True" time="0.713" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/scalar_functions/event/EventStatus.rb)" executed="True" success="True" time="0.582" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/calculation_model/CM_Set_get.rb)" executed="True" success="True" time="0.620" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/calculation_model/CM_Set_Model_get.rb)" executed="True" success="True" time="0.590" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/data_dictionary/DD_Property_Area_get.rb)" executed="True" success="True" time="0.629" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/data_dictionary/DD_Property_del.rb)" executed="True" success="True" time="1.264" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/data_dictionary/DD_Property_get.rb)" executed="True" success="True" time="4.315" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/data_dictionary/DD_Property_Matrix_put.rb)" executed="True" success="True" time="0.578" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/data_dictionary/DD_Property_put.rb)" executed="True" success="True" time="2.648" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/data_dictionary/DD_Property_Value_calculate.rb)" executed="True" success="True" time="0.522" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/data_dictionary/DD_Property_Value_put.rb)" executed="True" success="True" time="1.031" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/event/Event_Log_put.rb)" executed="True" success="True" time="1.271" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/event/Event_put.rb)" executed="True" success="True" time="0.673" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/event/Event_System_Message_get.rb)" executed="True" success="True" time="0.621" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/event/Event_User_get.rb)" executed="True" success="True" time="0.614" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/financial_instrument/FI_Forecast_Result_Flat_get.rb)" executed="True" success="True" time="1.243" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/financial_instrument/FI_Property_get.rb)" executed="True" success="True" time="0.643" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/financial_instrument/FI_Property_Value_get.rb)" executed="True" success="True" time="0.670" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/forecast_entity/FE_Entity_get.rb)" executed="True" success="True" time="0.596" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/forecast_scenario/FS_Scenario_Queue_del_QueueGrid.rb)" executed="True" success="True" time="0.510" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/forecast_scenario/FS_Scenario_Queue_del_ScenarioGrid.rb)" executed="True" success="True" time="0.517" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/forecast_scenario/FS_Scenario_run.rb)" executed="True" success="True" time="0.532" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/transformation_matrix/TM_Characteristic_get.rb)" executed="True" success="True" time="0.617" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/transformation_matrix/TM_Criterion_get.rb)" executed="True" success="True" time="0.615" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/stored_procedures/transformation_matrix/TM_Schedule_get.rb)" executed="True" success="True" time="0.589" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/table_functions/data_dictionary/tf_DD_Object_Data_Check.rb)" executed="True" success="True" time="0.823" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/table_functions/data_dictionary/tf_DD_Property.rb)" executed="True" success="True" time="4.167" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/table_triggers/trg_Config_Value_put.rb)" executed="True" success="True" time="0.520" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app/table_triggers/trg_DD_Property.rb)" executed="True" success="True" time="1.115" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(app_clr/stored_procedures/Result_Sets_Schema_get.rb)" executed="True" success="True" time="1.714" />
+              <test-case name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(etl/stored_procedures/DL_Package_get.rb)" executed="True" success="True" time="0.632" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite name="I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\App.Db.SqlClr.Spec\bin\Debug\App.Db.SqlClr.Spec.dll" success="True" time="0.277">
+        <results>
+          <test-suite name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\App.Db.SqlClr.Spec\bin\Debug\App.Db.SqlClr.Spec.dll" success="True" time="0.277">
+            <results>
+              <test-case name="Given an instance of LookupScheduleSpec, LoadScheduleFromXml works correctly" executed="True" success="True" time="0.198" />
+              <test-case name="Given an instance of UtilityMethodsSpec, MoreMath Max methods works correctly" executed="True" success="True" time="0.004" />
+              <test-case name="Given an instance of UtilityMethodsSpec, MoreMath Min methods works correctly" executed="True" success="True" time="0.002" />
+              <test-case name="Given an instance of UtilityMethodsSpec, ClosestBinarySearch method works correctly" executed="True" success="True" time="0.009" />
+              <test-case name="Given an instance of LoadXmlDocumentFromXmlString, LoadXmlDocumentFromXmlString works correctly for Case: Valid XML String" executed="True" success="True" time="0.009" />
+              <test-case name="Given an instance of LoadXmlDocumentFromXmlString, LoadXmlDocumentFromXmlString works correctly for Case: Malformed XML" executed="True" success="True" time="0.004" />
+              <test-case name="Given a PMT result, PMT works correctly for Using BeginningOfPeriod" executed="True" success="True" time="0.004" />
+              <test-case name="Given a PMT result, PMT works correctly for Using EndOfPeriod" executed="True" success="True" time="0.000" />
+              <test-case name="Given a PMT result, PMT works correctly for Using future value with BeginningOfPeriod" executed="True" success="True" time="0.000" />
+              <test-case name="Given a PMT result, PMT works correctly for Using future value with EndOfPeriod" executed="True" success="True" time="0.000" />
+              <test-case name="Given an SingleMonthMortality result, SingleMonthMortality works correctly for Case 1" executed="True" success="True" time="0.001" />
+              <test-case name="Given an SingleMonthMortality result, SingleMonthMortality works correctly for Case 2" executed="True" success="True" time="0.000" />
+              <test-case name="Given an SingleMonthMortality result, SingleMonthMortality works correctly for Case 3" executed="True" success="True" time="0.000" />
+              <test-case name="Given a SinglePeriodStraighLine result, SinglePeriodStraightLine works correctly for Case 1" executed="True" success="True" time="0.001" />
+              <test-case name="Given a SinglePeriodStraighLine result, SinglePeriodStraightLine works correctly for Case 2" executed="True" success="True" time="0.000" />
+              <test-case name="Given a SinglePeriodStraighLine result, SinglePeriodStraightLine works correctly for Case 3" executed="True" success="True" time="0.000" />
+              <test-case name="Given the C# Method UnescapeUnicode result, UnescapeUnicode works correctly for Case: Non-XML: Unicode Escapes: Error Expected" executed="True" success="True" time="0.001" />
+              <test-case name="Given the C# Method UnescapeUnicode result, UnescapeUnicode works correctly for Case: XML: Child Elements: Unicode Escapes" executed="True" success="True" time="0.002" />
+              <test-case name="Given the C# Method UnescapeUnicode result, UnescapeUnicode works correctly for Case: XML: Unicode Escapes Only" executed="True" success="True" time="0.000" />
+              <test-case name="Given the C# Method UnescapeUnicode result, UnescapeUnicode works correctly for Case: XML: Unicode Escapes and Non-Unicode Escapes" executed="True" success="True" time="0.000" />
+              <test-case name="Given the C# Method UnescapeUnicode result, UnescapeUnicode works correctly for Case: XML: Non-Unicode Escapes" executed="True" success="True" time="0.000" />
+              <test-case name="Given the C# Method UnescapeUnicode result, UnescapeUnicode works correctly for Case: XML: Non-Unicode Escapes: Malformed XML: Closing Tag same as Open Tag" executed="True" success="True" time="0.000" />
+              <test-case name="Given the C# Method UnescapeUnicode result, UnescapeUnicode works correctly for Case: XML: Non-Unicode Escapes: Malformed XML: Not Closed" executed="True" success="True" time="0.000" />
+              <test-case name="Given the C# Method UnescapeUnicode result, UnescapeUnicode works correctly for Case: XML: Non-Unicode Escapes: Malformed XML: Open Tag Only" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlAttributeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Attribute does not exist" executed="True" success="True" time="0.003" />
+              <test-case name="Given an instance of XmlAttributeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid attribute name with value" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlAttributeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid attribute name with empty value" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlAttributeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid attribute name with null value" executed="True" success="True" time="0.001" />
+              <test-case name="Given an instance of XmlAttributeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid attribute name with padded spaces" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlAttributeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Malformed XML Element" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlAttributeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Duplicate attribute names" executed="True" success="True" time="0.002" />
+              <test-case name="Given an instance of XmlNodeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid node with value" executed="True" success="True" time="0.028" />
+              <test-case name="Given an instance of XmlNodeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid node without value and contains subnode" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlNodeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid subnode with value" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlNodeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid subnode without value" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlNodeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid node with null value" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlNodeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Valid node with padded spaces" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlNodeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Invalid tag search" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlNodeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Malformed XML Element" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlNodeIsEmptyOrNull, XmlAttributeIsEmptyOrNull works correctly for Case: Duplicate nodes" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlStringIsWellFormed, XmlStringIsWellFormed works correctly for Case: Valid XML String" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of XmlStringIsWellFormed, XmlStringIsWellFormed works correctly for Case: Malformed XML String" executed="True" success="True" time="0.000" />
+              <test-case name="Given an instance of StringSplitSpec, Current method works correctly" executed="True" success="True" time="0.006" />
+              <test-case name="Given an instance of StringSplitSpec, MoveNext method works correctly" executed="True" success="True" time="0.001" />
+              <test-case name="Given an instance of StringSplitSpec, Reset method works correctly" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Add" executed="True" success="True" time="0.001" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.GreaterOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.LesserOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Multiply" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Overwrite" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Subtract" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Add" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.GreaterOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.LesserOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Multiply" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Overwrite" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Subtract" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Add" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.GreaterOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.LesserOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Multiply" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Overwrite" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Subtract" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Add" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.GreaterOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.LesserOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Multiply" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Overwrite" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Subtract" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Add" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.GreaterOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.LesserOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Multiply" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Overwrite" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Subtract" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Add" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.GreaterOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.LesserOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Multiply" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Overwrite" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Subtract" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Add" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.GreaterOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.LesserOf" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Multiply" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Overwrite" executed="True" success="True" time="0.000" />
+              <test-case name="Given an ApplyModifier result, ApplyModifier works correctly for LookupType.ModifierType.Subtract" executed="True" success="True" time="0.000" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite name="I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\Beachcomber.Db.Slacker\bin\Debug\Beachcomber.Db.Slacker.dll" success="True" time="92.852">
+        <results>
+          <test-suite name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\Beachcomber.Db.Slacker\bin\Debug\Beachcomber.Db.Slacker.dll" success="True" time="92.852">
+            <results>
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(authorization/tf_authorization_verdict.rb)" executed="True" success="True" time="43.352" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(authorization/tf_role_authorization_permission.rb)" executed="True" success="True" time="9.797" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(authorization/tf_user_role_strands.rb)" executed="True" success="True" time="15.021" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(client_format/boolean_to_client_format.rb)" executed="True" success="True" time="0.710" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_code_part.rb)" executed="True" success="True" time="0.600" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_get.rb)" executed="True" success="True" time="0.725" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_put.rb)" executed="True" success="True" time="0.691" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/tf_config_value.rb)" executed="True" success="True" time="2.171" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(context_info/context_info.rb)" executed="True" success="True" time="0.644" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(excel_export/excel_export_meta.rb)" executed="True" success="True" time="0.758" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(excel_export/excel_export_seed.rb)" executed="True" success="True" time="0.676" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(holiday_schedule/put_get.rb)" executed="True" success="True" time="0.792" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_code/is_valid_lookup_code.rb)" executed="True" success="True" time="0.739" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_code/lookup_code_description.rb)" executed="True" success="True" time="0.739" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_code/tf_lookup_code.rb)" executed="True" success="True" time="1.301" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_type/put_get.rb)" executed="True" success="True" time="0.680" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(message/tf_message.rb)" executed="True" success="True" time="0.619" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(model/model_field_base_type_name.rb)" executed="True" success="True" time="0.594" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(model/model_type_format.rb)" executed="True" success="True" time="0.793" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(operation_result/add_operation_message.rb)" executed="True" success="True" time="0.600" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(report_destination/report_destination_seed.rb)" executed="True" success="True" time="0.641" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(string_list/separated_string_to_string_list.rb)" executed="True" success="True" time="0.650" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(string_list/string_list_to_table.rb)" executed="True" success="True" time="0.723" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(string_list/table_to_string_list.rb)" executed="True" success="True" time="0.700" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/maker_checker.rb)" executed="True" success="True" time="1.998" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/role_put.rb)" executed="True" success="True" time="1.044" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_del.rb)" executed="True" success="True" time="0.677" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_id.rb)" executed="True" success="True" time="0.662" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_put.rb)" executed="True" success="True" time="0.810" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_put_get.rb)" executed="True" success="True" time="0.641" />
+              <test-case name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_role_association_action.rb)" executed="True" success="True" time="2.304" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite name="I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\Beachcomber.Db.SqlClr.Spec\bin\Debug\Beachcomber.Db.SqlClr.Spec.dll" success="True" time="5.957">
+        <results>
+          <test-suite name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\Beachcomber.Db.SqlClr.Spec\bin\Debug\Beachcomber.Db.SqlClr.Spec.dll" success="True" time="5.957">
+            <results>
+              <test-case name="Given Date.IsInvalidClientFormat, it returns true if characters are passed when expecting numbers." executed="True" success="True" time="0.337" />
+              <test-case name="Given Date.IsInvalidClientFormat, it returns false if numbers are passed when expecting numbers." executed="True" success="True" time="0.000" />
+              <test-case name="Given Date.IsInvalidClientFormat, it returns true if invalid characters are passed when expecting date in MMM/d/yyyy." executed="True" success="True" time="0.001" />
+              <test-case name="Given Date.IsInvalidClientFormat, it returns true if invalid characters are passed when expecting date in MMMM/d/yyyy." executed="True" success="True" time="0.001" />
+              <test-case name="Given Date.IsInvalidClientFormat, it returns true if invalid characters are passed when expecting literals." executed="True" success="True" time="0.002" />
+              <test-case name="Given Date.IsInvalidClientFormat, it returns true if numbers are passed to escaped numeric format value." executed="True" success="True" time="0.001" />
+              <test-case name="Given Date.IsInvalidClientFormat, it returns false if date are passed when expecting date." executed="True" success="True" time="0.000" />
+              <test-case name="Given Date.IsInvalidClientFormat, it returns false if month is passed when expecting month." executed="True" success="True" time="0.031" />
+              <test-case name="Given Date.IsInvalidClientFormat, it returns false if day of week is passed when expecting day of week." executed="True" success="True" time="0.010" />
+              <test-case name="Given Date.IsInvalidClientFormat, it returns false if date and time are passed when expecting date and time." executed="True" success="True" time="0.001" />
+              <test-case name="Given Date.ToClientFormat, it formats year values correctly." executed="True" success="True" time="0.043" />
+              <test-case name="Given Date.ToClientFormat, it formats month values correctly." executed="True" success="True" time="0.008" />
+              <test-case name="Given Date.ToClientFormat, it formats weekday values correctly." executed="True" success="True" time="0.002" />
+              <test-case name="Given Date.ToClientFormat, it formats day of the month values correctly." executed="True" success="True" time="0.002" />
+              <test-case name="Given Date.ToClientFormat, it formats hour values correctly." executed="True" success="True" time="0.002" />
+              <test-case name="Given Date.ToClientFormat, it formats second values correctly." executed="True" success="True" time="0.000" />
+              <test-case name="Given Date.ToClientFormat, it formats special cases and complex formats correctly." executed="True" success="True" time="0.004" />
+              <test-case name="Given Date.ToClientFormat, it passes performance test for large number of iterations" executed="True" success="True" time="5.492" />
+              <test-case name="Given ClientFormat.IsInvalidNumber, it returns true if characters are passed when expecting numbers." executed="True" success="True" time="0.014" />
+              <test-case name="Given ClientFormat.IsInvalidNumber, it returns false if numbers are passed when expecting numbers." executed="True" success="True" time="0.000" />
+              <test-case name="Given ClientFormat.IsInvalidNumber, it returns false if numbers are passed when expecting numbers with additional format info." executed="True" success="True" time="0.001" />
+              <test-case name="Given ClientFormat.IsInvalidNumber, it returns false if numbers are passed with empty format." executed="True" success="True" time="0.000" />
+              <test-case name="Given ClientFormat.IsInvalidNumber, it returns true if characters are passed with empty format." executed="True" success="True" time="0.000" />
+              <test-case name="Given Text.RegexReplace, it replaces non-numeric values correctly." executed="True" success="True" time="0.005" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite name="I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\Beachcomber.Lib.Spec\bin\Debug\Beachcomber.Lib.Spec.dll" success="True" time="9.701">
+        <results>
+          <test-suite name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\Beachcomber.Lib.Spec\bin\Debug\Beachcomber.Lib.Spec.dll" success="True" time="9.701">
+            <results>
+              <test-case name="Given a preset ActiveDirectoryGroupMonitor.DbCodeToTimerMap, ActiveDirectoryGroupMonitor correctly monitors the groups" executed="True" success="True" time="2.810" />
+              <test-case name="Given a set of templates, the template is generated successfully" executed="True" success="True" time="0.056" />
+              <test-case name="Given a BeachcomberContext, a BrokerQueueClient should be able to process one message at a time" executed="True" success="True" time="0.266" />
+              <test-case name="Given a BeachcomberContext, a BrokerQueueClient should be able to process multiple messages at a time" executed="True" success="True" time="0.056" />
+              <test-case name="Given CommonMarkHelper, it correctly converts a Markdown input to a text input" executed="True" success="True" time="0.006" />
+              <test-case name="Given CommonMarkHelper, it correctly converts a Markdown input to HTML input" executed="True" success="True" time="0.036" />
+              <test-case name="Given a BeachcomberContext, a model specification can be extracted based on a model stored procedure" executed="True" success="True" time="0.858" />
+              <test-case name="Given a BeachcomberContext, a deep model tree can be generated based on a single model name" executed="True" success="True" time="0.227" />
+              <test-case name="Given a BeachcomberContext, a deep model tree can be deducted based on a list of model names" executed="True" success="True" time="0.014" />
+              <test-case name="Given a BeachcomberContext, the system throws an exception when trying to get a non-existing model" executed="True" success="True" time="0.058" />
+              <test-case name="Given DotLiquidExtensions, tag &quot;bullet_details&quot; is correctly registered and performs as expected" executed="True" success="True" time="0.035" />
+              <test-case name="Given DotLiquidExtensions, tag &quot;bullet_list&quot; is correctly registered and performs as expected" executed="True" success="True" time="0.003" />
+              <test-case name="Given DotLiquidExtensions, filter &quot;zn&quot; is correctly registered and performs as expected" executed="True" success="True" time="0.018" />
+              <test-case name="Given DotLiquidExtensions, filter &quot;markdown&quot; is correctly registered and performs as expected" executed="True" success="True" time="0.007" />
+              <test-case name="Given DotLiquidExtensions, ExcelExportDatasetDimensions can be used in a dotLiquid template to perform arithmetic operations" executed="True" success="True" time="0.021" />
+              <test-case name="Given a BeachcomberContext, ExcelExport handles hierarchical data" executed="True" success="True" time="1.159" />
+              <test-case name="Given a BeachcomberContext, ColumnAddress works as expected" executed="True" success="True" time="0.003" />
+              <test-case name="Given a BeachcomberContext, ExcelExport correctly handles grid strored procedures and appropriately overrides the return_type request parameter" executed="True" success="True" time="0.179" />
+              <test-case name="Given a BeachcomberContext, ExcelExport correctly handles various style exports" executed="True" success="True" time="0.371" />
+              <test-case name="Given a BeachcomberContext, ExcelExport correctly handles grid strored procedures with custom Excel template" executed="True" success="True" time="0.075" />
+              <test-case name="Given a BeachcomberContext, ExcelExport correctly handles grid strored procedures by calling them with return_type=EXCEL" executed="True" success="True" time="0.080" />
+              <test-case name="Given a BeachcomberContext, ExcelExport correctly uses the custom excel target file returned by the metadata" executed="True" success="True" time="0.071" />
+              <test-case name="Given a BeachcomberContext, ExcelExport correctly generates output file name based on the grid title" executed="True" success="True" time="0.071" />
+              <test-case name="Given a BeachcomberContext, ExcelExport correctly handles grid strored procedures with custom Excel templates" executed="True" success="True" time="0.159" />
+              <test-case name="Given a BeachcomberContext, ExcelExport populates a default excel workbook with the resultset of a stored procedure" executed="True" success="True" time="0.089" />
+              <test-case name="Given a BeachcomberContext, ExcelExport populates an excel workbook with multiple resultsets from a stored procedure" executed="True" success="True" time="0.118" />
+              <test-case name="Given a BeachcomberContext, ExcelExport correctly handles type conversions" executed="True" success="True" time="0.100" />
+              <test-case name="Given a BeachcomberContext, ExcelExport correctly handles Excel export metadata" executed="True" success="True" time="0.138" />
+              <test-case name="Given an ExecutionSurface with preloaded test data, the surface contents is as expected" executed="True" success="True" time="0.598" />
+              <test-case name="Given an ExecutionSurface with preloaded test data, authorization works as expected" executed="True" success="True" time="0.576" />
+              <test-case name="Given an ExecutionSurface with preloaded test data, authorization works as expected as it relates to role inheritance" executed="True" success="True" time="0.515" />
+              <test-case name="Given an IEnumerable&lt;T&gt;, extension method ForEach can be used to enumerate all its elements" executed="True" success="True" time="0.004" />
+              <test-case name="Given a Flex object, it correctly gets converted to an Xml string" executed="True" success="True" time="0.004" />
+              <test-case name="Given an Xml string, it can be converted to a Flex" executed="True" success="True" time="0.063" />
+              <test-case name="Given an Xml string with an array, it correctly gets converted to an IEnumerable" executed="True" success="True" time="0.027" />
+              <test-case name="Given an object and a Flex, extension method ToObject properly populates an object with the contents of a Flex" executed="True" success="True" time="0.009" />
+              <test-case name="Given an object and a Flex, extension method ToObject properly populates an object with the contents of a Flex ins strict mode" executed="True" success="True" time="0.000" />
+              <test-case name="Given an object and a Flex, extension method ToObject properly throws in strict mode" executed="True" success="True" time="0.000" />
+              <test-case name="Given Flex, it can be converted to Json" executed="True" success="True" time="0.018" />
+              <test-case name="Given Flex, a Json value can be converted to a Flex" executed="True" success="True" time="0.020" />
+              <test-case name="Given a BeachcomberContext, a grid meta can converted to Json" executed="True" success="True" time="0.029" />
+              <test-case name="Given a string, it can be underscored using the Inflector extension methods" executed="True" success="True" time="0.000" />
+              <test-case name="Given an arbitrary Flex, it correctly converts it to a Json string" executed="True" success="True" time="0.013" />
+              <test-case name="Given an arbitrary anonymous object, it correctly converts it to a Json string" executed="True" success="True" time="0.004" />
+              <test-case name="Given a Json string, it correctly converts it to a .NET object" executed="True" success="True" time="0.008" />
+              <test-case name="Given a BeachcomberContext, calling a sproc which divides by zero throws an exception (ANSI_WARNINGS is set to ON)" executed="True" success="True" time="0.014" />
+              <test-case name="Given a BeachcomberContext, sprocs can be executed dynamically through its Sproc property" executed="True" success="True" time="0.012" />
+              <test-case name="Given a BeachcomberContext, sprocs with named params can be invoked" executed="True" success="True" time="0.011" />
+              <test-case name="Given a BeachcomberContext, sprocs with optional params can be invoked" executed="True" success="True" time="0.019" />
+              <test-case name="Given a BeachcomberContext, sprocs with 'out' params can be invoked" executed="True" success="True" time="0.011" />
+              <test-case name="Given a BeachcomberContext, sprocs with xml 'out' params can be invoked" executed="True" success="True" time="0.066" />
+              <test-case name="Given a BeachcomberContext, a sproc can be called with arbitrary number of parameters - it will ignore parameters which it does not accept" executed="True" success="True" time="0.009" />
+              <test-case name="Given a BeachcomberContext, an array of objects is passed to the udnerlying sproc as a table" executed="True" success="True" time="0.154" />
+              <test-case name="Given a BeachcomberContext, an array with disjointed elements can be passed as a parameter to a sproc which takes a table valued parameter" executed="True" success="True" time="0.014" />
+              <test-case name="Given a BeachcomberContext, a complex object can be passed to a sproc which takes an XML input parameter" executed="True" success="True" time="0.024" />
+              <test-case name="Given a BeachcomberContext, an object is passed to the udnerlying sproc as a table" executed="True" success="True" time="0.009" />
+              <test-case name="Given a BeachcomberContext, an array of objects is passed to the udnerlying sproc as a table and used by it" executed="True" success="True" time="0.075" />
+              <test-case name="Given a BeachcomberContext, a sproc's resultset which contains a hierarchy_child_id and hierarchy_parent_id is compiled into a hierarchical resultset" executed="True" success="True" time="0.031" />
+              <test-case name="Given a BeachcomberContext, a hierarchical result pushes all orphans to the top of the hierarchy" executed="True" success="True" time="0.007" />
+              <test-case name="Given a BeachcomberContext, a hierarchical result does not omit children of missing parents when there is a single record in the recordset" executed="True" success="True" time="0.006" />
+              <test-case name="Given a BeachcomberContext, a hierarchical result omits shallow circular reference chains" executed="True" success="True" time="0.006" />
+              <test-case name="Given a BeachcomberContext, a hierarchical result omits deep circular reference chains" executed="True" success="True" time="0.006" />
+              <test-case name="Given a BeachcomberContext, a sproc which accepts INT parameters can be called with a string representation of an INT" executed="True" success="True" time="0.011" />
+              <test-case name="Given a BeachcomberContext, a sproc which accepts INT parameters can be called with an empty string which is internally converted to NULL" executed="True" success="True" time="0.006" />
+              <test-case name="Given a BeachcomberContext, a sproc returns an error message in the operation result and stops the sproc execution when an error message is reported" executed="True" success="True" time="0.044" />
+              <test-case name="Given a BeachcomberContext, an error message includes the SQL call-stack when enabled" executed="True" success="True" time="0.041" />
+              <test-case name="Given a BeachcomberContext, a sproc returns a warning message in the operation result and stops the sproc execution when a warning message is reported" executed="True" success="True" time="0.021" />
+              <test-case name="Given a BeachcomberContext, a sproc returns an info message in the operation result and does not stop the sproc execution when an info message is reported" executed="True" success="True" time="0.019" />
+              <test-case name="Given a BeachcomberContext, a sproc can respond with a collection of messages" executed="True" success="True" time="0.021" />
+              <test-case name="Given a BeachcomberContext, a nested sproc returns an error message in the operation result and stops the sproc execution when an error message is reported" executed="True" success="True" time="0.022" />
+              <test-case name="Given a BeachcomberContext, a nested sproc returns a warning message in the operation result and stops the sproc execution when a warning message is reported" executed="True" success="True" time="0.020" />
+              <test-case name="Given a BeachcomberContext, a nested sproc returns an info message in the operation result and does not stop the sproc execution when an info message is reported" executed="True" success="True" time="0.019" />
+              <test-case name="Given a BeachcomberContext, a nested sproc can respond with a collection of messages" executed="True" success="True" time="0.024" />
+              <test-case name="Given a BeachcomberContext, Sproc can be called with a pre and post closure with an open connection" executed="True" success="True" time="0.007" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite name="" success="" time="">
+        <results />
+      </test-suite>
+      <test-suite name="" success="" time="">
+        <results />
+      </test-suite>
+      <test-suite name="" success="" time="">
+        <results />
+      </test-suite>
+      <test-suite name="I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\Beachcomber.Web.Spec\bin\Debug\Beachcomber.Web.Spec.dll" success="True" time="6.981">
+        <results>
+          <test-suite name="xUnit.net v1 Tests for I:\Agent\PROD-Jason_Bourne\_work\8e7d9e21\Solvas Forecast\spec\Beachcomber.Web.Spec\bin\Debug\Beachcomber.Web.Spec.dll" success="True" time="6.981">
+            <results>
+              <test-case name="Given a BeachcomberContext, DirectFileController can be used to import an Excel file directly into a table" executed="True" success="True" time="4.102" />
+              <test-case name="Given a BeachcomberContext, DirectFileController offers option to load worksheets with missing fields" executed="True" success="True" time="0.181" />
+              <test-case name="Given a BeachcomberContext, DirectFileController offers option to load worksheets with extra fields" executed="True" success="True" time="0.169" />
+              <test-case name="Given a BeachcomberContext, DirectFileController detects missing worksheets" executed="True" success="True" time="0.093" />
+              <test-case name="Given a BeachcomberContext, DirectFileController offers an option to run a post-load stored procedure as part of the import operation" executed="True" success="True" time="0.397" />
+              <test-case name="Given a BeachcomberContext, DirectFileController correctly processes operation result messages generated by the post-load stored procedure" executed="True" success="True" time="0.192" />
+              <test-case name="Given a BeachcomberContext, Assert" executed="True" success="True" time="0.001" />
+              <test-case name="Given a BeachcomberContext, SprocController can call simple sprocs with parameters" executed="True" success="True" time="0.155" />
+              <test-case name="Given a BeachcomberContext, SprocController correctly handles ISO 8601 dates as parameters" executed="True" success="True" time="0.044" />
+              <test-case name="Given a BeachcomberContext, SprocController can call sprocs with XML out parameters" executed="True" success="True" time="0.067" />
+              <test-case name="Given a BeachcomberContext, SprocController correctly handles XML typed elements" executed="True" success="True" time="0.022" />
+              <test-case name="Given a BeachcomberContext, SprocController correctly reports field SQL data types" executed="True" success="True" time="0.052" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a list of records on GET without a specified ID" executed="True" success="True" time="0.451" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a single record when GET is called with an ID parameter" executed="True" success="True" time="0.056" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller creates a single new record when _put sproc is called" executed="True" success="True" time="0.119" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller performs a record edit when _put sproc is called on an existing record" executed="True" success="True" time="0.092" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when a single property-value filter is specified as a request parameter" executed="True" success="True" time="0.063" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when a multi property-value filter is specified as a request parameter" executed="True" success="True" time="0.063" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when an exact string match filter is executed" executed="True" success="True" time="0.032" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when an exact string match filter is executed with the wrong string value" executed="True" success="True" time="0.032" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when a &quot;like&quot; string match filter is executed" executed="True" success="True" time="0.032" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when an exact string match filter is executed with the wrong string value" executed="True" success="True" time="0.032" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when numeric greater than comparison is executed" executed="True" success="True" time="0.033" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when numeric greater than comparison is executed with a number equal to the max" executed="True" success="True" time="0.033" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when numeric less than comparison is executed" executed="True" success="True" time="0.033" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when numeric less than comparison is executed with a number equal to the min" executed="True" success="True" time="0.035" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when numeric equal to comparison is executed" executed="True" success="True" time="0.036" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when numeric equal to comparison is executed with a number which does not exist in the database model" executed="True" success="True" time="0.031" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when date greater than comparison is executed" executed="True" success="True" time="0.038" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when date greater than comparison is executed with a number equal to the max" executed="True" success="True" time="0.031" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when date less than comparison is executed" executed="True" success="True" time="0.032" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when date less than comparison is executed with a number equal to the min" executed="True" success="True" time="0.031" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when date equal to comparison is executed" executed="True" success="True" time="0.032" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when date equal to comparison is executed with a date which does not exist in the database model" executed="True" success="True" time="0.031" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when true boolean equal to comparison is executed" executed="True" success="True" time="0.032" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns a filtered list of records when false boolean equal to comparison is executed" executed="True" success="True" time="0.031" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when true boolean equal to comparison is executed against a field which is all false" executed="True" success="True" time="0.041" />
+              <test-case name="Given a BeachcomberContext, Sproc Controller returns an empty list of records when false boolean equal to comparison is executed against a field which is all true" executed="True" success="True" time="0.034" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

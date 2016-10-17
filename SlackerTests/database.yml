@@ -4,6 +4,6 @@
 # Replace the following with your connection information.
 # Note that at this point Slacker only works with SQL Server authentication.
 server: local_dev
-database: MyDatabase
-user: MyUser
-password: MyPassword
+database: Beachcomber
+user: solvas_user
+password: solvas

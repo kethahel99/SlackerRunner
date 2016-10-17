@@ -66,8 +66,6 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="run_opencover.bat" />
-    <None Include="run_xunit.bat" />
     <ProjectReference Include="..\SlackerRunner\SlackerRunner.csproj">
       <Name>SlackerRunner</Name>
       <Project>{28bb7d57-4bd7-4298-9fcf-7375c87401e3}</Project>
@@ -92,9 +90,6 @@
       <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
       <Private>True</Private>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="xunit_results.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

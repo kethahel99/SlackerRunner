@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assemblies>
+  <assembly name="I:\Agent\PROD-James_Bond\_work\5c0e0f53\CDO Team\spec\App.Db.Slacker\bin\Debug\App.Db.Slacker.dll" environment="64-bit .NET 4.0.30319.42000" test-framework="xUnit.net 1.8.0.1545" run-date="2016-03-14" run-time="16:56:10" total="2" passed="2" failed="0" skipped="0" time="1.396" errors="0">
+    <errors />
+    <collection total="2" passed="2" failed="0" skipped="0" name="xUnit.net v1 Tests for I:\Agent\PROD-James_Bond\_work\5c0e0f53\CDO Team\spec\App.Db.Slacker\bin\Debug\App.Db.Slacker.dll" time="1.396">
+      <test name="App.Db.Slacker.SlackerRunner.SpecificSpecTester.RunThisSpec" type="App.Db.Slacker.SlackerRunner.SpecificSpecTester" method="RunThisSpec" time="0.931" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+Cannot find directory "I:/Agent/PROD-James_Bond/_work/5c0e0f53/CDO Team/spec/App.Db.Slacker/debug"
+
+]]></output>
+      </test>
+      <test name="App.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_code_part.rb)" type="App.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.465" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+Cannot find directory "I:/Agent/PROD-James_Bond/_work/5c0e0f53/CDO Team/spec/App.Db.Slacker/debug"
+
+]]></output>
+      </test>
+    </collection>
+  </assembly>
+  <assembly name="I:\Agent\PROD-James_Bond\_work\5c0e0f53\CDO Team\spec\Beachcomber.Db.Slacker\bin\Debug\Beachcomber.Db.Slacker.dll" environment="64-bit .NET 4.0.30319.42000" test-framework="xUnit.net 1.8.0.1545" run-date="2016-03-14" run-time="16:56:12" total="32" passed="30" failed="2" skipped="0" time="72.472" errors="0">
+    <errors />
+    <collection total="32" passed="30" failed="2" skipped="0" name="xUnit.net v1 Tests for I:\Agent\PROD-James_Bond\_work\5c0e0f53\CDO Team\spec\Beachcomber.Db.Slacker\bin\Debug\Beachcomber.Db.Slacker.dll" time="72.472">
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecificSpecTester.RunThisSpec" type="Beachcomber.Db.Slacker.SlackerRunner.SpecificSpecTester" method="RunThisSpec" time="1.060" result="Fail">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+F
+
+Failures:
+
+  1) bc.ConfigValueCodePart works as expected
+     Failure/Error: s_func('bc.nothere', config_value, part).should == expected
+     ODBC::Error:
+       37000 (4121) [Microsoft][ODBC SQL Server Driver][SQL Server]Cannot find either column "bc" or the user-defined function or aggregate "bc.nothere", or the name is ambiguous.
+     # ./lib/helpers/my_helper.rb:12:in `s_func'
+     # ./spec/config/config_value_code_part.rb:3:in `test_value_part'
+     # ./spec/config/config_value_code_part.rb:7:in `block (2 levels) in <top (required)>'
+
+Finished in 0.038 seconds (files took 0.41304 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/config/config_value_code_part.rb:6 # bc.ConfigValueCodePart works as expected
+
+
+]]></output>
+        <failure exception-type="Xunit.Sdk.TrueException">
+          <message><![CDATA[Test should have succeeded.]]></message>
+          <stack-trace><![CDATA[   at Beachcomber.Db.Slacker.SlackerRunner.SpecificSpecTester.RunThisSpec() in I:\Agent\PROD-James_Bond\_work\5c0e0f53\CDO Team\Spec\Beachcomber.Db.Slacker\SlackerRunner\SpecificSpecTester.cs:line 22]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(authorization/tf_authorization_verdict.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="30.393" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+..........................................................
+
+Finished in 29.81 seconds (files took 0.31303 seconds to load)
+58 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(authorization/tf_role_authorization_permission.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="6.767" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...................
+
+Finished in 6.18 seconds (files took 0.32803 seconds to load)
+19 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(authorization/tf_user_role_strands.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="10.483" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+............................
+
+Finished in 9.91 seconds (files took 0.31603 seconds to load)
+28 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(client_format/boolean_to_client_format.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.771" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.15801 seconds (files took 0.33203 seconds to load)
+3 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_code_part.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.621" result="Fail">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+F
+
+Failures:
+
+  1) bc.ConfigValueCodePart works as expected
+     Failure/Error: s_func('bc.nothere', config_value, part).should == expected
+     ODBC::Error:
+       37000 (4121) [Microsoft][ODBC SQL Server Driver][SQL Server]Cannot find either column "bc" or the user-defined function or aggregate "bc.nothere", or the name is ambiguous.
+     # ./lib/helpers/my_helper.rb:12:in `s_func'
+     # ./spec/config/config_value_code_part.rb:3:in `test_value_part'
+     # ./spec/config/config_value_code_part.rb:7:in `block (2 levels) in <top (required)>'
+
+Finished in 0.043 seconds (files took 0.31003 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/config/config_value_code_part.rb:6 # bc.ConfigValueCodePart works as expected
+
+
+]]></output>
+        <failure exception-type="Xunit.Sdk.TrueException">
+          <message><![CDATA[Test should have succeeded.]]></message>
+          <stack-trace><![CDATA[   at Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(SpecTestFile rbFile) in I:\Agent\PROD-James_Bond\_work\5c0e0f53\CDO Team\Spec\Beachcomber.Db.Slacker\SlackerRunner\SpecsTester.cs:line 27]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_get.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.761" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+..
+
+Finished in 0.16002 seconds (files took 0.31303 seconds to load)
+2 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/config_value_put.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.682" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.11601 seconds (files took 0.30503 seconds to load)
+3 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(config/tf_config_value.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="1.627" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+........................
+
+Finished in 1.01 seconds (files took 0.34903 seconds to load)
+24 examples, 0 failures
+
+
+]]></output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(context_info/context_info.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.629" result="Pass">
+        <output><![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.033 seconds (files took 0.33003 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(excel_export/excel_export_meta.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.742" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.16702 seconds (files took 0.31603 seconds to load)
+3 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(excel_export/excel_export_seed.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.671" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+..
+
+Finished in 0.08401 seconds (files took 0.32503 seconds to load)
+2 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(holiday_schedule/put_get.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="1.276" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.71007 seconds (files took 0.30903 seconds to load)
+3 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_code/is_valid_lookup_code.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.729" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.13901 seconds (files took 0.32303 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_code/lookup_code_description.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.723" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.11501 seconds (files took 0.34803 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_code/tf_lookup_code.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="1.110" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+....
+
+Finished in 0.52905 seconds (files took 0.31703 seconds to load)
+4 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(lookup_type/put_get.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.647" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.07101 seconds (files took 0.31703 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(message/tf_message.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.604" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.035 seconds (files took 0.31103 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(model/model_field_base_type_name.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.630" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.046 seconds (files took 0.32103 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(model/model_type_format.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.807" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+....
+
+Finished in 0.22802 seconds (files took 0.32203 seconds to load)
+4 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(operation_result/add_operation_message.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.610" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.033 seconds (files took 0.31603 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(report_destination/report_destination_seed.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.644" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.028 seconds (files took 0.32203 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(string_list/separated_string_to_string_list.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.682" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+...
+
+Finished in 0.09201 seconds (files took 0.30903 seconds to load)
+3 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(string_list/string_list_to_table.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.751" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.....
+
+Finished in 0.16102 seconds (files took 0.32403 seconds to load)
+5 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(string_list/table_to_string_list.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.735" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.....
+
+Finished in 0.15902 seconds (files took 0.31403 seconds to load)
+5 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/maker_checker.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="1.864" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+........
+
+Finished in 1.28 seconds (files took 0.32403 seconds to load)
+8 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/role_put.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.925" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+..
+
+Finished in 0.32703 seconds (files took 0.33003 seconds to load)
+2 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_del.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.639" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.07601 seconds (files took 0.30903 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_id.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.625" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.048 seconds (files took 0.32303 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_put.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.813" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+....
+
+Finished in 0.23602 seconds (files took 0.31903 seconds to load)
+4 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_put_get.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="0.637" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.
+
+Finished in 0.05901 seconds (files took 0.31703 seconds to load)
+1 example, 0 failures
+
+
+]]>
+        </output>
+      </test>
+      <test name="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester.RunSpecs(user/user_role_association_action.rb)" type="Beachcomber.Db.Slacker.SlackerRunner.SpecsTester" method="RunSpecs" time="1.814" result="Pass">
+        <output>
+          <![CDATA[Slacker runner, version=1.0.0.8
+Standard Error: 
+Standard Output: Running Slacker ....
+
+testoutput.txt:
+Beachcomber (local_dev)
+.........
+
+Finished in 1.24 seconds (files took 0.31103 seconds to load)
+9 examples, 0 failures
+
+
+]]>
+        </output>
+      </test>
+    </collection>
+  </assembly>
+</assemblies>
