@@ -9,8 +9,8 @@ namespace SlackerRunner.IntegrationTests
   //features are run
   public class RunScenarios
   {
-    //[Fact(Skip = "Live database needed")]
-    [Fact]
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
     public void RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb");
