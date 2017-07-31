@@ -14,8 +14,8 @@
     <tags>Slacker Tests</tags>
   </metadata>
   <files>
-    <file src="bin\Debug\SlackerRunner.dll" target="lib\SlackerRunner.dll" />
-    <file src="bin\Debug\SlackerRunner.pdb" target="lib\SlackerRunner.pdb" />
+    <file src="bin\Release\SlackerRunner.dll" target="lib\SlackerRunner.dll" />
+    <file src="bin\Release\SlackerRunner.pdb" target="lib\SlackerRunner.pdb" />
     <file src="..\README.md" target="README.md" />
     <file src="..\releases.txt" target="releases.txt" />
   </files>
