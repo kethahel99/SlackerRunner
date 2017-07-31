@@ -9,8 +9,8 @@ namespace SlackerRunner.IntegrationTests
   //features are run
   public class RunScenarios
   {
-    [Fact(Skip = "Live database needed")]
-    //[Fact]
+    //[Fact(Skip = "Live database needed")]
+    [Fact]
     public void RunWithPassingProfileForSmokeTestLiveBuildReturnsTrue()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample1.rb");
@@ -27,17 +27,20 @@ namespace SlackerRunner.IntegrationTests
         new SlackerService().Run(testDirectory, "passingProfile", user);
       });
       Assert.IsAssignableFrom<Win32Exception>(exception);
-      // Assert.Equal( "The user name or password is incorrect", exception.Message );
     }
 
 
     // See -- https://github.com/vassilvk/slacker/issues/3
-    //[Fact(Skip = "NotReady")]
-    [Fact]
+    [Fact(Skip = "Acivate by hand when neeeded to test slacker non zero exit code")]
+    //[Fact]
     public void CheckSlackerExitCode()
     {
+      // Setup
       var startInfo = new ProcessStartInfo("slacker");
       startInfo.WorkingDirectory = @"C:\work\_solvas\put slacker runner here\SlackerRunner\SlackerTests\";
+      // Run without popping up the cmd window
+      startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+      // Start 
       Process proc = Process.Start(startInfo);
       proc.WaitForExit();
       Assert.True( proc.ExitCode != 0);
