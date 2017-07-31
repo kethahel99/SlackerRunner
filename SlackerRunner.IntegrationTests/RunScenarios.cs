@@ -32,7 +32,8 @@ namespace SlackerRunner.IntegrationTests
 
 
     // See -- https://github.com/vassilvk/slacker/issues/3
-    [Fact(Skip ="NotReady")]
+    //[Fact(Skip = "NotReady")]
+    [Fact]
     public void CheckSlackerExitCode()
     {
       var startInfo = new ProcessStartInfo("slacker");
