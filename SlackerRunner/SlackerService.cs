@@ -6,15 +6,15 @@ namespace SlackerRunner
 {
     public class SlackerService
     {
-        private readonly Func<User, IDisposable> impersonatorCreator;
-        private readonly ProfileRunner profileRunner;
+        private readonly Func<User, IDisposable> _impersonatorCreator;
+        private readonly ProfileRunner _profileRunner;
 
         public SlackerService() : this((x) => new Impersonator(x.Name, x.Domain, x.Password), new ProfileRunner()) { }
         
         public SlackerService(Func<User, IDisposable> impersonatorCreator, ProfileRunner profileRunner)
         {
-            this.impersonatorCreator = impersonatorCreator;
-            this.profileRunner = profileRunner;
+            _impersonatorCreator = impersonatorCreator;
+            _profileRunner = profileRunner;
         }
 
         /// <summary>
@@ -26,9 +26,9 @@ namespace SlackerRunner
         /// <returns></returns>
         public SlackerResults Run(string testdirectory, string testfile, User user)
         {
-            using (impersonatorCreator(user))
+            using (_impersonatorCreator(user))
             {
-                return profileRunner.Run(testdirectory, testfile);
+                return _profileRunner.Run(testdirectory, testfile);
             }
         }
 
@@ -47,7 +47,7 @@ namespace SlackerRunner
               throw new SlackerException("The file does not exist, file=" + testfile);
 
             // Go for it
-            return profileRunner.Run(testdirectory, testfile);
+            return _profileRunner.Run(testdirectory, testfile);
         }
 
 
