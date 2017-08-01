@@ -5,13 +5,13 @@ namespace SlackerRunner
 {
     public class ProfileRunner 
     {
-        private readonly ProcessRunner processRunner;
-        private readonly ResultsParser resultsParser;
+        private readonly ProcessRunner _processRunner;
+        private readonly ResultsParser _resultsParser;
         
         public ProfileRunner(ProcessRunner processRunner, ResultsParser resultsParser )
         {
-            this.processRunner = processRunner;
-            this.resultsParser = resultsParser;
+            _processRunner = processRunner;
+            _resultsParser = resultsParser;
         }
 
         public ProfileRunner()
@@ -20,8 +20,8 @@ namespace SlackerRunner
     
         public SlackerResults Run(string testDirectory, string testFile)
         {
-          processRunner.Run(testDirectory, testFile);
-          return resultsParser.Parse(processRunner.StandardOutput, processRunner.StandardError);
+          _processRunner.Run(testDirectory, testFile);
+          return _resultsParser.Parse(_processRunner.StandardOutput, _processRunner.StandardError);
         }
     
     }
