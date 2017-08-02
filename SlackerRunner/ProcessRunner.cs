@@ -89,7 +89,7 @@ namespace SlackerRunner
         using (AutoResetEvent outputWaitHandle = new AutoResetEvent(false))
         using (AutoResetEvent errorWaitHandle = new AutoResetEvent(false))
         {
-          // General output
+
           process.OutputDataReceived += (sender, e) =>
           {
             if (e.Data == null)
@@ -102,7 +102,6 @@ namespace SlackerRunner
             }
           };
 
-          // Error 
           process.ErrorDataReceived += (sender, e) =>
           {
             if (e.Data == null)
