@@ -7,7 +7,6 @@ namespace SlackerRunner.IntegrationTests
 {
   public class SpecificSpecTester
   {
-
     /// <summary>
     /// Runs the slacker test in the file specified 
     /// </summary>
