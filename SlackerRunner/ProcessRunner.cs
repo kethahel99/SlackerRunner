@@ -16,6 +16,8 @@ namespace SlackerRunner
     public ProcessRunner()
     {
       Logger.Log("Slacker runner, version=" + RuntimeVersion.GetVersion());
+      // Set default timeout 
+      TimeoutMilliseconds = ProfileRunner.DEFAULT_TIMEOUT;
     }
 
     public string StandardOutput
