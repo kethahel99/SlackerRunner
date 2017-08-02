@@ -1,6 +1,6 @@
 
 
-2.3.0.x - 8/1/2017
+2.3.0.13 - 8/1/2017
 ------------------------------
 Added run all specs in directory recursive at once - SlackerService().RunDirectory
 Added xunit dependency packages 
