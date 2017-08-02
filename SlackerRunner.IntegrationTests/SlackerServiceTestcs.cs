@@ -58,8 +58,8 @@ namespace SlackerRunner.IntegrationTests
     }
 
     // Testing failure 
-    //[Fact(Skip = "Live database needed")]
-    [Fact]
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
     public void TestFileNotPassing2()
     {
       SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sample2.rb");
