@@ -1,5 +1,11 @@
 
 
+2.3.0.x - 8/1/2017
+------------------------------
+Added run all specs in directory recursive at once - SlackerService().RunDirectory
+Added xunit dependency packages 
+
+
 2.3.0.2 - 10/12/2016 
 ------------------------------
 Added standard output and error from Slacker when Slacker exits with non 0 exitcode
