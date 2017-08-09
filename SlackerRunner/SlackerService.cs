@@ -53,9 +53,10 @@ namespace SlackerRunner
       // Make sure directory and file exists before heading further
       if (!Directory.Exists(testdirectory))
         throw new SlackerException("The directory does not exist, directory=" + testdirectory);
-      // Fixit, keep it or not ? --- This does not work with wildcards like **
-      //if (!File.Exists(testfile))
-        //throw new SlackerException("The file does not exist, file=" + testfile);
+
+      // Only test for specific test file when wildcars are not in use
+      if (testfile.IndexOf('*') == -1 && !File.Exists(testfile))
+        throw new SlackerException("The file does not exist, file=" + testfile);
 
       // Go for it
       return _profileRunner.Run(testdirectory, testfile);
@@ -65,7 +66,7 @@ namespace SlackerRunner
     /// </summary>
     /// <param name="testdirectory">Base directory where database.yml is located. </param>
     /// <param name="testfile">The test file to run.</param>
-    public SlackerResults RunDirectory(string testDirectory, string specDirectory, int timeoutMilliseconds )
+    public SlackerResults RunDirectory(string testDirectory, string specDirectory, int timeoutMilliseconds)
     {
       // Make sure directory and file exists before heading further
       if (!Directory.Exists(testDirectory))

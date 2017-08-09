@@ -8,9 +8,8 @@ namespace SlackerRunner.IntegrationTests
 {
   public class SlackerServiceTest
   {
-    // Testing failure
-    [Fact(Skip = "File not exist is on hold, Fixit")]
-    //[Fact]
+    // Testing failure, when no wildcards in use 
+    [Fact]
     public void FileNotFound()
     {
       Exception ex = Record.Exception(() =>
