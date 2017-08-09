@@ -144,7 +144,13 @@ namespace SlackerRunner.IntegrationTests
     public void SmokeTest()
     {
       var service = new SlackerService( 1000 );
+      // Proof
       Assert.NotNull(service);
+      Assert.True(service.TimeoutMilliseconds == 1000);
+      // Further timeout testing
+      service.TimeoutMilliseconds = 1500;
+      Assert.True(service.TimeoutMilliseconds == 1500);
+      
     }
 
   }

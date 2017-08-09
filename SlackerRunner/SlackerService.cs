@@ -16,7 +16,7 @@ namespace SlackerRunner
 
     public SlackerService(Func<User, IDisposable> impersonatorCreator, int timeoutMilliseconds)
     {
-      _timeout = TimeoutMilliseconds;
+      _timeout = timeoutMilliseconds;
       _impersonatorCreator = impersonatorCreator;
     }
 
