@@ -1,4 +1,9 @@
 
+2.3.0.22 - 8/9/2017
+------------------------------
+Fix Passed indicator when no tests pass and no tests fail
+Fix service constructor timeout bug
+
 
 2.3.0.21 - 8/1/2017
 ------------------------------
