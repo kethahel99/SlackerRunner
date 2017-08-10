@@ -5,7 +5,7 @@ using SlackerRunner;
 
 namespace SlackerRunner.IntegrationTests
 {
-  public class ImpersonatorTest
+  public class ImpersonatorTester
   {
 
     [Fact]
@@ -18,11 +18,11 @@ namespace SlackerRunner.IntegrationTests
           // Invalid user, this doesn't hit 
         }
       });
-      
+
       // Exception was thrown
       Assert.NotNull(ex);
     }
-    
+
   }  // EOF
 }
 
