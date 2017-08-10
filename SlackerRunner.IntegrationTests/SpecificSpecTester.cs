@@ -33,12 +33,12 @@ namespace SlackerRunner.IntegrationTests
     /// <summary>
     /// Runs the slacker tests that match the criteria 
     /// </summary>
-    [Fact(Skip = "Live database needed, Slacker ** functionality needs to be fixed")]
+    [Fact(Skip = "Live database needed")]
     //[Fact]
-    public void RunSpecsInDir()
+    public void RunAllSpecsIncludingSubdirs()
     {
-      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\sampledir1\**");
-      Assert.True(SlackerResults.PassedSpecs > 1, SlackerResults.Message);
+      SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\**\*");
+      Assert.True(SlackerResults.PassedSpecs > 3, SlackerResults.Message);
     }
 
 
