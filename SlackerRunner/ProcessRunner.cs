@@ -73,7 +73,7 @@ namespace SlackerRunner
           // Run everything in the directory and subdirectories 
           // as specDirectory has been specified 
           // **\* means all specs in dir and sub directories 
-          procSI.Arguments = "/C slacker" + " \"" + specDirectory + "**\\*" + "\" ";;
+          procSI.Arguments = "/C slacker" + " \"" + specDirectory + "**\\*" + "\" ";
         }
         else
         {
