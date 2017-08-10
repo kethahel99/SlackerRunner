@@ -1,4 +1,9 @@
 
+2.3.0.23 - 8/10/2017
+------------------------------
+Fix RunDirectory function to run from the subdirectory that was passed in
+
+
 2.3.0.22 - 8/9/2017
 ------------------------------
 Fix Passed indicator when no tests pass and no tests fail

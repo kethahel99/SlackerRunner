@@ -62,11 +62,18 @@ namespace SlackerRunner
         // set the attributes
         ProcessStartInfo procSI = new ProcessStartInfo();
         procSI.FileName = "cmd.exe";
-        // Run either in dir or single file 
-        if (specDirectory  != null && specDirectory != string.Empty)
+        
+        // Run directory or file 
+        if (specDirectory != null && specDirectory != string.Empty)
         {
-          // Run everything in the directory as no profile / file was specified 
-          procSI.Arguments = "/C slacker";
+          // Make sure the path ends with \ otherwise add it
+          if (!specDirectory.EndsWith(@"\"))
+            specDirectory = specDirectory + @"\";
+
+          // Run everything in the directory and subdirectories 
+          // as specDirectory has been specified 
+          // **\* means all specs in dir and sub directories 
+          procSI.Arguments = "/C slacker" + " \"" + specDirectory + "**\\*" + "\" ";;
         }
         else
         {
@@ -89,7 +96,7 @@ namespace SlackerRunner
         using (AutoResetEvent outputWaitHandle = new AutoResetEvent(false))
         using (AutoResetEvent errorWaitHandle = new AutoResetEvent(false))
         {
-
+          // Collect output
           process.OutputDataReceived += (sender, e) =>
           {
             if (e.Data == null)
@@ -102,6 +109,7 @@ namespace SlackerRunner
             }
           };
 
+          // Collect errors
           process.ErrorDataReceived += (sender, e) =>
           {
             if (e.Data == null)

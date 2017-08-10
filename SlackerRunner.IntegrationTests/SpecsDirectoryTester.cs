@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
 //
 using Xunit;
 //
@@ -26,6 +25,18 @@ namespace SlackerRunner.IntegrationTests
       SlackerResults SlackerResults = new SlackerService().RunDirectory(RUN_TEST_DIR, SPEC_TEST_DIR, timeoutMilliseconds );
       // Proof it - got a few passed tests ( see debug for Slacker output )
       Assert.True(SlackerResults.PassedSpecs > 7, SlackerResults.Message );
+    }
+
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
+    public void runAllSpecsInSubDirectory()
+    {
+      // Use explicit timeout as it's running all the tests in the spec directory
+      int timeoutMilliseconds = 100 * 1000;
+      // Run all the tests in the directory at once 
+      SlackerResults SlackerResults = new SlackerService().RunDirectory(RUN_TEST_DIR, SPEC_TEST_DIR + "sample", timeoutMilliseconds);
+      // Proof it - got a few passed tests ( see debug for Slacker output )
+      Assert.True(SlackerResults.PassedSpecs > 3, SlackerResults.Message);
     }
 
     [Fact]
