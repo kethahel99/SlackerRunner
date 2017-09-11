@@ -51,9 +51,6 @@ namespace SlackerRunner
       // Get passed and calculate
       _res.PassedSpecs = FindInt("example", result, PassedSpecs) - _res.FailedSpecs;
       _res.Passed = _res.FailedSpecs == 0 && string.IsNullOrEmpty(standardError);
-      // When PassedSpecs is zero no tests ran, should not pass
-      if( _res.PassedSpecs == 0 )
-        _res.Passed = false;
 
       return _res;
     }
