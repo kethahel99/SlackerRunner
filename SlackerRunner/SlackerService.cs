@@ -61,11 +61,12 @@ namespace SlackerRunner
       // Go for it
       return _profileRunner.Run(testdirectory, testfile);
     }
+    
     /// <summary>
-    /// Runs the test in the given testfile.
+    /// Runs the tests in the given directory and sub directories.
     /// </summary>
     /// <param name="testdirectory">Base directory where database.yml is located. </param>
-    /// <param name="testfile">The test file to run.</param>
+    /// <param name="testfile">The test directory.</param>
     public SlackerResults RunDirectory(string testDirectory, string specDirectory, int timeoutMilliseconds)
     {
       // Make sure directory and file exists before heading further
