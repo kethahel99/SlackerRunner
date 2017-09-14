@@ -1,5 +1,7 @@
 ﻿//
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 namespace SlackerRunner
@@ -31,14 +33,14 @@ namespace SlackerRunner
     /// Runs the test in the given testfile.
     /// </summary>
     /// <param name="testdirectory">Base directory where database.yml is located. </param>
-    /// <param name="testfile">The test file to run.</param>
+    /// <param name="specfile">The spec test file to run.</param>
     /// <param name="user">Imprisonate user.</param>
     /// <returns></returns>
-    public SlackerResults Run(string testdirectory, string testfile, User user)
+    public SlackerResults Run(string testdirectory, string specfile, User user)
     {
       using (_impersonatorCreator(user))
       {
-        return _profileRunner.Run(testdirectory, testfile);
+        return _profileRunner.Run(testdirectory, specfile);
       }
     }
 
@@ -46,27 +48,27 @@ namespace SlackerRunner
     /// Runs the test in the given testfile.
     /// </summary>
     /// <param name="testdirectory">Base directory where database.yml is located. </param>
-    /// <param name="testfile">The test file to run.</param>
+    /// <param name="specfile">The spec test file to run.</param>
     /// <returns></returns>
-    public SlackerResults Run(string testdirectory, string testfile)
+    public SlackerResults Run(string testdirectory, string specfile)
     {
       // Make sure directory and file exists before heading further
       if (!Directory.Exists(testdirectory))
         throw new SlackerException("The directory does not exist, directory=" + testdirectory);
 
       // Only test for specific test file when wildcars are not in use
-      if (testfile.IndexOf('*') == -1 && !File.Exists(testfile))
-        throw new SlackerException("The file does not exist, file=" + testfile);
+      if (specfile.IndexOf('*') == -1 && !File.Exists(specfile))
+        throw new SlackerException("The file does not exist, file=" + specfile);
 
       // Go for it
-      return _profileRunner.Run(testdirectory, testfile);
+      return _profileRunner.Run(testdirectory, specfile);
     }
     
     /// <summary>
     /// Runs the tests in the given directory and sub directories.
     /// </summary>
     /// <param name="testdirectory">Base directory where database.yml is located. </param>
-    /// <param name="testfile">The test directory.</param>
+    /// <param name="specDirectory">The specs test directory.</param>
     public SlackerResults RunDirectory(string testDirectory, string specDirectory, int timeoutMilliseconds)
     {
       // Make sure directory and file exists before heading further
@@ -75,6 +77,22 @@ namespace SlackerRunner
 
       // Go for it
       return _profileRunner.RunDirectory(testDirectory, specDirectory, timeoutMilliseconds);
+    }
+
+
+    /// <summary>
+    /// Runs the tests in the given directory and sub directories, returns SlackerResults for each test.
+    /// </summary>
+    /// <param name="testdirectory">Base directory where database.yml is located. </param>
+    /// <param name="specDirectory">The specs test directory.</param>
+    public IEnumerable<SlackerResults> RunDirectoryMultiResults(string testDirectory, string specDirectory, int timeoutMilliseconds)
+    {
+      // Make sure directory and file exists before heading further
+      if (!Directory.Exists(testDirectory))
+        throw new SlackerException("The directory does not exist, directory=" + testDirectory);
+
+      // Go for it
+      return _profileRunner.RunDirectoryMultiResults(testDirectory, specDirectory, timeoutMilliseconds);
     }
 
   }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace SlackerRunner
@@ -30,7 +31,7 @@ namespace SlackerRunner
       _processRunner.Run(testDirectory, testFile);
       return _resultsParser.Parse(_processRunner.StandardOutput, _processRunner.StandardError);
     }
-    
+
     /// <summary>
     /// Run a spec test file 
     /// </summary>
@@ -38,6 +39,12 @@ namespace SlackerRunner
     {
       _processRunner.RunDirectory(testDirectory, specDirectory, timeoutMilliSeconds);
       return _resultsParser.Parse(_processRunner.StandardOutput, _processRunner.StandardError);
+    }
+
+    public IEnumerable<SlackerResults> RunDirectoryMultiResults(string testDirectory, string specDirectory, int timeoutMilliSeconds)
+    {
+      _processRunner.RunDirectory(testDirectory, specDirectory, timeoutMilliSeconds);
+      return _resultsParser.ParseJson(_processRunner.StandardOutput, _processRunner.StandardError);
     }
 
   }

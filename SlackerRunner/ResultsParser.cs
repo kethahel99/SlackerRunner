@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using SlackerRunner.Poco;
 
 namespace SlackerRunner
 {
-  public class ResultsParser 
+  public class ResultsParser
   {
     // Regexs 
     const string _FAILURE = "failure";
@@ -13,7 +17,7 @@ namespace SlackerRunner
     readonly Regex PassedSpecs = new Regex(@"(?<example>\d+)\sexample", RegexOptions.Compiled);
     //
     private SlackerResults _res = new SlackerResults();
-    
+
     /// <summary>
     /// Parses Passed, failures from the output results into SlackerResults
     /// </summary>
@@ -37,17 +41,17 @@ namespace SlackerRunner
 
       // Check for error in result and standardError
       bool error = Regex.IsMatch(result + standardError, "error", RegexOptions.IgnoreCase);
-            
+
       // Trap slacker not found 
-      if(standardError.IndexOf("'slacker' is not recognized") >-1 ||  // not installed yet, or path issue
-          standardError.IndexOf("cannot load such file") > -1 )  // Ruby configuration bad
+      if (standardError.IndexOf("'slacker' is not recognized") > -1 ||  // not installed yet, or path issue
+          standardError.IndexOf("cannot load such file") > -1)  // Ruby configuration bad
         throw new SlackerException("Not able to run slacker, slacker might not be configured correctly.");
 
       // If no failures found already, use that to communicate the error found
       // in that case it's usually outside of a good run, like bad connection to the database
-      if (error && _res.FailedSpecs == 0 )
+      if (error && _res.FailedSpecs == 0)
         _res.FailedSpecs++;
-            
+
       // Get passed and calculate
       _res.PassedSpecs = FindInt("example", result, PassedSpecs) - _res.FailedSpecs;
       _res.Passed = _res.FailedSpecs == 0 && string.IsNullOrEmpty(standardError);
@@ -55,33 +59,91 @@ namespace SlackerRunner
       return _res;
     }
 
+
+    public IEnumerable<SlackerResults> ParseJson(string result, string standardError)
+    {
+      // For safety 
+      if (standardError == null)
+        standardError = "";
+
+      // Find the start and end of the json to parse
+      int start = result.IndexOf("{\"version");
+      string endMarker = "failures\"}";
+      int end = result.IndexOf(endMarker);
+
+      // Parse it 
+      List<Example> examples = new List<Example>();
+      if (start > -1 && end > -1)
+      {
+        string json = result.Substring(start, end + endMarker.Length - start);
+        // Extract the examples ( test results )
+        examples = JObject.Parse(json).SelectToken("examples").ToObject<List<Example>>();
+      }
+
+      return PocoToResults(examples);
+    }
+
+    /// <summary>
+    /// Turns POCOS from Json data into SlackerResults
+    /// </summary>
+    private IEnumerable<SlackerResults> PocoToResults(List<Example> examples )
+    {
+      List<SlackerResults> ret = new List<SlackerResults>();
+
+      // Loop the examples, turn into SLackerResults
+      foreach( Example exs in examples)
+      {
+        SlackerResults res = new SlackerResults();
+        res.Header = exs.id;
+        // Passed or failed ?
+        if (exs.status.Equals("passed"))
+        {
+          res.Passed = true;
+          res.PassedSpecs = 1;
+        }
+        else
+        {
+          res.Passed = false;
+          res.FailedSpecs = 1;
+        }
+        // Time 
+        res.Seconds = exs.run_time;
+
+        // Add to list 
+        ret.Add(res);
+      }
+
+      return ret;
+    }
+
+
     /// <summary>
     /// Returns the given line
     /// </summary>
-    private static string getLine(string result, int lineNumber )
+    private static string getLine(string result, int lineNumber)
     {
       int where = 0;
-      int last= 0;
+      int last = 0;
       int count = 0;
-            
+
       // Trap, no need to process empty string
       if (result == string.Empty)
         return string.Empty;
 
       // Retrieve the line asked for, cut out line endings 
-      while ( count != lineNumber)
+      while (count != lineNumber)
       {
         last = where;
-        where = result.IndexOf(Environment.NewLine, where  );
+        where = result.IndexOf(Environment.NewLine, where);
         where += Environment.NewLine.Length;
         count++;
       }
-            
+
       // Must have encountered error
       if (where - last - Environment.NewLine.Length < 0)
         return string.Empty;
       else
-        return result.Substring(last, where - last - Environment.NewLine.Length );
+        return result.Substring(last, where - last - Environment.NewLine.Length);
     }
 
 
@@ -93,7 +155,7 @@ namespace SlackerRunner
       string match = regex.Match(result).Groups[group].Value;
       return string.IsNullOrEmpty(match) ? 0 : int.Parse(match);
     }
-        
+
     /// <summary>
     /// Returns the result as double 
     /// </summary>

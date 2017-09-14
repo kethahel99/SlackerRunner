@@ -4,7 +4,8 @@ using System.IO;
 using Xunit;
 //
 using SlackerRunner.Util;
-
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SlackerRunner.IntegrationTests
 {
@@ -15,8 +16,8 @@ namespace SlackerRunner.IntegrationTests
     public static string SPEC_TEST_DIR = Path.GetFullPath(Path.Combine("..", "..", "..", "SlackerTests", "spec") + "/");
 
 
-    [Fact(Skip = "Live database needed")]
-    //[Fact]
+    //[Fact(Skip = "Live database needed")]
+    [Fact]
     public void runAllSpecsInDirectory()
     {
       // Use explicit timeout as it's running all the tests in the spec directory
@@ -27,8 +28,8 @@ namespace SlackerRunner.IntegrationTests
       Assert.True(SlackerResults.PassedSpecs > 7, SlackerResults.Message );
     }
 
-    [Fact(Skip = "Live database needed")]
-    //[Fact]
+    //[Fact(Skip = "Live database needed")]
+    [Fact]
     public void runAllSpecsInSubDirectory()
     {
       // Use explicit timeout as it's running all the tests in the spec directory
@@ -37,6 +38,18 @@ namespace SlackerRunner.IntegrationTests
       SlackerResults SlackerResults = new SlackerService().RunDirectory(RUN_TEST_DIR, SPEC_TEST_DIR + "sample", timeoutMilliseconds);
       // Proof it - got a few passed tests ( see debug for Slacker output )
       Assert.True(SlackerResults.PassedSpecs > 3, SlackerResults.Message);
+    }
+
+    //[Fact(Skip = "Live database needed")]
+    [Fact]
+    public void runAllSpecsInSubDirectoryMultipleResults()
+    {
+      // Use explicit timeout as it's running all the tests in the spec directory
+      int timeoutMilliseconds = 100 * 1000;
+      // Run all the tests in the directory at once 
+      IEnumerable<SlackerResults> multi = new SlackerService().RunDirectoryMultiResults(RUN_TEST_DIR, SPEC_TEST_DIR + "sample", timeoutMilliseconds);
+      // Proof it - got a few passed tests ( see debug for Slacker output )
+      Assert.True( multi.Count() > 3 );
     }
 
     [Fact]
