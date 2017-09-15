@@ -16,8 +16,8 @@ namespace SlackerRunner.IntegrationTests
     public static string SPEC_TEST_DIR = Path.GetFullPath(Path.Combine("..", "..", "..", "SlackerTests", "spec") + "/");
 
 
-    //[Fact(Skip = "Live database needed")]
-    [Fact]
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
     public void runAllSpecsInDirectory()
     {
       // Use explicit timeout as it's running all the tests in the spec directory
@@ -28,8 +28,8 @@ namespace SlackerRunner.IntegrationTests
       Assert.True(SlackerResults.PassedSpecs > 7, SlackerResults.Message );
     }
 
-    //[Fact(Skip = "Live database needed")]
-    [Fact]
+    [Fact(Skip = "Live database needed")]
+    //[Fact]
     public void runAllSpecsInSubDirectory()
     {
       // Use explicit timeout as it's running all the tests in the spec directory
@@ -56,7 +56,7 @@ namespace SlackerRunner.IntegrationTests
     }
 
 
-    [Theory(Skip = "Live database needed"), MemberData("TestFiles", typeof(SpecTestFile))]
+    [Theory(Skip = "Live database needed"), MemberData("TestFiles")]
     //[Theory, MemberData("GetResults")]
     public void runAllSpecsInSubDirectoryMultipleResults(SlackerResults File)
     {
