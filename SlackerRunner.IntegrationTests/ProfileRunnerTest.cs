@@ -37,5 +37,21 @@ namespace SlackerRunner.IntegrationTests
       Assert.NotNull(run);
     }
 
+    [Fact]
+    public void InvalidDirConditionMultiResults()
+    {
+      ProfileRunner run = null;
+      Exception ex = Record.Exception(() =>
+      {
+        run = new ProfileRunner();
+        run.RunDirectoryMultiResults("invalid_dir", "invalid dir", 1000);
+      });
+
+      // Should throw SlackerException
+      Assert.Equal(typeof(SlackerException), ex.GetType());
+      Assert.NotNull(run);
+    }
+
+
   }  // EOC
 }

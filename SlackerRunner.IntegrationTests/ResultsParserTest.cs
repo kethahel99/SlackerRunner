@@ -1,5 +1,7 @@
 ﻿//
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 //
 using Xunit;
@@ -69,6 +71,20 @@ namespace SlackerRunner.IntegrationTests
       return sb.ToString();
     }
 
+    private static string ResultIncludesJson()
+    {
+      var sb = new StringBuilder();
+      sb.AppendLine("Beachcomber ((local))");
+      sb.AppendLine("...");
+      sb.AppendLine(" ");
+      sb.AppendLine("Finished in 0.11845 seconds");
+      sb.AppendLine("3 examples, 0 failures");
+      sb.AppendLine("");
+      // Embedded json ( just like using the -fj option )
+      sb.AppendLine("{\"version\":\"3.6.0\",\"examples\":[{\"id\":\"./spec/sam ple/sample1.rb[1:1]\",\"description\":\"contains system tables\",\"full_description\":\"My database contains system tables\",\"status\":\"passed\",\"file_path\":\"./spec/sam ple/sample1.rb\",\"line_number\":5,\"run_time\":0.034996,\"pending_message\":null},{\"id\":\"./spec/sample/sample2.rb[1:3]\",\"description\":\"contains system tables (take two)\",\"full_description\":\"My database contains system tables (take two)\",\"status\":\"failed\",\"file_path\":\"./spec/sample / sample2.rb\",\"line_number\":17,\"run_time\":0.037508,\"pending_message\":null,\"exception\":{\"class\":\"RuntimeError\",\"message\":\"No SQL file found corresponding to method 'sample_1' in folder C:/work/_solv/src/SlackerRunner/SlackerTests/sql\",\"backtrace\":[\"C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/slacker-1.0.19/lib/slacker/sql.rb:25:in `method_missing'\",\"C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/slacker-1.0.19/bin/slacker:32:in `<top (required)>'\",\"C:/Ruby23-x64/bin/slacker:22:in `load'\",\"C:/Ruby23-x64/bin/slacker:22:in `<main>'\"]}},{\"id\":\"./spec / sample / sample2.rb[1:4]\",\"description\":\"contains system tables (take three)\",\"full_description\":\"My database contains system tables (take three)\",\"status\":\"failed\",\"file_path\":\"./spec/sample/sample2.rb\",\"line_number\":24,\"run_time\":0.028012,\"pending_message\":null,\"exception\":{\"class\":\"RuntimeError\",\"message\":\"No SQL file found corresponding to method 'sample_1' in folder C:/work/_solv/src/SlackerRunner/SlackerTests/sql\",\"backtrace\":[\"C:/work/_solv/src/SlackerRunner/SlackerTests/spec/sample/sample2.rb:26:in `block (2 levels) in <top (required)>'\",\"C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/slacker-1.0.19/lib/slacker/application.rb:50:in `run'\",\"C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/slacker-1.0.19/bin/slacker:32:in `<top (required)>'\",\"C:/Ruby23-x64/bin/slacker:22:in `load'\",\"C:/Ruby23-x64/bin/slacker:22:in `<main>'\"]}}],\"summary\":{\"duration\":0.736109,\"example_count\":14,\"failure_count\":6,\"pending_count\":0},\"summary_line\":\"14 examples, 6 failures\"}");
+      return sb.ToString();
+    }
+
     [Fact]
     public void ParseUnforseenError()
     {
@@ -134,7 +150,17 @@ namespace SlackerRunner.IntegrationTests
       // This will guarantee empty tests files not to be failed as they should not
       Assert.True(res.Passed);
     }
-    
+
+
+    // This is the main parser test 
+    [Fact]
+    public void ParseJson()
+    {
+      var resultsParser = new ResultsParser();
+      IEnumerable<SlackerResults> res = resultsParser.ParseJson(ResultIncludesJson(), null);
+      // Proof it 
+      Assert.True(res.Count() == 3 );
+    }
 
     [Fact]
     public void ParseReturnsFalseWhenStandardErrorNotNull()
