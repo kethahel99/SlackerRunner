@@ -56,8 +56,8 @@ namespace SlackerRunner.IntegrationTests
     }
 
 
-    //[Theory(Skip = "Live database needed"), MemberData("TestFiles", typeof(SpecTestFile))]
-    [Theory, MemberData("GetResults")]
+    [Theory(Skip = "Live database needed"), MemberData("TestFiles", typeof(SpecTestFile))]
+    //[Theory, MemberData("GetResults")]
     public void runAllSpecsInSubDirectoryMultipleResults(SlackerResults File)
     {
       // Proof it check each one 
