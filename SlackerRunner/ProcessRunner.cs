@@ -8,10 +8,13 @@ using System.Threading;
 
 namespace SlackerRunner
 {
-  public class ProcessRunner
+  public class ProcessRunner : IDisposable
   {
     private StringBuilder _StandardOutput = new StringBuilder();
     private StringBuilder _ErrorOutput = new StringBuilder();
+    AutoResetEvent _outputWaitHandle = new AutoResetEvent(false);
+    AutoResetEvent _errorWaitHandle = new AutoResetEvent(false);
+    private Process _process = new Process();
 
     public ProcessRunner()
     {
@@ -57,7 +60,7 @@ namespace SlackerRunner
     private void Run(string testDirectory, string specDirectory, string specFile)
     {
       // Shooting off a process 
-      using (var process = new Process())
+      using (_process = new Process())
       {
         // set the attributes
         ProcessStartInfo procSI = new ProcessStartInfo();
@@ -91,55 +94,32 @@ namespace SlackerRunner
         procSI.WindowStyle = ProcessWindowStyle.Hidden;
         procSI.CreateNoWindow = true;
         // process start info
-        process.StartInfo = procSI;
+        _process.StartInfo = procSI;
 
         // Retrieve the outputs
-        using (AutoResetEvent outputWaitHandle = new AutoResetEvent(false))
-        using (AutoResetEvent errorWaitHandle = new AutoResetEvent(false))
-        {
-          // Collect output
-          process.OutputDataReceived += (sender, e) =>
-          {
-            if (e.Data == null)
-            {
-              outputWaitHandle.Set();
-            }
-            else
-            {
-              _StandardOutput.AppendLine(e.Data);
-            }
-          };
-
-          // Collect errors
-          process.ErrorDataReceived += (sender, e) =>
-          {
-            if (e.Data == null)
-            {
-              errorWaitHandle.Set();
-            }
-            else
-            {
-              _ErrorOutput.AppendLine(e.Data);
-            }
-          };
+        RegisterToEvents();
 
           // Go for it 
-          process.Start();
-          process.BeginOutputReadLine();
-          process.BeginErrorReadLine();
+        _process.Start();
+          _process.BeginOutputReadLine();
+          _process.BeginErrorReadLine();
 
 
           // Make sure there is no timeout issues
-          if (process.WaitForExit(TimeoutMilliseconds) &&
-            outputWaitHandle.WaitOne(TimeoutMilliseconds) &&
-            errorWaitHandle.WaitOne(TimeoutMilliseconds))
+          if (_process.WaitForExit(TimeoutMilliseconds) &&
+            _outputWaitHandle.WaitOne(TimeoutMilliseconds) &&
+            _errorWaitHandle.WaitOne(TimeoutMilliseconds))
           {
+            // Ensure event handling completion
+            // https://stackoverflow.com/questions/24543306/process-errordatareceived-fired-after-process-is-disposed
+            _process.WaitForExit();
+
             // Process completed
-            Logger.Log("process ended, exitcode=" + process.ExitCode);
+            Logger.Log("process ended, exitcode=" + _process.ExitCode);
             Logger.Log("process standard out=" + _StandardOutput);
             // Throws when Slacker has an error
-            if (process.ExitCode != 0)
-              throw new SlackerException("Slacker error, exitcode=" + process.ExitCode, new Exception(StandardOutput + " - " + StandardError));
+            if (_process.ExitCode != 0)
+              throw new SlackerException("Slacker error, exitcode=" + _process.ExitCode, new Exception(StandardOutput + " - " + StandardError));
           }
           else
           {
@@ -152,11 +132,72 @@ namespace SlackerRunner
           // Advertise
           if (StandardError != "")
             Logger.Log("Error=" + StandardError);
-        }
+        
       }
     }
 
+    private void RegisterToEvents()
+    {
+      _process.OutputDataReceived += process_OutputDataReceived;
+      _process.ErrorDataReceived += process_ErrorDataReceived;
+    }
 
+    private void UnregisterFromEvents()
+    {
+      _process.OutputDataReceived -= process_OutputDataReceived;
+      _process.ErrorDataReceived -= process_ErrorDataReceived;
+    }
+
+    private void process_ErrorDataReceived(object sender, DataReceivedEventArgs e)
+    {
+      if (e.Data == null)
+      {
+        _errorWaitHandle.Set();
+      }
+      else
+      {
+        _ErrorOutput.AppendLine(e.Data);
+      }
+    }
+
+    private void process_OutputDataReceived(object sender, DataReceivedEventArgs e)
+    {
+      if (e.Data == null)
+      {
+        _outputWaitHandle.Set();
+      }
+      else
+      {
+        _StandardOutput.AppendLine(e.Data);
+      }
+    }
+
+    /// <summary>
+    /// Cleanup process and handles as needed 
+    /// </summary>
+    public void Dispose()
+    {
+      UnregisterFromEvents();
+
+      if (_process != null)
+      {
+        _process.Dispose();
+        _process = null;
+      }
+
+      if (_errorWaitHandle != null)
+      {
+        _errorWaitHandle.Close();
+        _outputWaitHandle = null;
+      }
+
+      if (_outputWaitHandle != null)
+      {
+        _outputWaitHandle.Close();
+        _outputWaitHandle = null;
+      }
+
+    }
 
   }  // EOF
 }
