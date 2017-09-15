@@ -40,18 +40,6 @@ namespace SlackerRunner.IntegrationTests
       Assert.True(SlackerResults.PassedSpecs > 3, SlackerResults.Message);
     }
 
-    //[Fact(Skip = "Live database needed")]
-    [Fact]
-    public void runAllSpecsInSubDirectoryMultipleResults()
-    {
-      // Use explicit timeout as it's running all the tests in the spec directory
-      int timeoutMilliseconds = 100 * 1000;
-      // Run all the tests in the directory at once 
-      IEnumerable<SlackerResults> multi = new SlackerService().RunDirectoryMultiResults(RUN_TEST_DIR, SPEC_TEST_DIR + "sample", timeoutMilliseconds);
-      // Proof it - got a few passed tests ( see debug for Slacker output )
-      Assert.True( multi.Count() > 3 );
-    }
-
     [Fact]
     public void timeout()
     {
@@ -68,6 +56,25 @@ namespace SlackerRunner.IntegrationTests
     }
 
 
+    //[Theory(Skip = "Live database needed"), MemberData("TestFiles", typeof(SpecTestFile))]
+    [Theory, MemberData("GetResults")]
+    public void runAllSpecsInSubDirectoryMultipleResults(SlackerResults res)
+    {
+      // Proof it check each one 
+      Assert.True(res.Passed, res.Message );
+    }
+
+    public static IEnumerable<object[]> GetResults()
+    {
+      // Use explicit timeout as it's running all the tests in the spec directory
+      int timeoutMilliseconds = 100 * 1000;
+      // Run all the tests in the directory at once 
+      IEnumerable<SlackerResults> multi = new SlackerService().RunDirectoryMultiResults(RUN_TEST_DIR, SPEC_TEST_DIR + "sample", timeoutMilliseconds);
+
+      // Yeild results 
+      foreach( SlackerResults res in multi )
+        yield return new object[] { res };
+    }
   }
 }
 
