@@ -4,7 +4,7 @@ using Xunit;
 
 namespace SlackerRunner.IntegrationTests
 {
-  class SlackerExceptionTest
+  public class SlackerExceptionTest
   {
 
     [Fact]
