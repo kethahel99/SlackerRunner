@@ -3,6 +3,7 @@ using System.IO;
 using Xunit;
 using System.ComponentModel;
 using SlackerRunner.Util;
+using System.Collections.Generic;
 
 namespace SlackerRunner.IntegrationTests
 {
@@ -130,6 +131,21 @@ namespace SlackerRunner.IntegrationTests
       Exception ex = Record.Exception(() =>
       {
         SlackerResults SlackerResults = new SlackerService().RunDirectory("does not exist", "not this one either", 10000);
+      });
+      // Proof 
+      // Check the Exception thrown 
+      Assert.NotNull(ex);
+      Assert.True(ex is SlackerException);
+      Assert.True(ex.Message.IndexOf("The directory does not exist, directory=") > -1);
+    }
+
+    // Testing RunDirectory, directory not found 
+    [Fact]
+    public void DirectoryNotFoundRunDirMulti()
+    {
+      Exception ex = Record.Exception(() =>
+      {
+        IEnumerable<SlackerResults> SlackerResults = new SlackerService().RunDirectoryMultiResults("does not exist", "not this one either", 10000);
       });
       // Proof 
       // Check the Exception thrown 

@@ -56,7 +56,23 @@ namespace SlackerRunner.IntegrationTests
     }
 
 
-    [Theory(Skip = "Live database needed"), MemberData("TestFiles")]
+    [Fact]
+    public void timeoutMulti()
+    {
+      // Test timeout by setting very small timeout threshold
+      int timeoutMilliseconds = 1;
+      Exception ex = Record.Exception(() =>
+      {
+        IEnumerable<SlackerResults> SlackerResults = new SlackerService().RunDirectoryMultiResults(RUN_TEST_DIR, SPEC_TEST_DIR, timeoutMilliseconds);
+      });
+
+      // Exception was thrown
+      Assert.NotNull(ex);
+      Assert.True(ex.ToString().IndexOf("timeout") > -1);
+    }
+
+
+    [Theory(Skip = "Live database needed"), MemberData("GetResults")]
     //[Theory, MemberData("GetResults")]
     public void runAllSpecsInSubDirectoryMultipleResults(SlackerResults File)
     {
