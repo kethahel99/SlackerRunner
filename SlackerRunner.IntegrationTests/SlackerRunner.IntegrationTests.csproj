@@ -58,6 +58,7 @@
     <Compile Include="SpecificSpecTester.cs" />
     <Compile Include="ImpersonatorTester.cs" />
     <Compile Include="SpecsDirectoryTester.cs" />
+    <Compile Include="TestSlacerResults.cs" />
     <Compile Include="TestResolver.cs" />
     <Compile Include="SpecsTester.cs" />
     <None Include="..\SlackerTests\spec\sample\sample1.rb">
