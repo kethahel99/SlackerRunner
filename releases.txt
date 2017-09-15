@@ -1,4 +1,9 @@
 
+2.3.0.30 - 9/15/2017
+------------------------------
+Add RunDirectoryMultiResults that will allow running all tests in directories at once with individual test results
+
+
 2.3.0.23 - 8/10/2017
 ------------------------------
 Fix RunDirectory function to run from the subdirectory that was passed in
