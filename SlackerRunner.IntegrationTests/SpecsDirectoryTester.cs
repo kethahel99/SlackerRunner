@@ -58,10 +58,10 @@ namespace SlackerRunner.IntegrationTests
 
     //[Theory(Skip = "Live database needed"), MemberData("TestFiles", typeof(SpecTestFile))]
     [Theory, MemberData("GetResults")]
-    public void runAllSpecsInSubDirectoryMultipleResults(SlackerResults res)
+    public void runAllSpecsInSubDirectoryMultipleResults(SlackerResults File)
     {
       // Proof it check each one 
-      Assert.True(res.Passed, res.Message );
+      Assert.True(File.Passed, File.Trace );
     }
 
     public static IEnumerable<object[]> GetResults()

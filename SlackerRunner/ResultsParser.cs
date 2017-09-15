@@ -84,7 +84,7 @@ namespace SlackerRunner
     }
 
     /// <summary>
-    /// Turns POCOS from Json data into SlackerResults
+    /// Turns POCOs from Json data into SlackerResults
     /// </summary>
     private IEnumerable<SlackerResults> PocoToResults(List<Example> examples )
     {
@@ -95,7 +95,11 @@ namespace SlackerRunner
       {
         SlackerResults res = new SlackerResults();
         res.Header = exs.id;
-        // Passed or failed ?
+        res.Message = exs.full_description;
+        // Take out the prefix, that way it show the 
+        // same way as the IspecTestFile implementers
+        res.File = exs.file_path.Replace("./", string.Empty) + " - " + exs.full_description;
+        // Passed or failed 
         if (exs.status.Equals("passed"))
         {
           res.Passed = true;
@@ -105,6 +109,9 @@ namespace SlackerRunner
         {
           res.Passed = false;
           res.FailedSpecs = 1;
+          // Only setting the error - exs.exception.backtrace 
+          // holds more granular trace if needed
+          res.Trace = exs.full_description + ", Error=" + exs.exception.message;
         }
         // Time 
         res.Seconds = exs.run_time;

@@ -15,6 +15,7 @@ namespace SlackerRunner
     public int FailedSpecs { get; set; }
     public int PassedSpecs { get; set; }
     public bool Passed { get; set; }
+    public string File { get; set; }
 
 
     /// <summary>
@@ -22,6 +23,11 @@ namespace SlackerRunner
     /// </summary>
     public SlackerResults()
     {
+    }
+
+    public override string ToString()
+    {
+      return File;
     }
 
     /// <summary>
