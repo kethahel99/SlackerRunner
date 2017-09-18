@@ -45,7 +45,9 @@ namespace SlackerRunner
       // Trap slacker not found 
       if (standardError.IndexOf("'slacker' is not recognized") > -1 ||  // not installed yet, or path issue
           standardError.IndexOf("cannot load such file") > -1)  // Ruby configuration bad
+      {
         throw new SlackerException("Not able to run slacker, slacker might not be configured correctly.");
+      }
 
       // If no failures found already, use that to communicate the error found
       // in that case it's usually outside of a good run, like bad connection to the database
@@ -68,8 +70,14 @@ namespace SlackerRunner
 
       // Find the start and end of the json to parse
       int start = result.IndexOf("{\"version");
+      // 0 or more 
       string endMarker = "failures\"}";
+      // When only 1 failed
+      string endMarker2 = "failure\"}";
       int end = result.IndexOf(endMarker);
+      // Try find the second marker, if the first didn't hit 
+      if( end == -1 )
+        end = result.IndexOf(endMarker2);
 
       // Parse it 
       List<Example> examples = new List<Example>();
@@ -80,6 +88,7 @@ namespace SlackerRunner
         examples = JObject.Parse(json).SelectToken("examples").ToObject<List<Example>>();
       }
 
+      Logger.Log("   json, start=" + start + ", end=" + end + ", examples count=" + examples.Count );
       return PocoToResults(examples);
     }
 
@@ -94,7 +103,6 @@ namespace SlackerRunner
       foreach( Example exs in examples)
       {
         SlackerResults res = new SlackerResults();
-        res.Header = exs.id;
         res.Message = exs.full_description;
         // Take out the prefix, that way it show the 
         // same way as the IspecTestFile implementers
