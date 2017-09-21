@@ -6,6 +6,7 @@ using Xunit;
 using SlackerRunner.Util;
 using System.Collections.Generic;
 using System.Linq;
+using Xunit.Sdk;
 
 namespace SlackerRunner.IntegrationTests
 {
@@ -72,25 +73,50 @@ namespace SlackerRunner.IntegrationTests
     }
 
 
-    [Theory(Skip = "Live database needed"), MemberData("GetResults")]
-    //[Theory, MemberData("GetResults")]
+    // DisableDiscoveryEnumeration option has to be set to true, otherwise 
+    // the GetResults function will be run twice, once during discovery
+    // and once during the actual test run
+    [Theory, MemberData("GetResultsDirectoryNotThere", DisableDiscoveryEnumeration = true)]
+    public void runAllSpecsInSubDirectoryMultipleResultsDirNotPresent(SlackerResults File)
+    {
+      // Proof it check each one 
+      Assert.False(File.Passed, File.Trace);
+    }
+
+    public static IEnumerable<object[]> GetResultsDirectoryNotThere()
+    {
+      // Use explicit timeout as it's running all the tests in the spec directory
+      int timeoutMilliseconds = 1 * 60 * 1000;
+      // Run all the tests in the directory at once 
+      IEnumerable<SlackerResults> multi = new SlackerService().RunDirectoryMultiResults(RUN_TEST_DIR, SPEC_TEST_DIR + "fake directory", timeoutMilliseconds);
+
+      // Yeild results 
+      foreach (SlackerResults res in multi)
+        yield return new object[] { res };
+    }
+
+    // DisableDiscoveryEnumeration option has to be set to true, otherwise 
+    // the GetResults function will be run twice, once during discovery
+    // and once during the actual test run
+    [Theory, MemberData("GetResults", DisableDiscoveryEnumeration = true)]
     public void runAllSpecsInSubDirectoryMultipleResults(SlackerResults File)
     {
       // Proof it check each one 
-      Assert.True(File.Passed, File.Trace );
+      Assert.True(File.Passed, File.Trace);
     }
 
     public static IEnumerable<object[]> GetResults()
     {
       // Use explicit timeout as it's running all the tests in the spec directory
-      int timeoutMilliseconds = 100 * 1000;
+      int timeoutMilliseconds = 1 * 60 * 1000;
       // Run all the tests in the directory at once 
-      IEnumerable<SlackerResults> multi = new SlackerService().RunDirectoryMultiResults(RUN_TEST_DIR, SPEC_TEST_DIR + "sample", timeoutMilliseconds);
+      IEnumerable<SlackerResults> multi = new SlackerService().RunDirectoryMultiResults(RUN_TEST_DIR, SPEC_TEST_DIR + "sam ple/", timeoutMilliseconds);
 
       // Yeild results 
       foreach( SlackerResults res in multi )
         yield return new object[] { res };
     }
+    
   }
 }
 

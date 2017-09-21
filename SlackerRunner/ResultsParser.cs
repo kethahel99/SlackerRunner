@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SlackerRunner.Poco;
@@ -70,14 +71,10 @@ namespace SlackerRunner
 
       // Find the start and end of the json to parse
       int start = result.IndexOf("{\"version");
+      JToken error = null;
       // 0 or more 
-      string endMarker = "failures\"}";
-      // When only 1 failed
-      string endMarker2 = "failure\"}";
+      string endMarker = "\"}";
       int end = result.IndexOf(endMarker);
-      // Try find the second marker, if the first didn't hit 
-      if( end == -1 )
-        end = result.IndexOf(endMarker2);
 
       // Parse it 
       List<Example> examples = new List<Example>();
@@ -86,27 +83,42 @@ namespace SlackerRunner
         string json = result.Substring(start, end + endMarker.Length - start);
         // Extract the examples ( test results )
         examples = JObject.Parse(json).SelectToken("examples").ToObject<List<Example>>();
+        error = JObject.Parse(json).SelectToken("messages");
       }
 
-      Logger.Log("   json, start=" + start + ", end=" + end + ", examples count=" + examples.Count );
+      // Check for errors 
+      if ( error != null )
+      {
+        string tmp = error.ToString();
+
+        // Create exception from the Json error
+        Example ex = InitExample();
+        ex.exception.message = error.Last.ToString();
+        ex.exception.backtrace.Add(error.First.ToString());
+        // add it to the return
+        examples.Add(ex);
+      }
+
+      Logger.Log("   json, start=" + start + ", end=" + end + ", examples count=" + examples.Count);
       return PocoToResults(examples);
     }
 
     /// <summary>
     /// Turns POCOs from Json data into SlackerResults
     /// </summary>
-    private IEnumerable<SlackerResults> PocoToResults(List<Example> examples )
+    private IEnumerable<SlackerResults> PocoToResults(List<Example> examples)
     {
       List<SlackerResults> ret = new List<SlackerResults>();
 
       // Loop the examples, turn into SLackerResults
-      foreach( Example exs in examples)
+      foreach (Example exs in examples)
       {
         SlackerResults res = new SlackerResults();
+        var duration = TimeSpan.FromSeconds(exs.run_time);
         res.Message = exs.full_description;
         // Take out the prefix, that way it show the 
         // same way as the IspecTestFile implementers
-        res.File = exs.file_path.Replace("./", string.Empty) + " - " + exs.full_description;
+        res.File = exs.file_path.Replace("./", string.Empty) + " - " + exs.full_description + ", duration=" + duration.ToString(@"mm\:ss\.fff");
         // Passed or failed 
         if (exs.status.Equals("passed"))
         {
@@ -179,5 +191,24 @@ namespace SlackerRunner
       string match = regex.Match(result).Groups[group].Value;
       return string.IsNullOrEmpty(match) ? 0 : double.Parse(match);
     }
+
+    private static Example InitExample()
+    {
+      Example ex = new Example();
+      ex.exception = new Poco.Exception();
+      ex.exception.message = string.Empty;
+      ex.exception.backtrace = new List<string>();
+      ex.description = string.Empty; 
+      ex.file_path = string.Empty;
+      ex.full_description = string.Empty;
+      ex.id = string.Empty;
+      ex.line_number = 0;
+      ex.pending_message = string.Empty;
+      ex.run_time = 0;
+      ex.status = string.Empty;
+      return ex;
+    }
+
+
   }
 }
