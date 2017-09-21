@@ -76,8 +76,8 @@ namespace SlackerRunner.IntegrationTests
     // DisableDiscoveryEnumeration option has to be set to true, otherwise 
     // the GetResults function will be run twice, once during discovery
     // and once during the actual test run
-    //[Theory(Skip = "Live database needed"), MemberData("GetResultsDirectoryNotThere", DisableDiscoveryEnumeration = true)]
-    [Theory, MemberData("GetResultsDirectoryNotThere", DisableDiscoveryEnumeration = true)]
+    [Theory(Skip = "Live database needed"), MemberData("GetResultsDirectoryNotThere", DisableDiscoveryEnumeration = true)]
+    //[Theory, MemberData("GetResultsDirectoryNotThere", DisableDiscoveryEnumeration = true)]
     public void runAllSpecsInSubDirectoryMultipleResultsDirNotPresent(SlackerResults File)
     {
       // Proof it check each one 
