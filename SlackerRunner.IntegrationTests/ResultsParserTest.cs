@@ -85,6 +85,21 @@ namespace SlackerRunner.IntegrationTests
       return sb.ToString();
     }
 
+    private static string ResultJsonError()
+    {
+      var sb = new StringBuilder();
+      sb.AppendLine("Beachcomber ((local))");
+      sb.AppendLine("...");
+      sb.AppendLine(" ");
+      sb.AppendLine("Finished in 0.11845 seconds");
+      sb.AppendLine("3 examples, 0 failures");
+      sb.AppendLine("");
+      // Embedded json ( just like using the -fj option )
+      sb.AppendLine("{\"version\":\"3.6.0\",\"messages\":[\"\nAn error occurred while loading./ spec / fake directory/**/*.\nFailure / Error: load file\n\nLoadError:\n cannot load such file-- C:/ work / _solv / src / SlackerRunner / SlackerTests / spec / fake directory/**/*\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1922:in `load'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1922:in `load_spec_file_handling_errors'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1494:in `block in load_spec_files'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1492:in `each'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1492:in `load_spec_files'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:100:in `setup'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:86:in `run'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:71:in `run'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/slacker-1.0.19/lib/slacker/application.rb:76:in `run_rspec'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/slacker-1.0.19/lib/slacker/application.rb:56:in `block in run'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/slacker-1.0.19/lib/slacker/application.rb:50:in `catch'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/slacker-1.0.19/lib/slacker/application.rb:50:in `run'\n# C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/slacker-1.0.19/bin/slacker:32:in `<top (required)>'\n# C:/Ruby23-x64/bin/slacker:22:in `load'\n# C:/Ruby23-x64/bin/slacker:22:in `<main>'\n# \n#   Showing full backtrace because every line was filtered out.\n#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and\n#   RSpec::Configuration#backtrace_inclusion_patterns for more information.\n\",\"No examples found.\"],\"examples\":[],\"summary\":{\"duration\":0.001,\"example_count\":0,\"failure_count\":0,\"pending_count\":0},\"summary_line\":\"0 examples, 0 failures, 1 error occurred outside of examples\"}");
+      return sb.ToString();
+    }
+
+
     [Fact]
     public void ParseUnforseenError()
     {
@@ -160,6 +175,16 @@ namespace SlackerRunner.IntegrationTests
       IEnumerable<SlackerResults> res = resultsParser.ParseJson(ResultIncludesJson(), null);
       // Proof it 
       Assert.True(res.Count() == 3 );
+    }
+
+    [Fact]
+    public void ParseJsonError()
+    {
+      var resultsParser = new ResultsParser();
+      IEnumerable<SlackerResults> res = resultsParser.ParseJson(ResultJsonError(), null);
+      // Proof it 
+      Assert.True(res.Count() == 1);
+      Assert.False(res.First().Passed);
     }
 
     [Fact]

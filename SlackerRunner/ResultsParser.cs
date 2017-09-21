@@ -89,8 +89,6 @@ namespace SlackerRunner
       // Check for errors 
       if ( error != null )
       {
-        string tmp = error.ToString();
-
         // Create exception from the Json error
         Example ex = InitExample();
         ex.exception.message = error.Last.ToString();
@@ -114,6 +112,7 @@ namespace SlackerRunner
       foreach (Example exs in examples)
       {
         SlackerResults res = new SlackerResults();
+        res.Header = string.Empty;
         var duration = TimeSpan.FromSeconds(exs.run_time);
         res.Message = exs.full_description;
         // Take out the prefix, that way it show the 
