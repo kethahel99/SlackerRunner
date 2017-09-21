@@ -74,7 +74,7 @@ namespace SlackerRunner
       JToken error = null;
       // 0 or more 
       string endMarker = "\"}";
-      int end = result.IndexOf(endMarker);
+      int end = result.LastIndexOf(endMarker);
 
       // Parse it 
       List<Example> examples = new List<Example>();

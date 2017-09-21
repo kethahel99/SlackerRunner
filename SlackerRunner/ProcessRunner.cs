@@ -126,7 +126,7 @@ namespace SlackerRunner
             // Timed out.
             Logger.Log("run timeout");
             // Throws when Slacker times out
-            throw new SlackerException("Slacker timeout error, timeout is set to=" + (TimeoutMilliseconds / 1000) + " seconds");
+            throw new SlackerException("SlackerRunner timeout error, timeout is set to=" + (TimeoutMilliseconds / 1000) + " seconds");
           }
 
           // Advertise
