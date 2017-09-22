@@ -58,6 +58,8 @@
     <Compile Include="Util\ISpecTestFile.cs" />
     <Compile Include="Util\SpecsTesterResolver.cs" />
     <Compile Include="Util\SpecTestFile.cs" />
+    <Compile Include="Xunit\SlackerRunnerTheory.cs" />
+    <Compile Include="Xunit\SlackerRunnerFact.cs" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>

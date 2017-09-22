@@ -6,7 +6,7 @@ using Xunit;
 
 namespace SlackerRunner.IntegrationTests
 {
-  public class TestSlacerResults
+  public class TestSlackerResults
   {
     
     /// <summary>

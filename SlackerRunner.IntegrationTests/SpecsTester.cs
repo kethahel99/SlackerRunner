@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Xunit;
 //
 using SlackerRunner.Util;
+using SlackerRunner.Xunit;
 
 
 namespace SlackerRunner.IntegrationTests
@@ -28,12 +29,11 @@ namespace SlackerRunner.IntegrationTests
       Assert.True(SlackerResults.Passed, SlackerResults.Message);
     }
 
-
     /// <summary>
     /// Runs Slacker spec tests 
     /// </summary>
-    [Theory(DisplayName = "runSpecsIndividually", Skip = "Live database needed"), MemberData("TestFiles", typeof(IndividualSpecTestFile))]
-    //[Theory(DisplayName = "runSpecsIndividually"), MemberData("TestFiles", typeof(IndividualSpecTestFile))]
+    [SlackerRunnerTheory(Skip = "Live database needed"), MemberData("TestFiles", typeof(IndividualSpecTestFile))]
+    //[SlacerRunnerTheory, MemberData("TestFiles", typeof(IndividualSpecTestFile))]
     public void runSpecsIndividually(ISpecTestFile File)
     {
       SlackerResults SlackerResults = new SlackerService().Run(RUN_TEST_DIR, LONG_SPEC_TEST_DIR + File.FileName);

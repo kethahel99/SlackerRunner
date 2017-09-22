@@ -1,4 +1,9 @@
 
+2.3.0.39 - 9/22/2017
+------------------------------
+Add SlackerRunnerFact and SlackerRunnerTheory that overrides the DisplayName with the test function name, closes issue #21
+
+
 2.3.0.36 - 9/21/2017
 ------------------------------
 Fix RunDirectoryMultiResults Json unexpected error parsing
