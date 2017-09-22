@@ -1,5 +1,6 @@
 
-2.3.0.39 - 9/22/2017
+
+2.4.0.1 - 9/22/2017
 ------------------------------
 Add SlackerRunnerFact and SlackerRunnerTheory that overrides the DisplayName with the test function name, closes issue #21
 
