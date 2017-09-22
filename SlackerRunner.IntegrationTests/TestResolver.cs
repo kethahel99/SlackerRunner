@@ -16,7 +16,7 @@ namespace SlackerRunner.IntegrationTests
     /// Excersizes the SpecTesterResolver and SpecTestFile
     /// </summary>
     [Theory, MemberData("TestFiles", typeof(SpecTestFile))]
-    public void smokeRunSpecs(ISpecTestFile File)
+    public void SmokeRunSpecs(ISpecTestFile File)
     {
       Assert.NotNull( File.FileName );
     }
@@ -26,7 +26,7 @@ namespace SlackerRunner.IntegrationTests
     /// Excersizes the SpecTesterResolver and IndividualSpecTestFile
     /// </summary>
     [Theory, MemberData("TestFiles", typeof(IndividualSpecTestFile))]
-    public void smokeRunSpecsIndividually(ISpecTestFile File)
+    public void SmokeRunSpecsIndividually(ISpecTestFile File)
     {
       Assert.NotNull(File.FileName);
     }

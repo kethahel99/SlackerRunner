@@ -40,7 +40,7 @@ namespace SlackerRunner.IntegrationTests
     /// Excersize SlackerRunnerTheory
     /// </summary>
     [Theory, MemberData("TestFiles", typeof(IndividualSpecTestFile))]
-    public void TraditionalRunSpecsIndividually(ISpecTestFile File)
+    public void TraditionalRunSpecFiles(ISpecTestFile File)
     {
       Assert.True(File != null);
     }
@@ -50,7 +50,7 @@ namespace SlackerRunner.IntegrationTests
     /// Excersize SlackerRunnerTheory
     /// </summary>
     [SlackerRunnerTheory, MemberData("TestFiles", typeof(IndividualSpecTestFile))]
-    public void RunSpecsIndividually(ISpecTestFile File)
+    public void RunSpecFiles(ISpecTestFile File)
     {
       Assert.True(File != null);
     }

@@ -14,7 +14,7 @@ namespace SlackerRunner.IntegrationTests.Poco
     /// Coverage test, these haven't been touched by other test code
     /// </summary>
     [Fact]
-    public void smokeTest()
+    public void SmokeTest()
     {
       Example sample = new Example();
       

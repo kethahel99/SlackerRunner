@@ -19,7 +19,7 @@ namespace SlackerRunner.IntegrationTests
 
     [Fact(Skip = "Live database needed")]
     //[Fact]
-    public void runAllSpecsInDirectory()
+    public void RunAllSpecsInDirectory()
     {
       // Use explicit timeout as it's running all the tests in the spec directory
       int timeoutMilliseconds = 100 * 1000;
@@ -31,7 +31,7 @@ namespace SlackerRunner.IntegrationTests
 
     [Fact(Skip = "Live database needed")]
     //[Fact]
-    public void runAllSpecsInSubDirectory()
+    public void RunAllSpecsInSubDirectory()
     {
       // Use explicit timeout as it's running all the tests in the spec directory
       int timeoutMilliseconds = 100 * 1000;
@@ -42,7 +42,7 @@ namespace SlackerRunner.IntegrationTests
     }
 
     [Fact]
-    public void timeout()
+    public void Timeout()
     {
       // Test timeout by setting very small timeout threshold
       int timeoutMilliseconds = 1;
@@ -58,7 +58,7 @@ namespace SlackerRunner.IntegrationTests
 
 
     [Fact]
-    public void timeoutMulti()
+    public void TimeoutMulti()
     {
       // Test timeout by setting very small timeout threshold
       int timeoutMilliseconds = 1;
@@ -78,7 +78,7 @@ namespace SlackerRunner.IntegrationTests
     // and once during the actual test run
     [Theory(Skip = "Live database needed"), MemberData("GetResultsDirectoryNotThere", DisableDiscoveryEnumeration = true)]
     //[Theory, MemberData("GetResultsDirectoryNotThere", DisableDiscoveryEnumeration = true)]
-    public void runAllSpecsInSubDirectoryMultipleResultsDirNotPresent(SlackerResults File)
+    public void RunAllSpecsInSubDirectoryMultipleResultsDirNotPresent(SlackerResults File)
     {
       // Proof it check each one 
       Assert.False(File.Passed, File.Trace);
@@ -101,7 +101,7 @@ namespace SlackerRunner.IntegrationTests
     // and once during the actual test run
     [Theory(Skip = "Live database needed"), MemberData("GetResults", DisableDiscoveryEnumeration = true)]
     //[Theory, MemberData("GetResults", DisableDiscoveryEnumeration = true)]
-    public void runAllSpecsInSubDirectoryMultipleResults(SlackerResults File)
+    public void RunAllSpecsInSubDirectoryMultipleResults(SlackerResults File)
     {
       // Proof it check each one 
       Assert.True(File.Passed, File.Trace);
