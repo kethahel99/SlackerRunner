@@ -12,11 +12,6 @@ namespace SlackerRunner.IntegrationTests
 {
   public class DisplayNameTester
   {
-    // Relative path to test dir 
-    public static string RUN_TEST_DIR = Path.GetFullPath(Path.Combine("..", "..", "..", "SlackerTests")) + "\\";
-    public static string SPEC_TEST_DIR = Path.GetFullPath(Path.Combine("..", "..", "..", "SlackerTests", "spec") + "/");
-    public static string LONG_SPEC_TEST_DIR = Path.GetFullPath(Path.Combine("..", "..", "..", "SlackerTests", "spec", "sam ple") + "/");
-
 
     /// <summary>
     /// Excersize SlackerRunnerFact

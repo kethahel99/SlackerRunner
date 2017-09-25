@@ -1,5 +1,0 @@
-
-Nuget
----------
-Packaging is now run as part of the CI build.
-
