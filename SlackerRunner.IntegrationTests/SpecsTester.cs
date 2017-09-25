@@ -33,7 +33,7 @@ namespace SlackerRunner.IntegrationTests
     /// Runs Slacker spec tests 
     /// </summary>
     [SlackerRunnerTheory(Skip = "Live database needed"), MemberData("TestFiles", typeof(IndividualSpecTestFile))]
-    //[SlacerRunnerTheory, MemberData("TestFiles", typeof(IndividualSpecTestFile))]
+    //[SlackerRunnerTheory, MemberData("TestFiles", typeof(IndividualSpecTestFile))]
     public void RunSpecsIndividually(ISpecTestFile File)
     {
       SlackerResults SlackerResults = new SlackerService().Run(RUN_TEST_DIR, LONG_SPEC_TEST_DIR + File.FileName);
