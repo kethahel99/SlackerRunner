@@ -8,4 +8,4 @@ $tmp = "Updating assembly Version: "
 $tmp += $version
 write-output $tmp
 $content = Get-Content .\SlackerRunner\Properties\AssemblyInfo.cs
-$content -replace 'Version\(".*"\)',$x > ..\SlackerRunner\Properties\AssemblyInfo.cs
+$content -replace 'Version\(".*"\)',$x > .\SlackerRunner\Properties\AssemblyInfo.cs
