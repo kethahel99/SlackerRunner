@@ -37,13 +37,13 @@ namespace SlackerRunner
     /// </summary>
     public SlackerResults RunDirectory(string testDirectory, string specDirectory, int timeoutMilliSeconds)
     {
-      _processRunner.RunDirectory(testDirectory, specDirectory, timeoutMilliSeconds);
+      _processRunner.RunDirectory(testDirectory, specDirectory, timeoutMilliSeconds, false);
       return _resultsParser.Parse(_processRunner.StandardOutput, _processRunner.StandardError);
     }
 
     public IEnumerable<SlackerResults> RunDirectoryMultiResults(string testDirectory, string specDirectory, int timeoutMilliSeconds)
     {
-      _processRunner.RunDirectory(testDirectory, specDirectory, timeoutMilliSeconds);
+      _processRunner.RunDirectory(testDirectory, specDirectory, timeoutMilliSeconds, true);
       return _resultsParser.ParseJson(_processRunner.StandardOutput, _processRunner.StandardError);
     }
 

@@ -40,10 +40,10 @@ namespace SlackerRunner
     /// <summary>
     /// Runs all specs in a directory
     /// </summary>
-    public void RunDirectory(string testDirectory, string specDirectory, int timeoutMilliseconds)
+    public void RunDirectory(string testDirectory, string specDirectory, int timeoutMilliseconds, bool multiResults)
     {
       TimeoutMilliseconds = timeoutMilliseconds;
-      this.Run(testDirectory, specDirectory, string.Empty);
+      this.Run(testDirectory, specDirectory, string.Empty, multiResults);
     }
 
     /// <summary>
@@ -51,13 +51,13 @@ namespace SlackerRunner
     /// </summary>
     public void Run(string testDirectory, string specFile)
     {
-      this.Run(testDirectory, string.Empty, specFile );
+      this.Run(testDirectory, string.Empty, specFile, false );
     }
 
     /// <summary>
     /// Runs the Slacker process on directory or file
     /// </summary>
-    private void Run(string testDirectory, string specDirectory, string specFile)
+    private void Run(string testDirectory, string specDirectory, string specFile, bool multiResults)
     {
       // Shooting off a process 
       using (_process = new Process())
@@ -77,7 +77,10 @@ namespace SlackerRunner
           // as specDirectory has been specified 
           // **\* means all specs in dir and sub directories 
           // -fj means Json format, -fh ( HTML ), -fd ( document )
-          procSI.Arguments = "/C slacker \"" + specDirectory + "**\\*\" -fj";
+          if( multiResults )
+            procSI.Arguments = "/C slacker \"" + specDirectory + "**\\*\" -fj";
+          else
+            procSI.Arguments = "/C slacker \"" + specDirectory + "**\\*\"";
         }
         else
         {
