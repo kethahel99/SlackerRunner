@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C295798-0AE1-458F-8DE1-0DF68360FBBF}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,7 +14,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		slacker.runsettings = slacker.runsettings
 		SlackerRunner.vsmdi = SlackerRunner.vsmdi
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-		update_version.ps1 = update_version.ps1
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackerRunner", "SlackerRunner\SlackerRunner.csproj", "{28BB7D57-4BD7-4298-9FCF-7375C87401E3}"
@@ -22,6 +21,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackerRunner.IntegrationTests", "SlackerRunner.IntegrationTests\SlackerRunner.IntegrationTests.csproj", "{B272CCCD-A5FD-40B9-A761-B8E5F1105475}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackerTests", "SlackerTests\SlackerTests.csproj", "{A35773F6-BA8F-4E3A-85DB-083A6466A0DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{9537FCB1-D98E-4B72-AE6F-A9C0642ED795}"
+	ProjectSection(SolutionItems) = preProject
+		build\update_version.ps1 = build\update_version.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +46,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9537FCB1-D98E-4B72-AE6F-A9C0642ED795} = {8C295798-0AE1-458F-8DE1-0DF68360FBBF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1170D945-0F92-46E7-8D3B-450886FB52DD}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = CucumberRunner.vsmdi
