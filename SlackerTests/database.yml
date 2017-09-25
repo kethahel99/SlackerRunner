@@ -4,6 +4,7 @@
 # Replace the following with your connection information.
 # Note that at this point Slacker only works with SQL Server authentication.
 server: local_dev
-database: xxx
-user: xxx
-password: xxx
+database: slacker_db
+user: slacker
+password: SlackerRunner
+console_enabled: false
