@@ -24,6 +24,24 @@ namespace SlackerRunner.IntegrationTests
       Assert.True(ex.Message.IndexOf("The file does not exist, file=") > -1);
     }
 
+    
+    [Fact]
+    public void TestInvalidUser()
+    {
+      var user = new User { Domain = "MyDomain", Name = "Unit", Password = "Tester" };
+
+      Exception ex = Record.Exception(() =>
+      {
+        SlackerResults SlackerResults = new SlackerService().Run(SpecsTester.RUN_TEST_DIR, SpecsTester.SPEC_TEST_DIR + @"sample\filedoesnotexist.rb", user);
+      });
+      // Proof 
+      // Check the Exception thrown 
+      Assert.NotNull(ex);
+      Assert.True(ex is SystemException);
+      Assert.True(ex.Message.IndexOf("incorrect") > -1);
+    }
+
+
     // Testing failure
     [Fact]
     public void DirectoryNotFound()
