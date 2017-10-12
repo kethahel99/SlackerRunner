@@ -34,3 +34,9 @@ To add SlackerRunner to your VS solution from the Nuget Package Manager console
 The Nuget package feed is [located here](https://www.nuget.org/packages/SlackerRunner/).
 
 
+
+
+Code samples
+------------
+See [Code samples on the Wiki](https://github.com/deloitte-solvas/SlackerRunner/wiki/Samples "SlackerRunner samples")  to get you started.
+
