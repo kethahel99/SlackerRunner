@@ -109,11 +109,14 @@ steps:
     packagesToPack: '$(SolutionName)/$(ProductName).csproj'
     packDestination: '$(Build.BinariesDirectory)'
     includeReferencedProjects: true
+    versioningScheme: byEnvVar
+    versionEnvVar: 'GitVersion_MajorMinorPatch'
+    verbosityPack: Normal
 
 - task: PublishBuildArtifacts@1
   displayName: "Publish Artifact: nuget-packages"
   inputs:
-    PathtoPublish: '$(Build.BinariesDirectory)/$(ProductName).$(GitVersion.AssemblySemVer).nupkg'
+    PathtoPublish: '$(Build.BinariesDirectory)/$(ProductName).$(GitVersion.MajorMinorPatch).nupkg'
     ArtifactName: nuget-packages
     ArtifactType: Container
   timeoutInMinutes: 5
