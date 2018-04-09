@@ -103,6 +103,7 @@ steps:
   continueOnError: true
 
 - task: NuGetCommand@2
+  displayName: "NuGet Pack: nuget-packages"
   inputs:
     command: pack
     packagesToPack: '$(SolutionName)/$(ProductName).csproj'
@@ -112,7 +113,7 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: "Publish Artifact: nuget-packages"
   inputs:
-    PathtoPublish: '$(Build.BinariesDirectory)/*.nupkg'
+    PathtoPublish: '$(Build.BinariesDirectory)/$(ProductName).$(GitVersion.AssemblySemVer).nupkg'
     ArtifactName: nuget-packages
     ArtifactType: Container
   timeoutInMinutes: 5
