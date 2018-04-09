@@ -36,7 +36,7 @@ namespace SlackerRunner.IntegrationTests
       // Check the Exception thrown 
       Assert.NotNull(ex);
       Assert.True(ex is SlackerException);
-      Assert.True(ex.Message.Equals(msg));
+      Assert.Equal(ex.Message, msg);
     }
 
     [Fact]
@@ -47,18 +47,18 @@ namespace SlackerRunner.IntegrationTests
       string innerMsg = "Null ref detected, inner exception";
       Exception ex = await Record.ExceptionAsync(() =>
       {
-        throw new SlackerException(msg, new NullReferenceException(innerMsg) );
+        throw new SlackerException(msg, new NullReferenceException(innerMsg));
       });
 
       // Proof 
       // Check the Exception thrown 
       Assert.NotNull(ex);
       Assert.True(ex is SlackerException);
-      Assert.True(ex.Message.Equals(msg));
+      Assert.Equal(ex.Message, msg);
       // Inner
       Assert.True(ex.InnerException is NullReferenceException);
-      Assert.True(ex.InnerException.Message.Equals(innerMsg)); 
+      Assert.Equal(ex.InnerException.Message, innerMsg);
     }
-    
+
   }
 }

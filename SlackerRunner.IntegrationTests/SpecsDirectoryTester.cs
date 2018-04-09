@@ -24,9 +24,9 @@ namespace SlackerRunner.IntegrationTests
       // Use explicit timeout as it's running all the tests in the spec directory
       int timeoutMilliseconds = 100 * 1000;
       // Run all the tests in the directory at once 
-      SlackerResults SlackerResults = new SlackerService().RunDirectory(RUN_TEST_DIR, SPEC_TEST_DIR, timeoutMilliseconds );
+      SlackerResults SlackerResults = new SlackerService().RunDirectory(RUN_TEST_DIR, SPEC_TEST_DIR, timeoutMilliseconds);
       // Proof it - got a few passed tests ( see debug for Slacker output )
-      Assert.True(SlackerResults.PassedSpecs > 7, SlackerResults.Message );
+      Assert.True(SlackerResults.PassedSpecs > 7, SlackerResults.Message);
     }
 
     [Fact(Skip = "Live database needed")]
@@ -53,7 +53,7 @@ namespace SlackerRunner.IntegrationTests
 
       // Exception was thrown
       Assert.NotNull(ex);
-      Assert.True(ex.ToString().IndexOf("timeout") > -1 );
+      Assert.True(ex.ToString().IndexOf("timeout") > -1);
     }
 
 
@@ -76,8 +76,8 @@ namespace SlackerRunner.IntegrationTests
     // DisableDiscoveryEnumeration option has to be set to true, otherwise 
     // the GetResults function will be run twice, once during discovery
     // and once during the actual test run
-    [Theory(Skip = "Live database needed"), MemberData("GetResultsDirectoryNotThere", DisableDiscoveryEnumeration = true)]
-    //[Theory, MemberData("GetResultsDirectoryNotThere", DisableDiscoveryEnumeration = true)]
+    [Theory(Skip = "Live database needed"), MemberData(nameof(GetResultsDirectoryNotThere), DisableDiscoveryEnumeration = true)]
+    //[Theory, MemberData(nameof(GetResultsDirectoryNotThere), DisableDiscoveryEnumeration = true)]
     public void RunAllSpecsInSubDirectoryMultipleResultsDirNotPresent(SlackerResults File)
     {
       // Proof it check each one 
@@ -99,11 +99,12 @@ namespace SlackerRunner.IntegrationTests
     // DisableDiscoveryEnumeration option has to be set to true, otherwise 
     // the GetResults function will be run twice, once during discovery
     // and once during the actual test run
-    [Theory(Skip = "Live database needed"), MemberData("GetResults", DisableDiscoveryEnumeration = true)]
-    //[Theory, MemberData("GetResults", DisableDiscoveryEnumeration = true)]
+    [Theory(Skip = "Live database needed"), MemberData(nameof(GetResults), DisableDiscoveryEnumeration = true)]
+    //[Theory, MemberData(nameof(GetResults), DisableDiscoveryEnumeration = true)]
     public void RunAllSpecsInSubDirectoryMultipleResults(SlackerResults File)
     {
       // Proof it check each one 
+      Logger.Log("file=" + File.File);
       Assert.True(File.Passed, File.Trace);
     }
 
@@ -112,13 +113,13 @@ namespace SlackerRunner.IntegrationTests
       // Use explicit timeout as it's running all the tests in the spec directory
       int timeoutMilliseconds = 1 * 60 * 1000;
       // Run all the tests in the directory at once 
-      IEnumerable<SlackerResults> multi = new SlackerService().RunDirectoryMultiResults(RUN_TEST_DIR, SPEC_TEST_DIR, timeoutMilliseconds);
+      IEnumerable<SlackerResults> multi = new SlackerService().RunDirectoryMultiResults(RUN_TEST_DIR, SPEC_TEST_DIR + "sample/sampledir1/", timeoutMilliseconds);
 
       // Yeild results 
-      foreach( SlackerResults res in multi )
+      foreach (SlackerResults res in multi)
         yield return new object[] { res };
     }
-    
+
   }
 }
 

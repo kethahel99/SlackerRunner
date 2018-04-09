@@ -21,8 +21,8 @@ namespace SlackerRunner.IntegrationTests
     /// <summary>
     /// Runs Slacker spec tests 
     /// </summary>
-    [Theory(Skip = "Live database needed"), MemberData("TestFiles", typeof(SpecTestFile))]
-    //[Theory, MemberData("TestFiles", typeof(SpecTestFile))]
+    [Theory(Skip = "Live database needed"), MemberData(nameof(TestFiles), typeof(SpecTestFile))]
+    //[Theory, MemberData(nameof(TestFiles), typeof(SpecTestFile))]
     public void RunSpecs(ISpecTestFile File)
     {
       SlackerResults SlackerResults = new SlackerService().Run(RUN_TEST_DIR, LONG_SPEC_TEST_DIR + File.FileName);
@@ -32,8 +32,8 @@ namespace SlackerRunner.IntegrationTests
     /// <summary>
     /// Runs Slacker spec tests 
     /// </summary>
-    [SlackerRunnerTheory(Skip = "Live database needed"), MemberData("TestFiles", typeof(IndividualSpecTestFile))]
-    //[SlackerRunnerTheory, MemberData("TestFiles", typeof(IndividualSpecTestFile))]
+    [SlackerRunnerTheory(Skip = "Live database needed"), MemberData(nameof(TestFiles), typeof(IndividualSpecTestFile))]
+    //[SlackerRunnerTheory, MemberData(nameof(TestFiles), typeof(IndividualSpecTestFile))]
     public void RunSpecsIndividually(ISpecTestFile File)
     {
       SlackerResults SlackerResults = new SlackerService().Run(RUN_TEST_DIR, LONG_SPEC_TEST_DIR + File.FileName);

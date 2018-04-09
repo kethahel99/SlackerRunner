@@ -120,8 +120,8 @@ namespace SlackerRunner.IntegrationTests
       // advertise what what the score is 
       Console.WriteLine(res.getString());
       // Proof it 
-      Assert.Equal(res.FailedSpecs, 0);
-      Assert.Equal(res.PassedSpecs, 3);
+      Assert.Equal(0, res.FailedSpecs);
+      Assert.Equal(3, res.PassedSpecs);
     }
 
     [Fact]
@@ -132,8 +132,8 @@ namespace SlackerRunner.IntegrationTests
       // advertise what what the score is 
       Console.WriteLine(res.getString());
       // Proof it 
-      Assert.Equal(res.FailedSpecs, 0);
-      Assert.Equal(res.PassedSpecs, 1);
+      Assert.Equal(0, res.FailedSpecs);
+      Assert.Equal(1, res.PassedSpecs);
     }
 
 
@@ -146,8 +146,8 @@ namespace SlackerRunner.IntegrationTests
       // advertise what what the score is 
       Console.WriteLine(res.getString());
       // Proof it 
-      Assert.Equal(res.FailedSpecs, 3);
-      Assert.Equal(res.PassedSpecs, 24);
+      Assert.Equal(3, res.FailedSpecs);
+      Assert.Equal(24, res.PassedSpecs);
     }
 
     [Fact]
@@ -174,7 +174,7 @@ namespace SlackerRunner.IntegrationTests
       var resultsParser = new ResultsParser();
       IEnumerable<SlackerResults> res = resultsParser.ParseJson(ResultIncludesJson(), null);
       // Proof it 
-      Assert.True(res.Count() == 3 );
+      Assert.True(res.Count() == 3);
     }
 
     [Fact]
