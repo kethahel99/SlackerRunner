@@ -1,5 +1,11 @@
 
 
+2.5.0.2 - 4/9/2018
+------------------------------
+Update projects to .Net 4.6.1
+Update xUnit to stable 2.3.1
+
+
 2.4.0.7 - 10/12/2017
 ------------------------------
 Remove xunit and ms runner dependencies that are not needed, caused side affects, issue #16
