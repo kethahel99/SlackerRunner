@@ -1,0 +1,122 @@
+resources:
+- repo: self
+  clean: true
+
+name: $(date:yyyyMMdd)$(rev:.r)
+
+#trigger:
+#  branches:
+#    include:
+#    - master
+
+queue:
+  name: Hosted
+  demands: 
+  - DotNetFramework
+  - msbuild
+  - visualstudio
+  - vstest
+
+variables:
+  "Build.Clean": true
+  "BuildConfiguration": Release
+  "BuildPlatform": Any CPU
+  "ProductName": SlackerRunner
+  "SolutionName": SlackerRunner
+  "SqlUserName": US\sttsqlsa
+  "System.PreferGit": true
+
+steps:
+- task: NuGetToolInstaller@0
+  displayName: Use NuGet 4.3.0
+
+- task: NuGetCommand@2
+  displayName: NuGet restore
+  inputs:
+    restoreSolution: '$(SolutionName).sln'
+    restoreDirectory: packages
+    verbosityRestore: Normal
+
+- powershell: |
+    # Set agent user name.
+
+    Write-Output "##vso[task.setvariable variable=AgentUserName]$env:username"
+  displayName: Set agent user name
+  errorActionPreference: stop
+  failOnStderr: true
+
+- task: andremarques023.DiagnosticTasks.DiagnosticTasks.AddBuildTag.AddBuildTag@1
+  displayName: Add build tag Reason_$(Build.Reason)
+  inputs:
+    tag: 'Reason_$(Build.Reason)'
+
+- task: gittools.gitversion.gitversion-task.GitVersion@3
+  displayName: GitVersion
+
+- task: jessehouwing.jessehouwing-vsts-variable-tasks.vsts-variable-transform.VariableTransformTask@1
+  displayName: "Remove dots from '$(GitVersion.MajorMinorPatch)' and save as: GitVersion.MajorMinorPatch_Escaped"
+  inputs:
+    value: '$(GitVersion.MajorMinorPatch)'
+    variableName: 'GitVersion.MajorMinorPatch_Escaped'
+    searchReplace: true
+    searchValue: .
+    trim: false
+    slice: false
+    substring: false
+    casing: false
+    pad: false
+
+- task: andremarques023.DiagnosticTasks.DiagnosticTasks.AddBuildTag.AddBuildTag@1
+  displayName: Add build tag $(GitVersion.PreReleaseLabel)
+  inputs:
+    tag: '$(GitVersion.PreReleaseLabel)'
+
+- task: moonspace-labs-llc.vsts-tools-build-extensions.vsts-ListVariables.VSTSToolsListVariables@1
+  displayName: List Variables
+  condition: always()
+
+- task: ivanboyko.vsts-regex-replace.ivanboyko.RegexReplace.ivanboyko.RegexReplace@1
+  displayName: Set version in SharedAssemblyInfo.cs
+  inputs:
+    FileMask: '$(SolutionName)/Properties/SharedAssemblyInfo.cs'
+    Regex: '(\[assembly: Assembly(File|Informational)?Version\(["''])(\d+\.){2,3}(\d+|\*)?(["'']\)])'
+    Replacement: '${1}$(GitVersion.AssemblySemVer)${5}'
+
+- task: VSBuild@1
+  displayName: Build $(SolutionName).sln
+  inputs:
+    solution: '$(SolutionName).sln'
+    msbuildArgs: '/p:CmdLineInMemoryStorage=True'
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+
+- task: VSTest@2
+  displayName: Test Assemblies
+  inputs:
+    testAssemblyVer2: |
+     **\*test*.dll;-:**\obj\**
+    runSettingsFile: slacker.runsettings'
+    runInParallel: true
+    codeCoverageEnabled: true
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+  continueOnError: true
+
+- task: NuGetCommand@2
+  displayName: "NuGet Pack: nuget-packages"
+  inputs:
+    command: pack
+    packagesToPack: '$(SolutionName)/$(ProductName).csproj'
+    packDestination: '$(Build.BinariesDirectory)'
+    includeReferencedProjects: true
+    versioningScheme: byEnvVar
+    versionEnvVar: 'GitVersion_MajorMinorPatch'
+    verbosityPack: Normal
+
+- task: PublishBuildArtifacts@1
+  displayName: "Publish Artifact: nuget-packages"
+  inputs:
+    PathtoPublish: '$(Build.BinariesDirectory)/$(ProductName).$(GitVersion.MajorMinorPatch).nupkg'
+    ArtifactName: nuget-packages
+    ArtifactType: Container
+  timeoutInMinutes: 5
