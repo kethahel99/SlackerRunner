@@ -6,6 +6,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SlackerRunner.Poco;
+using System.Globalization;
 
 namespace SlackerRunner
 {
@@ -188,7 +189,8 @@ namespace SlackerRunner
     private static double FindDouble(string group, string result, Regex regex)
     {
       string match = regex.Match(result).Groups[group].Value;
-      return string.IsNullOrEmpty(match) ? 0 : double.Parse(match);
+      // Make parsing from type Double insensitive to localization settings
+      return string.IsNullOrEmpty(match) ? 0 : double.Parse(match, CultureInfo.InvariantCulture);
     }
 
     private static Example InitExample()
